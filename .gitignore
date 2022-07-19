@@ -1,0 +1,5 @@
+*.iml
+.idea/**
+test/**
+openapi-generator-cli-6.0.0.jar
+.openapi-generator

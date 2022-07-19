@@ -1,0 +1,7 @@
+test/**
+.gitignore
+git_push.sh
+.travis.yml
+.gitlab-ci.yml
+test-requirements.txt
+tox.ini
