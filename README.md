@@ -17,13 +17,13 @@ Python >=3.6
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/eliona-smart-building-assistant/python-eliona-api-client.git
+pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/eliona-smart-building-assistant/python-eliona-api-client.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
 
 Then import the package:
 ```python
-import io.eliona.api-client
+import io.eliona.api_client
 ```
 
 ### Setuptools
@@ -37,7 +37,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import io.eliona.api-client
+import io.eliona.api_client
 ```
 
 ## Getting Started
@@ -47,21 +47,21 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import time
-import io.eliona.api-client
+import io.eliona.api_client
 from pprint import pprint
-from io.eliona.api-client.api import app_api
-from io.eliona.api-client.model.app import App
-from io.eliona.api-client.model.patch import Patch
+from io.eliona.api_client.api import app_api
+from io.eliona.api_client.model.app import App
+from io.eliona.api_client.model.patch import Patch
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api-client.Configuration(
+configuration = io.eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api-client.ApiClient(configuration) as api_client:
+with io.eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = app_api.AppApi(api_client)
     app_name = "weather" # str | The name of the app
@@ -70,7 +70,7 @@ with io.eliona.api-client.ApiClient(configuration) as api_client:
     try:
         # Marks a patch in eliona as applied
         api_instance.apply_patch_by_name(app_name, patch_name)
-    except io.eliona.api-client.ApiException as e:
+    except io.eliona.api_client.ApiException as e:
         print("Exception when calling AppApi->apply_patch_by_name: %s\n" % e)
 ```
 
@@ -127,21 +127,21 @@ Class | Method | HTTP request | Description
 
 
 ## Notes for Large OpenAPI documents
-If the OpenAPI document is large, imports in io.eliona.api-client.apis and io.eliona.api-client.models may fail with a
+If the OpenAPI document is large, imports in io.eliona.api_client.apis and io.eliona.api_client.models may fail with a
 RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:
 
 Solution 1:
 Use specific imports for apis and models like:
-- `from io.eliona.api-client.api.default_api import DefaultApi`
-- `from io.eliona.api-client.model.pet import Pet`
+- `from io.eliona.api_client.api.default_api import DefaultApi`
+- `from io.eliona.api_client.model.pet import Pet`
 
 Solution 2:
 Before importing the package, adjust the maximum recursion limit as shown below:
 ```
 import sys
 sys.setrecursionlimit(1500)
-import io.eliona.api-client
-from io.eliona.api-client.apis import *
-from io.eliona.api-client.models import *
+import io.eliona.api_client
+from io.eliona.api_client.apis import *
+from io.eliona.api_client.models import *
 ```
 

@@ -1,4 +1,4 @@
-# io.eliona.api-client.HeapApi
+# io.eliona.api_client.HeapApi
 
 All URIs are relative to *http://api.eliona.io/v2*
 
@@ -19,19 +19,19 @@ Create new heap data or update data if already exists
 
 ```python
 import time
-import io.eliona.api-client
-from io.eliona.api-client.api import heap_api
-from io.eliona.api-client.model.heap import Heap
+import io.eliona.api_client
+from io.eliona.api_client.api import heap_api
+from io.eliona.api_client.model.heap import Heap
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api-client.Configuration(
+configuration = io.eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api-client.ApiClient() as api_client:
+with io.eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = heap_api.HeapApi(api_client)
     heap = Heap(
@@ -45,7 +45,7 @@ with io.eliona.api-client.ApiClient() as api_client:
     try:
         # Create or update heap data
         api_instance.post_heap(heap)
-    except io.eliona.api-client.ApiException as e:
+    except io.eliona.api_client.ApiException as e:
         print("Exception when calling HeapApi->post_heap: %s\n" % e)
 ```
 

@@ -1,4 +1,4 @@
-# io.eliona.api-client.AppApi
+# io.eliona.api_client.AppApi
 
 All URIs are relative to *http://api.eliona.io/v2*
 
@@ -22,18 +22,18 @@ Marks that the patch is now applied. Further request to get patch information re
 
 ```python
 import time
-import io.eliona.api-client
-from io.eliona.api-client.api import app_api
+import io.eliona.api_client
+from io.eliona.api_client.api import app_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api-client.Configuration(
+configuration = io.eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api-client.ApiClient() as api_client:
+with io.eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = app_api.AppApi(api_client)
     app_name = "weather" # str | The name of the app
@@ -43,7 +43,7 @@ with io.eliona.api-client.ApiClient() as api_client:
     try:
         # Marks a patch in eliona as applied
         api_instance.apply_patch_by_name(app_name, patch_name)
-    except io.eliona.api-client.ApiException as e:
+    except io.eliona.api_client.ApiException as e:
         print("Exception when calling AppApi->apply_patch_by_name: %s\n" % e)
 ```
 
@@ -90,19 +90,19 @@ Gets information about an app. Can used to determine if an app is already regist
 
 ```python
 import time
-import io.eliona.api-client
-from io.eliona.api-client.api import app_api
-from io.eliona.api-client.model.app import App
+import io.eliona.api_client
+from io.eliona.api_client.api import app_api
+from io.eliona.api_client.model.app import App
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api-client.Configuration(
+configuration = io.eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api-client.ApiClient() as api_client:
+with io.eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = app_api.AppApi(api_client)
     app_name = "weather" # str | The name of the app
@@ -112,7 +112,7 @@ with io.eliona.api-client.ApiClient() as api_client:
         # Information about an app
         api_response = api_instance.get_app_by_name(app_name)
         pprint(api_response)
-    except io.eliona.api-client.ApiException as e:
+    except io.eliona.api_client.ApiException as e:
         print("Exception when calling AppApi->get_app_by_name: %s\n" % e)
 ```
 
@@ -157,19 +157,19 @@ Gets information about a patch for an app. Can used to determine if the patch is
 
 ```python
 import time
-import io.eliona.api-client
-from io.eliona.api-client.api import app_api
-from io.eliona.api-client.model.patch import Patch
+import io.eliona.api_client
+from io.eliona.api_client.api import app_api
+from io.eliona.api_client.model.patch import Patch
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api-client.Configuration(
+configuration = io.eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api-client.ApiClient() as api_client:
+with io.eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = app_api.AppApi(api_client)
     app_name = "weather" # str | The name of the app
@@ -180,7 +180,7 @@ with io.eliona.api-client.ApiClient() as api_client:
         # Information about a patch for an app
         api_response = api_instance.get_patch_by_name(app_name, patch_name)
         pprint(api_response)
-    except io.eliona.api-client.ApiException as e:
+    except io.eliona.api_client.ApiException as e:
         print("Exception when calling AppApi->get_patch_by_name: %s\n" % e)
 ```
 
@@ -226,18 +226,18 @@ Marks that the app is now initialized and installed. Further request to get app 
 
 ```python
 import time
-import io.eliona.api-client
-from io.eliona.api-client.api import app_api
+import io.eliona.api_client
+from io.eliona.api_client.api import app_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api-client.Configuration(
+configuration = io.eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api-client.ApiClient() as api_client:
+with io.eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = app_api.AppApi(api_client)
     app_name = "weather" # str | The name of the app
@@ -246,7 +246,7 @@ with io.eliona.api-client.ApiClient() as api_client:
     try:
         # Marks an app in eliona as registered
         api_instance.register_app_by_name(app_name)
-    except io.eliona.api-client.ApiException as e:
+    except io.eliona.api_client.ApiException as e:
         print("Exception when calling AppApi->register_app_by_name: %s\n" % e)
 ```
 
