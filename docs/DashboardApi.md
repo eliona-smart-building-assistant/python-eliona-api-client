@@ -1,4 +1,4 @@
-# io.eliona.api_client.DashboardApi
+# eliona.api_client.DashboardApi
 
 All URIs are relative to *http://api.eliona.io/v2*
 
@@ -21,19 +21,19 @@ Create a new dashboard for frontend
 
 ```python
 import time
-import io.eliona.api_client
-from io.eliona.api_client.api import dashboard_api
-from io.eliona.api_client.model.dashboard import Dashboard
+import eliona.api_client
+from eliona.api_client.api import dashboard_api
+from eliona.api_client.model.dashboard import Dashboard
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api_client.Configuration(
+configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = dashboard_api.DashboardApi(api_client)
     dashboard = Dashboard(
@@ -48,7 +48,7 @@ with io.eliona.api_client.ApiClient() as api_client:
         # Creates a new dashboard
         api_response = api_instance.post_dashboard(dashboard)
         pprint(api_response)
-    except io.eliona.api_client.ApiException as e:
+    except eliona.api_client.ApiException as e:
         print("Exception when calling DashboardApi->post_dashboard: %s\n" % e)
 ```
 
@@ -93,19 +93,19 @@ Create a new widget type
 
 ```python
 import time
-import io.eliona.api_client
-from io.eliona.api_client.api import dashboard_api
-from io.eliona.api_client.model.widget_type import WidgetType
+import eliona.api_client
+from eliona.api_client.api import dashboard_api
+from eliona.api_client.model.widget_type import WidgetType
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api_client.Configuration(
+configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = dashboard_api.DashboardApi(api_client)
     widget_type = WidgetType(
@@ -133,7 +133,7 @@ with io.eliona.api_client.ApiClient() as api_client:
     try:
         # Adds a new widget type
         api_instance.post_widget_type(widget_type)
-    except io.eliona.api_client.ApiException as e:
+    except eliona.api_client.ApiException as e:
         print("Exception when calling DashboardApi->post_widget_type: %s\n" % e)
 ```
 
@@ -178,19 +178,19 @@ Create a new widget an ad this to a dashboard
 
 ```python
 import time
-import io.eliona.api_client
-from io.eliona.api_client.api import dashboard_api
-from io.eliona.api_client.model.widget import Widget
+import eliona.api_client
+from eliona.api_client.api import dashboard_api
+from eliona.api_client.model.widget import Widget
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api_client.Configuration(
+configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = dashboard_api.DashboardApi(api_client)
     dashboard_id = 4711 # int | The id of the dashboard
@@ -216,7 +216,7 @@ with io.eliona.api_client.ApiClient() as api_client:
     try:
         # Adds widget to dashboard
         api_instance.put_dashboard_widget(dashboard_id, widget)
-    except io.eliona.api_client.ApiException as e:
+    except eliona.api_client.ApiException as e:
         print("Exception when calling DashboardApi->put_dashboard_widget: %s\n" % e)
 ```
 

@@ -1,4 +1,4 @@
-# io.eliona.api_client.AssetTypeApi
+# eliona.api_client.AssetTypeApi
 
 All URIs are relative to *http://api.eliona.io/v2*
 
@@ -21,19 +21,19 @@ Returns a list of asset types
 
 ```python
 import time
-import io.eliona.api_client
-from io.eliona.api_client.api import asset_type_api
-from io.eliona.api_client.model.asset_type import AssetType
+import eliona.api_client
+from eliona.api_client.api import asset_type_api
+from eliona.api_client.model.asset_type import AssetType
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api_client.Configuration(
+configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = asset_type_api.AssetTypeApi(api_client)
     limit = 20 # int | Limits the number of items on a page (optional)
@@ -45,7 +45,7 @@ with io.eliona.api_client.ApiClient() as api_client:
         # List of asset types
         api_response = api_instance.get_asset_types(limit=limit, offset=offset)
         pprint(api_response)
-    except io.eliona.api_client.ApiException as e:
+    except eliona.api_client.ApiException as e:
         print("Exception when calling AssetTypeApi->get_asset_types: %s\n" % e)
 ```
 
@@ -91,19 +91,19 @@ Create a new asset type or update an asset type if already exists
 
 ```python
 import time
-import io.eliona.api_client
-from io.eliona.api_client.api import asset_type_api
-from io.eliona.api_client.model.asset_type import AssetType
+import eliona.api_client
+from eliona.api_client.api import asset_type_api
+from eliona.api_client.model.asset_type import AssetType
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api_client.Configuration(
+configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = asset_type_api.AssetTypeApi(api_client)
     asset_type = AssetType(
@@ -154,7 +154,7 @@ with io.eliona.api_client.ApiClient() as api_client:
     try:
         # Create or update an asset type
         api_instance.post_asset_type(asset_type)
-    except io.eliona.api_client.ApiException as e:
+    except eliona.api_client.ApiException as e:
         print("Exception when calling AssetTypeApi->post_asset_type: %s\n" % e)
 ```
 
@@ -199,19 +199,19 @@ Create a new asset type attribute or update an asset type attribute if already e
 
 ```python
 import time
-import io.eliona.api_client
-from io.eliona.api_client.api import asset_type_api
-from io.eliona.api_client.model.attribute import Attribute
+import eliona.api_client
+from eliona.api_client.api import asset_type_api
+from eliona.api_client.model.attribute import Attribute
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api_client.Configuration(
+configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = asset_type_api.AssetTypeApi(api_client)
     attribute = Attribute(
@@ -246,7 +246,7 @@ with io.eliona.api_client.ApiClient() as api_client:
     try:
         # Create or update an asset type attribute
         api_instance.post_asset_type_attribute(attribute)
-    except io.eliona.api_client.ApiException as e:
+    except eliona.api_client.ApiException as e:
         print("Exception when calling AssetTypeApi->post_asset_type_attribute: %s\n" % e)
 ```
 
