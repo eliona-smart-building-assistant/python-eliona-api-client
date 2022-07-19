@@ -1,4 +1,4 @@
-# io.eliona.api-client.AssetApi
+# eliona.api_client.AssetApi
 
 All URIs are relative to *http://api.eliona.io/v2*
 
@@ -23,19 +23,19 @@ Gets information about an asset.
 
 ```python
 import time
-import io.eliona.api-client
-from io.eliona.api-client.api import asset_api
-from io.eliona.api-client.model.asset import Asset
+import eliona.api_client
+from eliona.api_client.api import asset_api
+from eliona.api_client.model.asset import Asset
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api-client.Configuration(
+configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api-client.ApiClient() as api_client:
+with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = asset_api.AssetApi(api_client)
     asset_id = 4711 # int | The id of the asset
@@ -45,7 +45,7 @@ with io.eliona.api-client.ApiClient() as api_client:
         # Information about an Asset
         api_response = api_instance.get_asset_by_id(asset_id)
         pprint(api_response)
-    except io.eliona.api-client.ApiException as e:
+    except eliona.api_client.ApiException as e:
         print("Exception when calling AssetApi->get_asset_by_id: %s\n" % e)
 ```
 
@@ -91,19 +91,19 @@ Returns a list of asset ids which are children for an asset
 
 ```python
 import time
-import io.eliona.api-client
-from io.eliona.api-client.api import asset_api
-from io.eliona.api-client.model.asset_relation import AssetRelation
+import eliona.api_client
+from eliona.api_client.api import asset_api
+from eliona.api_client.model.asset_relation import AssetRelation
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api-client.Configuration(
+configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api-client.ApiClient() as api_client:
+with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = asset_api.AssetApi(api_client)
     asset_id = 4711 # int | The id of the asset
@@ -113,7 +113,7 @@ with io.eliona.api-client.ApiClient() as api_client:
         # Get children for an asset
         api_response = api_instance.get_asset_children(asset_id)
         pprint(api_response)
-    except io.eliona.api-client.ApiException as e:
+    except eliona.api_client.ApiException as e:
         print("Exception when calling AssetApi->get_asset_children: %s\n" % e)
 ```
 
@@ -159,19 +159,19 @@ Returns the asset ids which are the parents for an asset
 
 ```python
 import time
-import io.eliona.api-client
-from io.eliona.api-client.api import asset_api
-from io.eliona.api-client.model.asset_relation import AssetRelation
+import eliona.api_client
+from eliona.api_client.api import asset_api
+from eliona.api_client.model.asset_relation import AssetRelation
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api-client.Configuration(
+configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api-client.ApiClient() as api_client:
+with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = asset_api.AssetApi(api_client)
     asset_id = 4711 # int | The id of the asset
@@ -181,7 +181,7 @@ with io.eliona.api-client.ApiClient() as api_client:
         # Get the parents for an asset
         api_response = api_instance.get_asset_parents(asset_id)
         pprint(api_response)
-    except io.eliona.api-client.ApiException as e:
+    except eliona.api_client.ApiException as e:
         print("Exception when calling AssetApi->get_asset_parents: %s\n" % e)
 ```
 
@@ -227,19 +227,19 @@ Creates an asset if no asset with the same projectId and globalAssetIdentifier a
 
 ```python
 import time
-import io.eliona.api-client
-from io.eliona.api-client.api import asset_api
-from io.eliona.api-client.model.asset import Asset
+import eliona.api_client
+from eliona.api_client.api import asset_api
+from eliona.api_client.model.asset import Asset
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api-client.Configuration(
+configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api-client.ApiClient() as api_client:
+with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = asset_api.AssetApi(api_client)
     asset = Asset(
@@ -259,7 +259,7 @@ with io.eliona.api-client.ApiClient() as api_client:
         # Create or update an asset
         api_response = api_instance.post_asset(asset)
         pprint(api_response)
-    except io.eliona.api-client.ApiException as e:
+    except eliona.api_client.ApiException as e:
         print("Exception when calling AssetApi->post_asset: %s\n" % e)
 ```
 
@@ -304,19 +304,19 @@ Sets or replaces the parent asset ids for an asset
 
 ```python
 import time
-import io.eliona.api-client
-from io.eliona.api-client.api import asset_api
-from io.eliona.api-client.model.asset_relation import AssetRelation
+import eliona.api_client
+from eliona.api_client.api import asset_api
+from eliona.api_client.model.asset_relation import AssetRelation
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
-configuration = io.eliona.api-client.Configuration(
+configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
 
 # Enter a context with an instance of the API client
-with io.eliona.api-client.ApiClient() as api_client:
+with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = asset_api.AssetApi(api_client)
     asset_id = 4711 # int | The id of the asset
@@ -331,7 +331,7 @@ with io.eliona.api-client.ApiClient() as api_client:
     try:
         # Set or replace parents for an asset
         api_instance.set_asset_parents(asset_id, asset_relation)
-    except io.eliona.api-client.ApiException as e:
+    except eliona.api_client.ApiException as e:
         print("Exception when calling AssetApi->set_asset_parents: %s\n" % e)
 ```
 

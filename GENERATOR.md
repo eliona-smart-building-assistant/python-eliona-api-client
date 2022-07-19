@@ -11,5 +11,5 @@ java -jar openapi-generator-cli-6.0.0.jar generate \
   -g python \
   -i https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/develop/eliona-api-v2.yaml \
   -o ./ \
-  --additional-properties="packageName=io.eliona.api-client,projectName=Python Eliona API client,packageVersion=1.0.0"
+  --additional-properties="packageName=io.eliona.api_client,projectName=Python Eliona API client,packageVersion=1.0.0"
 ```
