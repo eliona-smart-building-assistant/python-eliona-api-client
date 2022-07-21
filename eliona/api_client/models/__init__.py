@@ -11,14 +11,13 @@
 
 from eliona.api_client.model.app import App
 from eliona.api_client.model.asset import Asset
-from eliona.api_client.model.asset_relation import AssetRelation
 from eliona.api_client.model.asset_type import AssetType
-from eliona.api_client.model.attribute import Attribute
-from eliona.api_client.model.attribute_pipeline import AttributePipeline
+from eliona.api_client.model.asset_type_attribute import AssetTypeAttribute
 from eliona.api_client.model.dashboard import Dashboard
 from eliona.api_client.model.heap import Heap
 from eliona.api_client.model.heap_subtype import HeapSubtype
 from eliona.api_client.model.patch import Patch
+from eliona.api_client.model.pipeline import Pipeline
 from eliona.api_client.model.translation import Translation
 from eliona.api_client.model.widget import Widget
 from eliona.api_client.model.widget_data import WidgetData

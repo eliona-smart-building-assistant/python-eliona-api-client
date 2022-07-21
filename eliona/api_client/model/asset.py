@@ -89,7 +89,10 @@ class Asset(ModelNormal):
             'latitude': (float,),  # noqa: E501
             'longitude': (float,),  # noqa: E501
             'description': (str,),  # noqa: E501
+            'parent_functional_asset_id': (int,),  # noqa: E501
+            'parent_locational_asset_id': (int,),  # noqa: E501
             'tags': ([str],),  # noqa: E501
+            'children': ([Asset],),  # noqa: E501
         }
 
     @cached_property
@@ -101,15 +104,20 @@ class Asset(ModelNormal):
         'project_id': 'projectId',  # noqa: E501
         'global_asset_identifier': 'globalAssetIdentifier',  # noqa: E501
         'asset_type': 'assetType',  # noqa: E501
-        'id': 'id',  # noqa: E501
+        'id': 'Id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'latitude': 'latitude',  # noqa: E501
         'longitude': 'longitude',  # noqa: E501
         'description': 'description',  # noqa: E501
+        'parent_functional_asset_id': 'parentFunctionalAssetId',  # noqa: E501
+        'parent_locational_asset_id': 'parentLocationalAssetId',  # noqa: E501
         'tags': 'tags',  # noqa: E501
+        'children': 'children',  # noqa: E501
     }
 
     read_only_vars = {
+        'id',  # noqa: E501
+        'children',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -160,7 +168,10 @@ class Asset(ModelNormal):
             latitude (float): Latitude coordinate (GPS) of the asset. [optional]  # noqa: E501
             longitude (float): Longitude coordinate (GPS) of the asset. [optional]  # noqa: E501
             description (str): Textual description for this asset. [optional]  # noqa: E501
+            parent_functional_asset_id (int): The id of an asset which groups this asset as a functional child. [optional]  # noqa: E501
+            parent_locational_asset_id (int): The id of an asset which groups this asset as a locational child. [optional]  # noqa: E501
             tags ([str]): List of tags associated with asset. [optional]  # noqa: E501
+            children ([Asset]): List of children for this asset. This list is filled when the `withChildren` parameter is set.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -259,7 +270,10 @@ class Asset(ModelNormal):
             latitude (float): Latitude coordinate (GPS) of the asset. [optional]  # noqa: E501
             longitude (float): Longitude coordinate (GPS) of the asset. [optional]  # noqa: E501
             description (str): Textual description for this asset. [optional]  # noqa: E501
+            parent_functional_asset_id (int): The id of an asset which groups this asset as a functional child. [optional]  # noqa: E501
+            parent_locational_asset_id (int): The id of an asset which groups this asset as a locational child. [optional]  # noqa: E501
             tags ([str]): List of tags associated with asset. [optional]  # noqa: E501
+            children ([Asset]): List of children for this asset. This list is filled when the `withChildren` parameter is set.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

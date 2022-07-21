@@ -30,9 +30,9 @@ from eliona.api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from eliona.api_client.model.attribute import Attribute
+    from eliona.api_client.model.asset_type_attribute import AssetTypeAttribute
     from eliona.api_client.model.translation import Translation
-    globals()['Attribute'] = Attribute
+    globals()['AssetTypeAttribute'] = AssetTypeAttribute
     globals()['Translation'] = Translation
 
 
@@ -96,7 +96,7 @@ class AssetType(ModelNormal):
             'translation': (Translation,),  # noqa: E501
             'urldoc': (str,),  # noqa: E501
             'icon': (str,),  # noqa: E501
-            'attributes': ([Attribute],),  # noqa: E501
+            'attributes': ([AssetTypeAttribute],),  # noqa: E501
         }
 
     @cached_property
@@ -165,7 +165,7 @@ class AssetType(ModelNormal):
             translation (Translation): [optional]  # noqa: E501
             urldoc (str): The url describing assets of this type. [optional]  # noqa: E501
             icon (str): Icon name corresponding to assets of this type. [optional]  # noqa: E501
-            attributes ([Attribute]): List of named attributes. [optional]  # noqa: E501
+            attributes ([AssetTypeAttribute]): List of named attributes. [optional]  # noqa: E501
         """
 
         custom = kwargs.get('custom', True)
@@ -263,7 +263,7 @@ class AssetType(ModelNormal):
             translation (Translation): [optional]  # noqa: E501
             urldoc (str): The url describing assets of this type. [optional]  # noqa: E501
             icon (str): Icon name corresponding to assets of this type. [optional]  # noqa: E501
-            attributes ([Attribute]): List of named attributes. [optional]  # noqa: E501
+            attributes ([AssetTypeAttribute]): List of named attributes. [optional]  # noqa: E501
         """
 
         custom = kwargs.get('custom', True)

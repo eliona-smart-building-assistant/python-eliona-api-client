@@ -6,7 +6,7 @@
 # raise a `RecursionError`.
 # In order to avoid this, import only the API that you directly need like:
 #
-#   from eliona.api_client.api.app_api import AppApi
+#   from eliona.api_client.api.apps_api import AppsApi
 #
 # or import this package, but before doing it, use:
 #
@@ -14,8 +14,8 @@
 #   sys.setrecursionlimit(n)
 
 # Import APIs into API package:
-from eliona.api_client.api.app_api import AppApi
-from eliona.api_client.api.asset_api import AssetApi
-from eliona.api_client.api.asset_type_api import AssetTypeApi
-from eliona.api_client.api.dashboard_api import DashboardApi
-from eliona.api_client.api.heap_api import HeapApi
+from eliona.api_client.api.apps_api import AppsApi
+from eliona.api_client.api.asset_types_api import AssetTypesApi
+from eliona.api_client.api.assets_api import AssetsApi
+from eliona.api_client.api.dashboards_api import DashboardsApi
+from eliona.api_client.api.heaps_api import HeapsApi

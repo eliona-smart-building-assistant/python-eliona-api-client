@@ -85,6 +85,7 @@ class Dashboard(ModelNormal):
             'project_id': (str,),  # noqa: E501
             'user_id': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
+            'sequence': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -96,10 +97,12 @@ class Dashboard(ModelNormal):
         'name': 'name',  # noqa: E501
         'project_id': 'projectId',  # noqa: E501
         'user_id': 'userId',  # noqa: E501
-        'id': 'id',  # noqa: E501
+        'id': 'Id',  # noqa: E501
+        'sequence': 'sequence',  # noqa: E501
     }
 
     read_only_vars = {
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -146,6 +149,7 @@ class Dashboard(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): The internal Id of dashboard. [optional]  # noqa: E501
+            sequence (int): The sequence of the. If not defined, the sequence is automatically incremented.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -240,6 +244,7 @@ class Dashboard(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int): The internal Id of dashboard. [optional]  # noqa: E501
+            sequence (int): The sequence of the. If not defined, the sequence is automatically incremented.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

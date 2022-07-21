@@ -10,7 +10,7 @@
 """
 
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 # import ApiClient
 from eliona.api_client.api_client import ApiClient
