@@ -1,12 +1,12 @@
-# eliona.api_client.DashboardApi
+# eliona.api_client.DashboardsApi
 
 All URIs are relative to *http://api.eliona.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**post_dashboard**](DashboardApi.md#post_dashboard) | **POST** /dashboard | Creates a new dashboard
-[**post_widget_type**](DashboardApi.md#post_widget_type) | **POST** /widget-type | Adds a new widget type
-[**put_dashboard_widget**](DashboardApi.md#put_dashboard_widget) | **PUT** /dashboard/{dashboard-id}/widget | Adds widget to dashboard
+[**post_dashboard**](DashboardsApi.md#post_dashboard) | **POST** /dashboards | Creates a new dashboard
+[**post_dashboard_widget**](DashboardsApi.md#post_dashboard_widget) | **POST** /dashboards/{dashboard-id}/widgets | Adds widget to dashboard
+[**put_widget_type**](DashboardsApi.md#put_widget_type) | **PUT** /widget-types | Create or update a widget type
 
 
 # **post_dashboard**
@@ -22,7 +22,7 @@ Create a new dashboard for frontend
 ```python
 import time
 import eliona.api_client
-from eliona.api_client.api import dashboard_api
+from eliona.api_client.api import dashboards_api
 from eliona.api_client.model.dashboard import Dashboard
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
@@ -35,12 +35,12 @@ configuration = eliona.api_client.Configuration(
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = dashboard_api.DashboardApi(api_client)
+    api_instance = dashboards_api.DashboardsApi(api_client)
     dashboard = Dashboard(
-        id=4711,
         name="Weather info",
         project_id="99",
         user_id="42",
+        sequence=42,
     ) # Dashboard | 
 
     # example passing only required values which don't have defaults set
@@ -49,7 +49,7 @@ with eliona.api_client.ApiClient() as api_client:
         api_response = api_instance.post_dashboard(dashboard)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
-        print("Exception when calling DashboardApi->post_dashboard: %s\n" % e)
+        print("Exception when calling DashboardsApi->post_dashboard: %s\n" % e)
 ```
 
 
@@ -81,93 +81,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **post_widget_type**
-> post_widget_type(widget_type)
-
-Adds a new widget type
-
-Create a new widget type
-
-### Example
-
-
-```python
-import time
-import eliona.api_client
-from eliona.api_client.api import dashboard_api
-from eliona.api_client.model.widget_type import WidgetType
-from pprint import pprint
-# Defining the host is optional and defaults to http://api.eliona.io/v2
-# See configuration.py for a list of all supported configuration parameters.
-configuration = eliona.api_client.Configuration(
-    host = "http://api.eliona.io/v2"
-)
-
-
-# Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
-    # Create an instance of the API class
-    api_instance = dashboard_api.DashboardApi(api_client)
-    widget_type = WidgetType(
-        name="weather",
-        custom=True,
-        translation=Translation(
-            de="Das ist eine deutsche Beschreibung",
-            en="This is an english description",
-            fr="Ceci est une description français",
-            it="Questa è una descrizione italiana",
-        ),
-        icon="weather",
-        with_alarm=False,
-        with_timespan=False,
-        elements=[
-            WidgetTypeElement(
-                category="weather",
-                description="Weather",
-                config={},
-            ),
-        ],
-    ) # WidgetType | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Adds a new widget type
-        api_instance.post_widget_type(widget_type)
-    except eliona.api_client.ApiException as e:
-        print("Exception when calling DashboardApi->post_widget_type: %s\n" % e)
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **widget_type** | [**WidgetType**](WidgetType.md)|  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successfully added widget type |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **put_dashboard_widget**
-> put_dashboard_widget(dashboard_id, widget)
+# **post_dashboard_widget**
+> post_dashboard_widget(dashboard_id, widget)
 
 Adds widget to dashboard
 
@@ -179,7 +94,7 @@ Create a new widget an ad this to a dashboard
 ```python
 import time
 import eliona.api_client
-from eliona.api_client.api import dashboard_api
+from eliona.api_client.api import dashboards_api
 from eliona.api_client.model.widget import Widget
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
@@ -192,7 +107,7 @@ configuration = eliona.api_client.Configuration(
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = dashboard_api.DashboardApi(api_client)
+    api_instance = dashboards_api.DashboardsApi(api_client)
     dashboard_id = 4711 # int | The id of the dashboard
     widget = Widget(
         widget_type_name="Weather",
@@ -215,9 +130,9 @@ with eliona.api_client.ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Adds widget to dashboard
-        api_instance.put_dashboard_widget(dashboard_id, widget)
+        api_instance.post_dashboard_widget(dashboard_id, widget)
     except eliona.api_client.ApiException as e:
-        print("Exception when calling DashboardApi->put_dashboard_widget: %s\n" % e)
+        print("Exception when calling DashboardsApi->post_dashboard_widget: %s\n" % e)
 ```
 
 
@@ -247,6 +162,91 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successfully added widget |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_widget_type**
+> put_widget_type(widget_type)
+
+Create or update a widget type
+
+Create a widget type if the a type with the name not exists or update a widget type if the name already exists
+
+### Example
+
+
+```python
+import time
+import eliona.api_client
+from eliona.api_client.api import dashboards_api
+from eliona.api_client.model.widget_type import WidgetType
+from pprint import pprint
+# Defining the host is optional and defaults to http://api.eliona.io/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = eliona.api_client.Configuration(
+    host = "http://api.eliona.io/v2"
+)
+
+
+# Enter a context with an instance of the API client
+with eliona.api_client.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = dashboards_api.DashboardsApi(api_client)
+    widget_type = WidgetType(
+        name="weather",
+        custom=True,
+        translation=Translation(
+            de="Das ist eine deutsche Beschreibung",
+            en="This is an english description",
+            fr="Ceci est une description français",
+            it="Questa è una descrizione italiana",
+        ),
+        icon="weather",
+        with_alarm=False,
+        with_timespan=False,
+        elements=[
+            WidgetTypeElement(
+                category="weather",
+                description="Weather",
+                config={},
+            ),
+        ],
+    ) # WidgetType | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create or update a widget type
+        api_instance.put_widget_type(widget_type)
+    except eliona.api_client.ApiException as e:
+        print("Exception when calling DashboardsApi->put_widget_type: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **widget_type** | [**WidgetType**](WidgetType.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully added widget type |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

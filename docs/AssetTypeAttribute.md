@@ -1,4 +1,4 @@
-# Attribute
+# AssetTypeAttribute
 
 Named attribute to store data of assets
 
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | Unique key of asset heap data | 
 **subtype** | [**HeapSubtype**](HeapSubtype.md) |  | 
-**asset_type_name** | **str** | The unique name for the asset type | [optional] 
+**asset_type_name** | **str** | The unique name for the asset type | [optional] [readonly] 
 **type** | **str** | Name of the type for this attribute | [optional] 
 **enable** | **bool** | Is heap data active or not | [optional]  if omitted the server will use the default value of True
 **translation** | [**Translation**](Translation.md) |  | [optional] 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **precision** | **int** | Number of decimal places | [optional] 
 **min** | **float** | Lower limit | [optional] 
 **max** | **float** | Upper limit | [optional] 
-**pipeline** | [**AttributePipeline**](AttributePipeline.md) |  | [optional] 
+**pipeline** | [**Pipeline**](Pipeline.md) |  | [optional] 
 **viewer** | **bool** | Should the attribute be displayed in viewer | [optional]  if omitted the server will use the default value of False
 **ar** | **bool** | Should the attribute be displayed in AR | [optional]  if omitted the server will use the default value of False
 **sequence** | **int** | Sequence in AR display | [optional] 

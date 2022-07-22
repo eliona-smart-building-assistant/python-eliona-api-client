@@ -17,7 +17,7 @@ Python >=3.6
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/eliona-smart-building-assistant/python-eliona-api-client
+pip install git+https://github.com/eliona-smart-building-assistant/python-eliona-api-client.git
 ```
 (you may need to run `pip` with root permission: `sudo pip install git+https://github.com/eliona-smart-building-assistant/python-eliona-api-client.git`)
 

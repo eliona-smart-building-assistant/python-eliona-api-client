@@ -1,4 +1,4 @@
-# AttributePipeline
+# Pipeline
 
 
 ## Properties

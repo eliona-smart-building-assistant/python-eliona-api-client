@@ -1,12 +1,12 @@
-# eliona.api_client.AssetTypeApi
+# eliona.api_client.AssetTypesApi
 
 All URIs are relative to *http://api.eliona.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_asset_types**](AssetTypeApi.md#get_asset_types) | **GET** /asset-type | List of asset types
-[**post_asset_type**](AssetTypeApi.md#post_asset_type) | **POST** /asset-type | Create or update an asset type
-[**post_asset_type_attribute**](AssetTypeApi.md#post_asset_type_attribute) | **POST** /asset-type-attribute | Create or update an asset type attribute
+[**get_asset_types**](AssetTypesApi.md#get_asset_types) | **GET** /asset-types | List of asset types
+[**put_asset_type**](AssetTypesApi.md#put_asset_type) | **PUT** /asset-types | Create or update an asset type
+[**put_asset_type_attribute**](AssetTypesApi.md#put_asset_type_attribute) | **PUT** /asset-types/{asset-type-name}/attributes | Create or update an asset type attribute
 
 
 # **get_asset_types**
@@ -22,7 +22,7 @@ Returns a list of asset types
 ```python
 import time
 import eliona.api_client
-from eliona.api_client.api import asset_type_api
+from eliona.api_client.api import asset_types_api
 from eliona.api_client.model.asset_type import AssetType
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
@@ -35,18 +35,17 @@ configuration = eliona.api_client.Configuration(
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = asset_type_api.AssetTypeApi(api_client)
-    limit = 20 # int | Limits the number of items on a page (optional)
-    offset = 1 # int | Specifies the page number to be displayed (optional)
+    api_instance = asset_types_api.AssetTypesApi(api_client)
+    with_attributes = False # bool | Gets also the the list of attributes (optional) if omitted the server will use the default value of False
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # List of asset types
-        api_response = api_instance.get_asset_types(limit=limit, offset=offset)
+        api_response = api_instance.get_asset_types(with_attributes=with_attributes)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
-        print("Exception when calling AssetTypeApi->get_asset_types: %s\n" % e)
+        print("Exception when calling AssetTypesApi->get_asset_types: %s\n" % e)
 ```
 
 
@@ -54,8 +53,7 @@ with eliona.api_client.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **int**| Limits the number of items on a page | [optional]
- **offset** | **int**| Specifies the page number to be displayed | [optional]
+ **with_attributes** | **bool**| Gets also the the list of attributes | [optional] if omitted the server will use the default value of False
 
 ### Return type
 
@@ -79,8 +77,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **post_asset_type**
-> post_asset_type(asset_type)
+# **put_asset_type**
+> put_asset_type(asset_type)
 
 Create or update an asset type
 
@@ -92,7 +90,7 @@ Create a new asset type or update an asset type if already exists
 ```python
 import time
 import eliona.api_client
-from eliona.api_client.api import asset_type_api
+from eliona.api_client.api import asset_types_api
 from eliona.api_client.model.asset_type import AssetType
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
@@ -105,7 +103,7 @@ configuration = eliona.api_client.Configuration(
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = asset_type_api.AssetTypeApi(api_client)
+    api_instance = asset_types_api.AssetTypesApi(api_client)
     asset_type = AssetType(
         name="weather_location",
         custom=True,
@@ -120,8 +118,7 @@ with eliona.api_client.ApiClient() as api_client:
         urldoc="urldoc_example",
         icon="weather",
         attributes=[
-            Attribute(
-                asset_type_name="weather_location",
+            AssetTypeAttribute(
                 name="temperature",
                 subtype=HeapSubtype("input"),
                 type="temperature",
@@ -136,7 +133,7 @@ with eliona.api_client.ApiClient() as api_client:
                 precision=1,
                 min=3.14,
                 max=3.14,
-                pipeline=AttributePipeline(
+                pipeline=Pipeline(
                     mode="avg",
                     raster=[
                         "S1",
@@ -153,9 +150,9 @@ with eliona.api_client.ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Create or update an asset type
-        api_instance.post_asset_type(asset_type)
+        api_instance.put_asset_type(asset_type)
     except eliona.api_client.ApiException as e:
-        print("Exception when calling AssetTypeApi->post_asset_type: %s\n" % e)
+        print("Exception when calling AssetTypesApi->put_asset_type: %s\n" % e)
 ```
 
 
@@ -187,8 +184,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **post_asset_type_attribute**
-> post_asset_type_attribute(attribute)
+# **put_asset_type_attribute**
+> put_asset_type_attribute(asset_type_name, asset_type_attribute)
 
 Create or update an asset type attribute
 
@@ -200,8 +197,8 @@ Create a new asset type attribute or update an asset type attribute if already e
 ```python
 import time
 import eliona.api_client
-from eliona.api_client.api import asset_type_api
-from eliona.api_client.model.attribute import Attribute
+from eliona.api_client.api import asset_types_api
+from eliona.api_client.model.asset_type_attribute import AssetTypeAttribute
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
@@ -213,9 +210,9 @@ configuration = eliona.api_client.Configuration(
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = asset_type_api.AssetTypeApi(api_client)
-    attribute = Attribute(
-        asset_type_name="weather_location",
+    api_instance = asset_types_api.AssetTypesApi(api_client)
+    asset_type_name = "weather_location" # str | The name of the asset type
+    asset_type_attribute = AssetTypeAttribute(
         name="temperature",
         subtype=HeapSubtype("input"),
         type="temperature",
@@ -230,7 +227,7 @@ with eliona.api_client.ApiClient() as api_client:
         precision=1,
         min=3.14,
         max=3.14,
-        pipeline=AttributePipeline(
+        pipeline=Pipeline(
             mode="avg",
             raster=[
                 "S1",
@@ -240,14 +237,14 @@ with eliona.api_client.ApiClient() as api_client:
         ar=False,
         sequence=1,
         virtual=True,
-    ) # Attribute | 
+    ) # AssetTypeAttribute | 
 
     # example passing only required values which don't have defaults set
     try:
         # Create or update an asset type attribute
-        api_instance.post_asset_type_attribute(attribute)
+        api_instance.put_asset_type_attribute(asset_type_name, asset_type_attribute)
     except eliona.api_client.ApiException as e:
-        print("Exception when calling AssetTypeApi->post_asset_type_attribute: %s\n" % e)
+        print("Exception when calling AssetTypesApi->put_asset_type_attribute: %s\n" % e)
 ```
 
 
@@ -255,7 +252,8 @@ with eliona.api_client.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **attribute** | [**Attribute**](Attribute.md)|  |
+ **asset_type_name** | **str**| The name of the asset type |
+ **asset_type_attribute** | [**AssetTypeAttribute**](AssetTypeAttribute.md)|  |
 
 ### Return type
 
