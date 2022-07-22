@@ -93,9 +93,9 @@ class WidgetType(ModelNormal):
             'custom': (bool,),  # noqa: E501
             'translation': (Translation,),  # noqa: E501
             'elements': ([WidgetTypeElement],),  # noqa: E501
-            'icon': (str,),  # noqa: E501
-            'with_alarm': (bool,),  # noqa: E501
-            'with_timespan': (bool,),  # noqa: E501
+            'icon': (str, none_type,),  # noqa: E501
+            'with_alarm': (bool, none_type,),  # noqa: E501
+            'with_timespan': (bool, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -160,9 +160,9 @@ class WidgetType(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            icon (str): Icon name corresponding to assets used in this widget. [optional]  # noqa: E501
-            with_alarm (bool): Show alarms in widget. [optional] if omitted the server will use the default value of False  # noqa: E501
-            with_timespan (bool): Show selection for timespan in widget. [optional] if omitted the server will use the default value of False  # noqa: E501
+            icon (str, none_type): Icon name corresponding to assets used in this widget. [optional]  # noqa: E501
+            with_alarm (bool, none_type): Show alarms in widget. [optional] if omitted the server will use the default value of False  # noqa: E501
+            with_timespan (bool, none_type): Show selection for timespan in widget. [optional] if omitted the server will use the default value of False  # noqa: E501
         """
 
         custom = kwargs.get('custom', True)
@@ -259,9 +259,9 @@ class WidgetType(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            icon (str): Icon name corresponding to assets used in this widget. [optional]  # noqa: E501
-            with_alarm (bool): Show alarms in widget. [optional] if omitted the server will use the default value of False  # noqa: E501
-            with_timespan (bool): Show selection for timespan in widget. [optional] if omitted the server will use the default value of False  # noqa: E501
+            icon (str, none_type): Icon name corresponding to assets used in this widget. [optional]  # noqa: E501
+            with_alarm (bool, none_type): Show alarms in widget. [optional] if omitted the server will use the default value of False  # noqa: E501
+            with_timespan (bool, none_type): Show selection for timespan in widget. [optional] if omitted the server will use the default value of False  # noqa: E501
         """
 
         custom = kwargs.get('custom', True)

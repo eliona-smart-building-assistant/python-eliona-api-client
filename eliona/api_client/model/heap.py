@@ -90,7 +90,7 @@ class Heap(ModelNormal):
             'asset_id': (int,),  # noqa: E501
             'subtype': (HeapSubtype,),  # noqa: E501
             'data': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
-            'timestamp': (datetime,),  # noqa: E501
+            'timestamp': (datetime, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -151,7 +151,7 @@ class Heap(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            timestamp (datetime): Timestamp of the latest data change. [optional]  # noqa: E501
+            timestamp (datetime, none_type): Timestamp of the latest data change. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -245,7 +245,7 @@ class Heap(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            timestamp (datetime): Timestamp of the latest data change. [optional]  # noqa: E501
+            timestamp (datetime, none_type): Timestamp of the latest data change. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

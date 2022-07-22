@@ -91,12 +91,12 @@ class AssetType(ModelNormal):
         return {
             'name': (str,),  # noqa: E501
             'custom': (bool,),  # noqa: E501
-            'vendor': (str,),  # noqa: E501
-            'model': (str,),  # noqa: E501
+            'vendor': (str, none_type,),  # noqa: E501
+            'model': (str, none_type,),  # noqa: E501
             'translation': (Translation,),  # noqa: E501
-            'urldoc': (str,),  # noqa: E501
-            'icon': (str,),  # noqa: E501
-            'attributes': ([AssetTypeAttribute],),  # noqa: E501
+            'urldoc': (str, none_type,),  # noqa: E501
+            'icon': (str, none_type,),  # noqa: E501
+            'attributes': ([AssetTypeAttribute], none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -160,12 +160,12 @@ class AssetType(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            vendor (str): The vendor providing assets of this type. [optional]  # noqa: E501
-            model (str): The specific model of assets of this type. [optional]  # noqa: E501
+            vendor (str, none_type): The vendor providing assets of this type. [optional]  # noqa: E501
+            model (str, none_type): The specific model of assets of this type. [optional]  # noqa: E501
             translation (Translation): [optional]  # noqa: E501
-            urldoc (str): The url describing assets of this type. [optional]  # noqa: E501
-            icon (str): Icon name corresponding to assets of this type. [optional]  # noqa: E501
-            attributes ([AssetTypeAttribute]): List of named attributes. [optional]  # noqa: E501
+            urldoc (str, none_type): The url describing assets of this type. [optional]  # noqa: E501
+            icon (str, none_type): Icon name corresponding to assets of this type. [optional]  # noqa: E501
+            attributes ([AssetTypeAttribute], none_type): List of named attributes. [optional]  # noqa: E501
         """
 
         custom = kwargs.get('custom', True)
@@ -258,12 +258,12 @@ class AssetType(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            vendor (str): The vendor providing assets of this type. [optional]  # noqa: E501
-            model (str): The specific model of assets of this type. [optional]  # noqa: E501
+            vendor (str, none_type): The vendor providing assets of this type. [optional]  # noqa: E501
+            model (str, none_type): The specific model of assets of this type. [optional]  # noqa: E501
             translation (Translation): [optional]  # noqa: E501
-            urldoc (str): The url describing assets of this type. [optional]  # noqa: E501
-            icon (str): Icon name corresponding to assets of this type. [optional]  # noqa: E501
-            attributes ([AssetTypeAttribute]): List of named attributes. [optional]  # noqa: E501
+            urldoc (str, none_type): The url describing assets of this type. [optional]  # noqa: E501
+            icon (str, none_type): Icon name corresponding to assets of this type. [optional]  # noqa: E501
+            attributes ([AssetTypeAttribute], none_type): List of named attributes. [optional]  # noqa: E501
         """
 
         custom = kwargs.get('custom', True)

@@ -88,11 +88,11 @@ class WidgetData(ModelNormal):
         lazy_import()
         return {
             'element_sequence': (int,),  # noqa: E501
-            'key': (str,),  # noqa: E501
-            'asset_id': (int,),  # noqa: E501
+            'key': (str, none_type,),  # noqa: E501
+            'asset_id': (int, none_type,),  # noqa: E501
             'subtype': (HeapSubtype,),  # noqa: E501
-            'attribute': (str,),  # noqa: E501
-            'description': (str,),  # noqa: E501
+            'attribute': (str, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -153,11 +153,11 @@ class WidgetData(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            key (str): Key for the data. [optional]  # noqa: E501
-            asset_id (int): The master asset id of this widget. [optional]  # noqa: E501
+            key (str, none_type): Key for the data. [optional]  # noqa: E501
+            asset_id (int, none_type): The master asset id of this widget. [optional]  # noqa: E501
             subtype (HeapSubtype): [optional]  # noqa: E501
-            attribute (str): Attribute of the asset type, which heap data should be used. [optional]  # noqa: E501
-            description (str): Text for frontend. [optional]  # noqa: E501
+            attribute (str, none_type): Attribute of the asset type, which heap data should be used. [optional]  # noqa: E501
+            description (str, none_type): Text for frontend. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -247,11 +247,11 @@ class WidgetData(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            key (str): Key for the data. [optional]  # noqa: E501
-            asset_id (int): The master asset id of this widget. [optional]  # noqa: E501
+            key (str, none_type): Key for the data. [optional]  # noqa: E501
+            asset_id (int, none_type): The master asset id of this widget. [optional]  # noqa: E501
             subtype (HeapSubtype): [optional]  # noqa: E501
-            attribute (str): Attribute of the asset type, which heap data should be used. [optional]  # noqa: E501
-            description (str): Text for frontend. [optional]  # noqa: E501
+            attribute (str, none_type): Attribute of the asset type, which heap data should be used. [optional]  # noqa: E501
+            description (str, none_type): Text for frontend. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

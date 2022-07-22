@@ -64,6 +64,7 @@ class AssetTypeAttribute(ModelNormal):
 
     allowed_values = {
         ('type',): {
+            'None': None,
             'BATTERY-VOLTAGE': "battery-voltage",
             'BRIGHTNESS': "brightness",
             'CO2': "co2",
@@ -122,19 +123,19 @@ class AssetTypeAttribute(ModelNormal):
         return {
             'name': (str,),  # noqa: E501
             'subtype': (HeapSubtype,),  # noqa: E501
-            'asset_type_name': (str,),  # noqa: E501
-            'type': (str,),  # noqa: E501
-            'enable': (bool,),  # noqa: E501
+            'asset_type_name': (str, none_type,),  # noqa: E501
+            'type': (str, none_type,),  # noqa: E501
+            'enable': (bool, none_type,),  # noqa: E501
             'translation': (Translation,),  # noqa: E501
-            'unit': (str,),  # noqa: E501
-            'precision': (int,),  # noqa: E501
-            'min': (float,),  # noqa: E501
-            'max': (float,),  # noqa: E501
+            'unit': (str, none_type,),  # noqa: E501
+            'precision': (int, none_type,),  # noqa: E501
+            'min': (float, none_type,),  # noqa: E501
+            'max': (float, none_type,),  # noqa: E501
             'pipeline': (Pipeline,),  # noqa: E501
-            'viewer': (bool,),  # noqa: E501
-            'ar': (bool,),  # noqa: E501
-            'sequence': (int,),  # noqa: E501
-            'virtual': (bool,),  # noqa: E501
+            'viewer': (bool, none_type,),  # noqa: E501
+            'ar': (bool, none_type,),  # noqa: E501
+            'sequence': (int, none_type,),  # noqa: E501
+            'virtual': (bool, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -206,19 +207,19 @@ class AssetTypeAttribute(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            asset_type_name (str): The unique name for the asset type. [optional]  # noqa: E501
-            type (str): Name of the type for this attribute. [optional]  # noqa: E501
-            enable (bool): Is heap data active or not. [optional] if omitted the server will use the default value of True  # noqa: E501
+            asset_type_name (str, none_type): The unique name for the asset type. [optional]  # noqa: E501
+            type (str, none_type): Name of the type for this attribute. [optional]  # noqa: E501
+            enable (bool, none_type): Is heap data active or not. [optional] if omitted the server will use the default value of True  # noqa: E501
             translation (Translation): [optional]  # noqa: E501
-            unit (str): Physical unit of numeric data. [optional]  # noqa: E501
-            precision (int): Number of decimal places. [optional]  # noqa: E501
-            min (float): Lower limit. [optional]  # noqa: E501
-            max (float): Upper limit. [optional]  # noqa: E501
+            unit (str, none_type): Physical unit of numeric data. [optional]  # noqa: E501
+            precision (int, none_type): Number of decimal places. [optional]  # noqa: E501
+            min (float, none_type): Lower limit. [optional]  # noqa: E501
+            max (float, none_type): Upper limit. [optional]  # noqa: E501
             pipeline (Pipeline): [optional]  # noqa: E501
-            viewer (bool): Should the attribute be displayed in viewer. [optional] if omitted the server will use the default value of False  # noqa: E501
-            ar (bool): Should the attribute be displayed in AR. [optional] if omitted the server will use the default value of False  # noqa: E501
-            sequence (int): Sequence in AR display. [optional]  # noqa: E501
-            virtual (bool): Is the attribute virtual or not. [optional]  # noqa: E501
+            viewer (bool, none_type): Should the attribute be displayed in viewer. [optional] if omitted the server will use the default value of False  # noqa: E501
+            ar (bool, none_type): Should the attribute be displayed in AR. [optional] if omitted the server will use the default value of False  # noqa: E501
+            sequence (int, none_type): Sequence in AR display. [optional]  # noqa: E501
+            virtual (bool, none_type): Is the attribute virtual or not. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -310,19 +311,19 @@ class AssetTypeAttribute(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            asset_type_name (str): The unique name for the asset type. [optional]  # noqa: E501
-            type (str): Name of the type for this attribute. [optional]  # noqa: E501
-            enable (bool): Is heap data active or not. [optional] if omitted the server will use the default value of True  # noqa: E501
+            asset_type_name (str, none_type): The unique name for the asset type. [optional]  # noqa: E501
+            type (str, none_type): Name of the type for this attribute. [optional]  # noqa: E501
+            enable (bool, none_type): Is heap data active or not. [optional] if omitted the server will use the default value of True  # noqa: E501
             translation (Translation): [optional]  # noqa: E501
-            unit (str): Physical unit of numeric data. [optional]  # noqa: E501
-            precision (int): Number of decimal places. [optional]  # noqa: E501
-            min (float): Lower limit. [optional]  # noqa: E501
-            max (float): Upper limit. [optional]  # noqa: E501
+            unit (str, none_type): Physical unit of numeric data. [optional]  # noqa: E501
+            precision (int, none_type): Number of decimal places. [optional]  # noqa: E501
+            min (float, none_type): Lower limit. [optional]  # noqa: E501
+            max (float, none_type): Upper limit. [optional]  # noqa: E501
             pipeline (Pipeline): [optional]  # noqa: E501
-            viewer (bool): Should the attribute be displayed in viewer. [optional] if omitted the server will use the default value of False  # noqa: E501
-            ar (bool): Should the attribute be displayed in AR. [optional] if omitted the server will use the default value of False  # noqa: E501
-            sequence (int): Sequence in AR display. [optional]  # noqa: E501
-            virtual (bool): Is the attribute virtual or not. [optional]  # noqa: E501
+            viewer (bool, none_type): Should the attribute be displayed in viewer. [optional] if omitted the server will use the default value of False  # noqa: E501
+            ar (bool, none_type): Should the attribute be displayed in AR. [optional] if omitted the server will use the default value of False  # noqa: E501
+            sequence (int, none_type): Sequence in AR display. [optional]  # noqa: E501
+            virtual (bool, none_type): Is the attribute virtual or not. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -84,8 +84,8 @@ class Dashboard(ModelNormal):
             'name': (str,),  # noqa: E501
             'project_id': (str,),  # noqa: E501
             'user_id': (str,),  # noqa: E501
-            'id': (int,),  # noqa: E501
-            'sequence': (int,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'sequence': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -148,8 +148,8 @@ class Dashboard(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            id (int): The internal Id of dashboard. [optional]  # noqa: E501
-            sequence (int): The sequence of the. If not defined, the sequence is automatically incremented.. [optional]  # noqa: E501
+            id (int, none_type): The internal Id of dashboard. [optional]  # noqa: E501
+            sequence (int, none_type): The sequence of the. If not defined, the sequence is automatically incremented.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -243,8 +243,8 @@ class Dashboard(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            id (int): The internal Id of dashboard. [optional]  # noqa: E501
-            sequence (int): The sequence of the. If not defined, the sequence is automatically incremented.. [optional]  # noqa: E501
+            id (int, none_type): The internal Id of dashboard. [optional]  # noqa: E501
+            sequence (int, none_type): The sequence of the. If not defined, the sequence is automatically incremented.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -84,15 +84,15 @@ class Asset(ModelNormal):
             'project_id': (str,),  # noqa: E501
             'global_asset_identifier': (str,),  # noqa: E501
             'asset_type': (str,),  # noqa: E501
-            'id': (int,),  # noqa: E501
-            'name': (str,),  # noqa: E501
-            'latitude': (float,),  # noqa: E501
-            'longitude': (float,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'parent_functional_asset_id': (int,),  # noqa: E501
-            'parent_locational_asset_id': (int,),  # noqa: E501
-            'tags': ([str],),  # noqa: E501
-            'children': ([Asset],),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
+            'latitude': (float, none_type,),  # noqa: E501
+            'longitude': (float, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'parent_functional_asset_id': (int, none_type,),  # noqa: E501
+            'parent_locational_asset_id': (int, none_type,),  # noqa: E501
+            'tags': ([str], none_type,),  # noqa: E501
+            'children': ([Asset], none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -163,15 +163,15 @@ class Asset(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            id (int): The internal Id of asset. [optional]  # noqa: E501
-            name (str): Alternate text for the asset to display in frontend. [optional]  # noqa: E501
-            latitude (float): Latitude coordinate (GPS) of the asset. [optional]  # noqa: E501
-            longitude (float): Longitude coordinate (GPS) of the asset. [optional]  # noqa: E501
-            description (str): Textual description for this asset. [optional]  # noqa: E501
-            parent_functional_asset_id (int): The id of an asset which groups this asset as a functional child. [optional]  # noqa: E501
-            parent_locational_asset_id (int): The id of an asset which groups this asset as a locational child. [optional]  # noqa: E501
-            tags ([str]): List of tags associated with asset. [optional]  # noqa: E501
-            children ([Asset]): List of children for this asset. This list is filled when the `withChildren` parameter is set.. [optional]  # noqa: E501
+            id (int, none_type): The internal Id of asset. [optional]  # noqa: E501
+            name (str, none_type): Alternate text for the asset to display in frontend. [optional]  # noqa: E501
+            latitude (float, none_type): Latitude coordinate (GPS) of the asset. [optional]  # noqa: E501
+            longitude (float, none_type): Longitude coordinate (GPS) of the asset. [optional]  # noqa: E501
+            description (str, none_type): Textual description for this asset. [optional]  # noqa: E501
+            parent_functional_asset_id (int, none_type): The id of an asset which groups this asset as a functional child. [optional]  # noqa: E501
+            parent_locational_asset_id (int, none_type): The id of an asset which groups this asset as a locational child. [optional]  # noqa: E501
+            tags ([str], none_type): List of tags associated with asset. [optional]  # noqa: E501
+            children ([Asset], none_type): List of children for this asset. This list is filled when the `withChildren` parameter is set.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -265,15 +265,15 @@ class Asset(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            id (int): The internal Id of asset. [optional]  # noqa: E501
-            name (str): Alternate text for the asset to display in frontend. [optional]  # noqa: E501
-            latitude (float): Latitude coordinate (GPS) of the asset. [optional]  # noqa: E501
-            longitude (float): Longitude coordinate (GPS) of the asset. [optional]  # noqa: E501
-            description (str): Textual description for this asset. [optional]  # noqa: E501
-            parent_functional_asset_id (int): The id of an asset which groups this asset as a functional child. [optional]  # noqa: E501
-            parent_locational_asset_id (int): The id of an asset which groups this asset as a locational child. [optional]  # noqa: E501
-            tags ([str]): List of tags associated with asset. [optional]  # noqa: E501
-            children ([Asset]): List of children for this asset. This list is filled when the `withChildren` parameter is set.. [optional]  # noqa: E501
+            id (int, none_type): The internal Id of asset. [optional]  # noqa: E501
+            name (str, none_type): Alternate text for the asset to display in frontend. [optional]  # noqa: E501
+            latitude (float, none_type): Latitude coordinate (GPS) of the asset. [optional]  # noqa: E501
+            longitude (float, none_type): Longitude coordinate (GPS) of the asset. [optional]  # noqa: E501
+            description (str, none_type): Textual description for this asset. [optional]  # noqa: E501
+            parent_functional_asset_id (int, none_type): The id of an asset which groups this asset as a functional child. [optional]  # noqa: E501
+            parent_locational_asset_id (int, none_type): The id of an asset which groups this asset as a locational child. [optional]  # noqa: E501
+            tags ([str], none_type): List of tags associated with asset. [optional]  # noqa: E501
+            children ([Asset], none_type): List of children for this asset. This list is filled when the `withChildren` parameter is set.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
