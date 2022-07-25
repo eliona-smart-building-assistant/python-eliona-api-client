@@ -40,7 +40,7 @@ with eliona.api_client.ApiClient() as api_client:
         name="Weather info",
         project_id="99",
         user_id="42",
-        sequence=42,
+        sequence=1,
     ) # Dashboard | 
 
     # example passing only required values which don't have defaults set
