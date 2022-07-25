@@ -149,7 +149,7 @@ class Dashboard(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int, none_type): The internal Id of dashboard. [optional]  # noqa: E501
-            sequence (int, none_type): The sequence of the. If not defined, the sequence is automatically incremented.. [optional]  # noqa: E501
+            sequence (int, none_type): The sequence of the dashboard. [optional] if omitted the server will use the default value of 0  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -244,7 +244,7 @@ class Dashboard(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             id (int, none_type): The internal Id of dashboard. [optional]  # noqa: E501
-            sequence (int, none_type): The sequence of the. If not defined, the sequence is automatically incremented.. [optional]  # noqa: E501
+            sequence (int, none_type): The sequence of the dashboard. [optional] if omitted the server will use the default value of 0  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

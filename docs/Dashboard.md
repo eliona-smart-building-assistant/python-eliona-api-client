@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **project_id** | **str** | ID of the project to which the dashboard belongs | 
 **user_id** | **str** | ID of the user who owns the dashboard | 
 **id** | **int, none_type** | The internal Id of dashboard | [optional] [readonly] 
-**sequence** | **int, none_type** | The sequence of the. If not defined, the sequence is automatically incremented. | [optional] 
+**sequence** | **int, none_type** | The sequence of the dashboard | [optional]  if omitted the server will use the default value of 0
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

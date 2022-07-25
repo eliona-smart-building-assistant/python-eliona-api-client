@@ -56,6 +56,7 @@ class Pipeline(ModelNormal):
 
     allowed_values = {
         ('mode',): {
+            'None': None,
             'AVG': "avg",
             'SUM': "sum",
             'CUSUM': "cusum",
@@ -124,7 +125,7 @@ class Pipeline(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'mode': (str,),  # noqa: E501
+            'mode': (str, none_type,),  # noqa: E501
             'raster': ([str],),  # noqa: E501
         }
 
@@ -179,7 +180,7 @@ class Pipeline(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            mode (str): Pipeline calculation mode. [optional]  # noqa: E501
+            mode (str, none_type): Pipeline calculation mode. [optional]  # noqa: E501
             raster ([str]): Pipeline calculation intervals. [optional]  # noqa: E501
         """
 
@@ -266,7 +267,7 @@ class Pipeline(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            mode (str): Pipeline calculation mode. [optional]  # noqa: E501
+            mode (str, none_type): Pipeline calculation mode. [optional]  # noqa: E501
             raster ([str]): Pipeline calculation intervals. [optional]  # noqa: E501
         """
 

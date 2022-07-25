@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**mode** | **str** | Pipeline calculation mode | [optional] 
+**mode** | **str, none_type** | Pipeline calculation mode | [optional] 
 **raster** | **[str]** | Pipeline calculation intervals | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
