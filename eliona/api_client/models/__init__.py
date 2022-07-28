@@ -9,6 +9,9 @@
 # import sys
 # sys.setrecursionlimit(n)
 
+from eliona.api_client.model.alarm import Alarm
+from eliona.api_client.model.alarm_priority import AlarmPriority
+from eliona.api_client.model.alarm_rule import AlarmRule
 from eliona.api_client.model.app import App
 from eliona.api_client.model.asset import Asset
 from eliona.api_client.model.asset_type import AssetType

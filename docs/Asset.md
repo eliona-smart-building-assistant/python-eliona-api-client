@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **description** | **str, none_type** | Textual description for this asset | [optional] 
 **parent_functional_asset_id** | **int, none_type** | The id of an asset which groups this asset as a functional child | [optional] 
 **parent_locational_asset_id** | **int, none_type** | The id of an asset which groups this asset as a locational child | [optional] 
-**tags** | **[str], none_type** | List of tags associated with asset | [optional] 
-**children** | [**[Asset], none_type**](Asset.md) | List of children for this asset. This list is filled when the &#x60;withChildren&#x60; parameter is set. | [optional] [readonly] 
+**tags** | **[str], none_type** | List of associated tags | [optional] 
+**children_info** | [**[Asset], none_type**](Asset.md) | List of children for this asset. | [optional] [readonly] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
