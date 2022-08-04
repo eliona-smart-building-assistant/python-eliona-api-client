@@ -188,7 +188,6 @@ with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = alarm_rules_api.AlarmRulesApi(api_client)
     alarm_rule = AlarmRule(
-        id=123,
         asset_id=4711,
         subtype=HeapSubtype("input"),
         attribute="temperature",

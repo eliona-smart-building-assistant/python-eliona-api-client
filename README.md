@@ -49,8 +49,10 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import time
 import eliona.api_client
 from pprint import pprint
-from eliona.api_client.api import alarm_rules_api
-from eliona.api_client.model.alarm_rule import AlarmRule
+from eliona.api_client.api import agents_api
+from eliona.api_client.model.agent import Agent
+from eliona.api_client.model.agent_device import AgentDevice
+from eliona.api_client.model.agent_device_mapping import AgentDeviceMapping
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
@@ -62,18 +64,16 @@ configuration = eliona.api_client.Configuration(
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = alarm_rules_api.AlarmRulesApi(api_client)
-    alarm_rule_id = 4711 # int | The id of the alarm rule
-    expansions = [
-        "expansions_example",
-    ] # [str], none_type | List of referenced data to load. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
+    api_instance = agents_api.AgentsApi(api_client)
+    agent_class = "iosys" # str | The class of an agent
+    agent_device_id = 4711 # int | The id of the device
 
     try:
-        # Information about an alarm rule
-        api_response = api_instance.get_alarm_rule_by_id(alarm_rule_id, expansions=expansions)
+        # Information about agent device mappings
+        api_response = api_instance.get_agent_device_mappings_by_id(agent_class, agent_device_id)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
-        print("Exception when calling AlarmRulesApi->get_alarm_rule_by_id: %s\n" % e)
+        print("Exception when calling AgentsApi->get_agent_device_mappings_by_id: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -82,6 +82,13 @@ All URIs are relative to *http://api.eliona.io/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AgentsApi* | [**get_agent_device_mappings_by_id**](docs/AgentsApi.md#get_agent_device_mappings_by_id) | **GET** /agent-devices/{agent-class}/{agent-device-id}/mappings | Information about agent device mappings
+*AgentsApi* | [**get_agent_devices_by_id**](docs/AgentsApi.md#get_agent_devices_by_id) | **GET** /agents/{agent-class}/{agent-id}/devices | Information about agent devices
+*AgentsApi* | [**get_agents**](docs/AgentsApi.md#get_agents) | **GET** /agents | Information about agents
+*AgentsApi* | [**get_agents_by_class**](docs/AgentsApi.md#get_agents_by_class) | **GET** /agents/{agent-class} | Information about agents for a specific class
+*AgentsApi* | [**put_agent_by_class**](docs/AgentsApi.md#put_agent_by_class) | **PUT** /agents/{agent-class} | Create or update an agent for a specific class
+*AgentsApi* | [**put_agent_device_by_id**](docs/AgentsApi.md#put_agent_device_by_id) | **PUT** /agents/{agent-class}/{agent-id}/devices | Create or update an agent device
+*AgentsApi* | [**put_agent_device_mapping_by_id**](docs/AgentsApi.md#put_agent_device_mapping_by_id) | **PUT** /agent-devices/{agent-class}/{agent-device-id}/mappings | Create or update an agent device mapping
 *AlarmRulesApi* | [**get_alarm_rule_by_id**](docs/AlarmRulesApi.md#get_alarm_rule_by_id) | **GET** /alarm-rules/{alarm-rule-id} | Information about an alarm rule
 *AlarmRulesApi* | [**get_alarm_rules**](docs/AlarmRulesApi.md#get_alarm_rules) | **GET** /alarm-rules | Information about alarm rules
 *AlarmRulesApi* | [**put_alarm_rule**](docs/AlarmRulesApi.md#put_alarm_rule) | **PUT** /alarm-rules | Create or update an alarm rule
@@ -105,10 +112,19 @@ Class | Method | HTTP request | Description
 *DashboardsApi* | [**post_dashboard_widget**](docs/DashboardsApi.md#post_dashboard_widget) | **POST** /dashboards/{dashboard-id}/widgets | Adds widget to dashboard
 *DashboardsApi* | [**put_widget_type**](docs/DashboardsApi.md#put_widget_type) | **PUT** /widget-types | Create or update a widget type
 *HeapsApi* | [**put_heap**](docs/HeapsApi.md#put_heap) | **PUT** /heaps | Create or update heap data
+*NodesApi* | [**get_node_by_ident**](docs/NodesApi.md#get_node_by_ident) | **GET** /nodes/{node-ident} | Information about a node
+*NodesApi* | [**get_nodes**](docs/NodesApi.md#get_nodes) | **GET** /nodes | Information about nodes
+*NodesApi* | [**put_node**](docs/NodesApi.md#put_node) | **PUT** /nodes | Create or update a node
 
 
 ## Documentation For Models
 
+ - [Agent](docs/Agent.md)
+ - [AgentClass](docs/AgentClass.md)
+ - [AgentDevice](docs/AgentDevice.md)
+ - [AgentDeviceGeneral](docs/AgentDeviceGeneral.md)
+ - [AgentDeviceMapping](docs/AgentDeviceMapping.md)
+ - [AgentDeviceMappingGeneral](docs/AgentDeviceMappingGeneral.md)
  - [Alarm](docs/Alarm.md)
  - [AlarmPriority](docs/AlarmPriority.md)
  - [AlarmRule](docs/AlarmRule.md)
@@ -119,6 +135,15 @@ Class | Method | HTTP request | Description
  - [Dashboard](docs/Dashboard.md)
  - [Heap](docs/Heap.md)
  - [HeapSubtype](docs/HeapSubtype.md)
+ - [IosysAgentDevice](docs/IosysAgentDevice.md)
+ - [IosysAgentDeviceMapping](docs/IosysAgentDeviceMapping.md)
+ - [IosysAgentDeviceMappingSpecific](docs/IosysAgentDeviceMappingSpecific.md)
+ - [IosysAgentDeviceSpecific](docs/IosysAgentDeviceSpecific.md)
+ - [MbusAgentDevice](docs/MbusAgentDevice.md)
+ - [MbusAgentDeviceMapping](docs/MbusAgentDeviceMapping.md)
+ - [MbusAgentDeviceMappingSpecific](docs/MbusAgentDeviceMappingSpecific.md)
+ - [MbusAgentDeviceSpecific](docs/MbusAgentDeviceSpecific.md)
+ - [Node](docs/Node.md)
  - [Patch](docs/Patch.md)
  - [Pipeline](docs/Pipeline.md)
  - [Translation](docs/Translation.md)

@@ -121,6 +121,7 @@ with eliona.api_client.ApiClient() as api_client:
         icon="weather",
         attributes=[
             AssetTypeAttribute(
+                asset_type_name="weather_location",
                 name="temperature",
                 subtype=HeapSubtype("input"),
                 type="temperature",
@@ -215,6 +216,7 @@ with eliona.api_client.ApiClient() as api_client:
     api_instance = asset_types_api.AssetTypesApi(api_client)
     asset_type_name = "weather_location" # str | The name of the asset type
     asset_type_attribute = AssetTypeAttribute(
+        asset_type_name="weather_location",
         name="temperature",
         subtype=HeapSubtype("input"),
         type="temperature",

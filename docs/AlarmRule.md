@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **subtype** | [**HeapSubtype**](HeapSubtype.md) |  | 
 **attribute** | **str** | Name of the attribute of the asset type | 
 **priority** | [**AlarmPriority**](AlarmPriority.md) |  | 
-**id** | **int, none_type** | The id of the rule | [optional] 
+**id** | **int, none_type** | The id of the rule | [optional] [readonly] 
 **enable** | **bool** | Rule enabled or not | [optional]  if omitted the server will use the default value of True
 **requires_acknowledge** | **bool** | Requires the alarm an acknowledgment | [optional]  if omitted the server will use the default value of False
 **equal** | **float, none_type** | Triggers alarm if attribute value equals this value | [optional] 
