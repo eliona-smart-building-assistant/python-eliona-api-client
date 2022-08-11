@@ -6,7 +6,7 @@ A type of assets
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** | The unique name for this asset type | 
-**custom** | **bool** | Is this a customer created type or not | defaults to True
+**custom** | **bool** | Is this a customer created type or not | [optional]  if omitted the server will use the default value of True
 **vendor** | **str, none_type** | The vendor providing assets of this type | [optional] 
 **model** | **str, none_type** | The specific model of assets of this type | [optional] 
 **translation** | [**Translation**](Translation.md) |  | [optional] 

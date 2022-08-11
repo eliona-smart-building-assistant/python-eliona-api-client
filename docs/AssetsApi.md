@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **get_asset_by_id**
-> Asset get_asset_by_id(asset_id, )
+> Asset get_asset_by_id(asset_id)
 
 Information about an asset
 
@@ -37,11 +37,23 @@ with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = assets_api.AssetsApi(api_client)
     asset_id = 4711 # int | The id of the asset
+    expansions = [
+        "expansions_example",
+    ] # [str], none_type | List of referenced data to load. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Information about an asset
-        api_response = api_instance.get_asset_by_id(asset_id, )
+        api_response = api_instance.get_asset_by_id(asset_id)
+        pprint(api_response)
+    except eliona.api_client.ApiException as e:
+        print("Exception when calling AssetsApi->get_asset_by_id: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Information about an asset
+        api_response = api_instance.get_asset_by_id(asset_id, expansions=expansions)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
         print("Exception when calling AssetsApi->get_asset_by_id: %s\n" % e)
@@ -53,7 +65,7 @@ with eliona.api_client.ApiClient() as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asset_id** | **int**| The id of the asset |
- **with_children** | **bool**| Gets also the the children hierarchy | defaults to False
+ **expansions** | **[str], none_type**| List of referenced data to load. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
 
 ### Return type
 

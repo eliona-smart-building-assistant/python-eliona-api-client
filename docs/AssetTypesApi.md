@@ -36,13 +36,15 @@ configuration = eliona.api_client.Configuration(
 with eliona.api_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = asset_types_api.AssetTypesApi(api_client)
-    with_attributes = False # bool | Gets also the the list of attributes (optional) if omitted the server will use the default value of False
+    expansions = [
+        "expansions_example",
+    ] # [str], none_type | List of referenced data to load. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # List of asset types
-        api_response = api_instance.get_asset_types(with_attributes=with_attributes)
+        api_response = api_instance.get_asset_types(expansions=expansions)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
         print("Exception when calling AssetTypesApi->get_asset_types: %s\n" % e)
@@ -53,7 +55,7 @@ with eliona.api_client.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **with_attributes** | **bool**| Gets also the the list of attributes | [optional] if omitted the server will use the default value of False
+ **expansions** | **[str], none_type**| List of referenced data to load. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
 
 ### Return type
 
@@ -119,6 +121,7 @@ with eliona.api_client.ApiClient() as api_client:
         icon="weather",
         attributes=[
             AssetTypeAttribute(
+                asset_type_name="weather_location",
                 name="temperature",
                 subtype=HeapSubtype("input"),
                 type="temperature",
@@ -213,6 +216,7 @@ with eliona.api_client.ApiClient() as api_client:
     api_instance = asset_types_api.AssetTypesApi(api_client)
     asset_type_name = "weather_location" # str | The name of the asset type
     asset_type_attribute = AssetTypeAttribute(
+        asset_type_name="weather_location",
         name="temperature",
         subtype=HeapSubtype("input"),
         type="temperature",

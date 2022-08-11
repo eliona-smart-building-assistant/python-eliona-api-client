@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **name** | **str** | The unique name for this widget type | 
 **translation** | [**Translation**](Translation.md) |  | 
 **elements** | [**[WidgetTypeElement]**](WidgetTypeElement.md) | A list of elements for this widget | 
-**custom** | **bool** | Is this a customer created type or not | defaults to True
+**custom** | **bool** | Is this a customer created type or not | [optional]  if omitted the server will use the default value of True
 **icon** | **str, none_type** | Icon name corresponding to assets used in this widget | [optional] 
 **with_alarm** | **bool, none_type** | Show alarms in widget | [optional]  if omitted the server will use the default value of False
 **with_timespan** | **bool, none_type** | Show selection for timespan in widget | [optional]  if omitted the server will use the default value of False
