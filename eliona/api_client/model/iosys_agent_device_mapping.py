@@ -32,11 +32,11 @@ from eliona.api_client.exceptions import ApiAttributeError
 def lazy_import():
     from eliona.api_client.model.agent_class import AgentClass
     from eliona.api_client.model.agent_device_mapping_general import AgentDeviceMappingGeneral
-    from eliona.api_client.model.heap_subtype import HeapSubtype
+    from eliona.api_client.model.data_subtype import DataSubtype
     from eliona.api_client.model.iosys_agent_device_mapping_specific import IosysAgentDeviceMappingSpecific
     globals()['AgentClass'] = AgentClass
     globals()['AgentDeviceMappingGeneral'] = AgentDeviceMappingGeneral
-    globals()['HeapSubtype'] = HeapSubtype
+    globals()['DataSubtype'] = DataSubtype
     globals()['IosysAgentDeviceMappingSpecific'] = IosysAgentDeviceMappingSpecific
 
 
@@ -105,7 +105,7 @@ class IosysAgentDeviceMapping(ModelComposed):
         """
         lazy_import()
         return {
-            'subtype': (HeapSubtype,),  # noqa: E501
+            'subtype': (DataSubtype,),  # noqa: E501
             'attribute': (str,),  # noqa: E501
             '_class': (AgentClass,),  # noqa: E501
             'id': (int, none_type,),  # noqa: E501
@@ -162,7 +162,7 @@ class IosysAgentDeviceMapping(ModelComposed):
         """IosysAgentDeviceMapping - a model defined in OpenAPI
 
         Keyword Args:
-            subtype (HeapSubtype):
+            subtype (DataSubtype):
             attribute (str): Name of the attribute to map
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be
@@ -283,7 +283,7 @@ class IosysAgentDeviceMapping(ModelComposed):
         """IosysAgentDeviceMapping - a model defined in OpenAPI
 
         Keyword Args:
-            subtype (HeapSubtype):
+            subtype (DataSubtype):
             attribute (str): Name of the attribute to map
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be

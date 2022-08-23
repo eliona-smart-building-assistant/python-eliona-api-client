@@ -30,8 +30,8 @@ from eliona.api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from eliona.api_client.model.heap_subtype import HeapSubtype
-    globals()['HeapSubtype'] = HeapSubtype
+    from eliona.api_client.model.data_subtype import DataSubtype
+    globals()['DataSubtype'] = DataSubtype
 
 
 class WidgetData(ModelNormal):
@@ -90,7 +90,7 @@ class WidgetData(ModelNormal):
             'element_sequence': (int,),  # noqa: E501
             'key': (str, none_type,),  # noqa: E501
             'asset_id': (int, none_type,),  # noqa: E501
-            'subtype': (HeapSubtype,),  # noqa: E501
+            'subtype': (DataSubtype,),  # noqa: E501
             'attribute': (str, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
         }
@@ -155,7 +155,7 @@ class WidgetData(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             key (str, none_type): Key for the data. [optional]  # noqa: E501
             asset_id (int, none_type): The master asset id of this widget. [optional]  # noqa: E501
-            subtype (HeapSubtype): [optional]  # noqa: E501
+            subtype (DataSubtype): [optional]  # noqa: E501
             attribute (str, none_type): Name of the attribute of the asset type. [optional]  # noqa: E501
             description (str, none_type): Text for frontend. [optional]  # noqa: E501
         """
@@ -249,7 +249,7 @@ class WidgetData(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             key (str, none_type): Key for the data. [optional]  # noqa: E501
             asset_id (int, none_type): The master asset id of this widget. [optional]  # noqa: E501
-            subtype (HeapSubtype): [optional]  # noqa: E501
+            subtype (DataSubtype): [optional]  # noqa: E501
             attribute (str, none_type): Name of the attribute of the asset type. [optional]  # noqa: E501
             description (str, none_type): Text for frontend. [optional]  # noqa: E501
         """

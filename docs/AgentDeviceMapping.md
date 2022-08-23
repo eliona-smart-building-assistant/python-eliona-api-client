@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **filter** | **str, none_type** |  | [optional] 
 **tau** | **float, none_type** |  | [optional] 
 **field** | **int, none_type** |  | [optional] 
-**subtype** | [**HeapSubtype**](HeapSubtype.md) |  | [optional] 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | [optional] 
 **attribute** | **str** | Name of the attribute to map | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

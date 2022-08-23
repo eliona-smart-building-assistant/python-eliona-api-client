@@ -1,18 +1,18 @@
-# eliona.api_client.HeapsApi
+# eliona.api_client.DataApi
 
 All URIs are relative to *http://api.eliona.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**put_heap**](HeapsApi.md#put_heap) | **PUT** /heaps | Create or update heap data
+[**put_data**](DataApi.md#put_data) | **PUT** /data | Create or update asset data
 
 
-# **put_heap**
-> put_heap(heap)
+# **put_data**
+> put_data(data)
 
-Create or update heap data
+Create or update asset data
 
-Create new heap data or update data if already exists
+Create new asset data or update data if already exists
 
 ### Example
 
@@ -21,8 +21,8 @@ Create new heap data or update data if already exists
 ```python
 import time
 import eliona.api_client
-from eliona.api_client.api import heaps_api
-from eliona.api_client.model.heap import Heap
+from eliona.api_client.api import data_api
+from eliona.api_client.model.data import Data
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
@@ -44,20 +44,20 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = heaps_api.HeapsApi(api_client)
-    heap = Heap(
+    api_instance = data_api.DataApi(api_client)
+    data = Data(
         asset_id=4711,
-        subtype=HeapSubtype("input"),
+        subtype=DataSubtype("input"),
         timestamp=dateutil_parser('1970-01-01T00:00:00.00Z'),
         data={},
-    ) # Heap | 
+    ) # Data | 
 
     # example passing only required values which don't have defaults set
     try:
-        # Create or update heap data
-        api_instance.put_heap(heap)
+        # Create or update asset data
+        api_instance.put_data(data)
     except eliona.api_client.ApiException as e:
-        print("Exception when calling HeapsApi->put_heap: %s\n" % e)
+        print("Exception when calling DataApi->put_data: %s\n" % e)
 ```
 
 
@@ -65,7 +65,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **heap** | [**Heap**](Heap.md)|  |
+ **data** | [**Data**](Data.md)|  |
 
 ### Return type
 
@@ -85,7 +85,7 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successfully created a new or updated existing heap data |  -  |
+**200** | Successfully created a new or updated existing asset data |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

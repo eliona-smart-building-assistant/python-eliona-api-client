@@ -1,12 +1,12 @@
-# Heap
+# Data
 
-Heap data
+Data for assets
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **asset_id** | **int** | ID of the corresponding asset | 
-**subtype** | [**HeapSubtype**](HeapSubtype.md) |  | 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | 
 **data** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** | Asset payload | 
 **timestamp** | **datetime, none_type** | Timestamp of the latest data change | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

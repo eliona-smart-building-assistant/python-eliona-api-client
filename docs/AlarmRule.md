@@ -6,7 +6,7 @@ Rule for an alarm
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **asset_id** | **int** | ID of the corresponding asset | 
-**subtype** | [**HeapSubtype**](HeapSubtype.md) |  | 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | 
 **attribute** | **str** | Name of the attribute of the asset type | 
 **priority** | [**AlarmPriority**](AlarmPriority.md) |  | 
 **id** | **int, none_type** | The id of the rule | [optional] [readonly] 

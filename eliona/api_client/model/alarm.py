@@ -33,11 +33,11 @@ def lazy_import():
     from eliona.api_client.model.alarm_priority import AlarmPriority
     from eliona.api_client.model.alarm_rule import AlarmRule
     from eliona.api_client.model.asset import Asset
-    from eliona.api_client.model.heap_subtype import HeapSubtype
+    from eliona.api_client.model.data_subtype import DataSubtype
     globals()['AlarmPriority'] = AlarmPriority
     globals()['AlarmRule'] = AlarmRule
     globals()['Asset'] = Asset
-    globals()['HeapSubtype'] = HeapSubtype
+    globals()['DataSubtype'] = DataSubtype
 
 
 class Alarm(ModelNormal):
@@ -94,7 +94,7 @@ class Alarm(ModelNormal):
         lazy_import()
         return {
             'asset_id': (int,),  # noqa: E501
-            'subtype': (HeapSubtype,),  # noqa: E501
+            'subtype': (DataSubtype,),  # noqa: E501
             'priority': (AlarmPriority,),  # noqa: E501
             'timestamp': (datetime,),  # noqa: E501
             'occurrences': (int,),  # noqa: E501
@@ -147,7 +147,7 @@ class Alarm(ModelNormal):
 
         Args:
             asset_id (int): ID of the corresponding asset
-            subtype (HeapSubtype):
+            subtype (DataSubtype):
             priority (AlarmPriority):
             timestamp (datetime): Timestamp of the latest data change
             occurrences (int): How often this alarm is triggered
@@ -255,7 +255,7 @@ class Alarm(ModelNormal):
 
         Args:
             asset_id (int): ID of the corresponding asset
-            subtype (HeapSubtype):
+            subtype (DataSubtype):
             priority (AlarmPriority):
             timestamp (datetime): Timestamp of the latest data change
             occurrences (int): How often this alarm is triggered

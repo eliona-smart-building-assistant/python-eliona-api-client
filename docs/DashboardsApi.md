@@ -142,7 +142,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
                 element_sequence=1,
                 key="key_example",
                 asset_id=4711,
-                subtype=HeapSubtype("input"),
+                subtype=DataSubtype("input"),
                 attribute="temperature",
                 description="Temperature",
             ),

@@ -31,9 +31,9 @@ from eliona.api_client.exceptions import ApiAttributeError
 
 def lazy_import():
     from eliona.api_client.model.agent_class import AgentClass
-    from eliona.api_client.model.heap_subtype import HeapSubtype
+    from eliona.api_client.model.data_subtype import DataSubtype
     globals()['AgentClass'] = AgentClass
-    globals()['HeapSubtype'] = HeapSubtype
+    globals()['DataSubtype'] = DataSubtype
 
 
 class AgentDeviceMappingGeneral(ModelNormal):
@@ -89,7 +89,7 @@ class AgentDeviceMappingGeneral(ModelNormal):
         """
         lazy_import()
         return {
-            'subtype': (HeapSubtype,),  # noqa: E501
+            'subtype': (DataSubtype,),  # noqa: E501
             'attribute': (str,),  # noqa: E501
             '_class': (AgentClass,),  # noqa: E501
             'id': (int, none_type,),  # noqa: E501
@@ -126,7 +126,7 @@ class AgentDeviceMappingGeneral(ModelNormal):
         """AgentDeviceMappingGeneral - a model defined in OpenAPI
 
         Args:
-            subtype (HeapSubtype):
+            subtype (DataSubtype):
             attribute (str): Name of the attribute to map
 
         Keyword Args:
@@ -222,7 +222,7 @@ class AgentDeviceMappingGeneral(ModelNormal):
         """AgentDeviceMappingGeneral - a model defined in OpenAPI
 
         Args:
-            subtype (HeapSubtype):
+            subtype (DataSubtype):
             attribute (str): Name of the attribute to map
 
         Keyword Args:

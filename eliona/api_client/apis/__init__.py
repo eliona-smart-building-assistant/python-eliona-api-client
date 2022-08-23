@@ -21,5 +21,5 @@ from eliona.api_client.api.apps_api import AppsApi
 from eliona.api_client.api.asset_types_api import AssetTypesApi
 from eliona.api_client.api.assets_api import AssetsApi
 from eliona.api_client.api.dashboards_api import DashboardsApi
-from eliona.api_client.api.heaps_api import HeapsApi
+from eliona.api_client.api.data_api import DataApi
 from eliona.api_client.api.nodes_api import NodesApi

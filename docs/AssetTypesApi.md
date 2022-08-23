@@ -145,7 +145,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
             AssetTypeAttribute(
                 asset_type_name="weather_location",
                 name="temperature",
-                subtype=HeapSubtype("input"),
+                subtype=DataSubtype("input"),
                 type="temperature",
                 enable=True,
                 translation=Translation(
@@ -251,7 +251,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     asset_type_attribute = AssetTypeAttribute(
         asset_type_name="weather_location",
         name="temperature",
-        subtype=HeapSubtype("input"),
+        subtype=DataSubtype("input"),
         type="temperature",
         enable=True,
         translation=Translation(

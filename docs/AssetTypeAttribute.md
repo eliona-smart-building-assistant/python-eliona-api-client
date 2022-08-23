@@ -5,11 +5,11 @@ Named attribute to store data of assets
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Unique key of asset heap data | 
-**subtype** | [**HeapSubtype**](HeapSubtype.md) |  | 
+**name** | **str** | Unique key of asset data | 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | 
 **asset_type_name** | **str, none_type** | The unique name for the asset type | [optional] 
 **type** | **str, none_type** | Name of the type for this attribute | [optional] 
-**enable** | **bool** | Is heap data active or not | [optional]  if omitted the server will use the default value of True
+**enable** | **bool** | Is data active or not | [optional]  if omitted the server will use the default value of True
 **translation** | [**Translation**](Translation.md) |  | [optional] 
 **unit** | **str, none_type** | Physical unit of numeric data | [optional] 
 **precision** | **int, none_type** | Number of decimal places | [optional] 

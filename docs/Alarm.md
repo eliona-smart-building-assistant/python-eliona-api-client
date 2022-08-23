@@ -6,7 +6,7 @@ An alarm
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **asset_id** | **int** | ID of the corresponding asset | 
-**subtype** | [**HeapSubtype**](HeapSubtype.md) |  | 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | 
 **priority** | [**AlarmPriority**](AlarmPriority.md) |  | 
 **timestamp** | **datetime** | Timestamp of the latest data change | 
 **occurrences** | **int** | How often this alarm is triggered | 

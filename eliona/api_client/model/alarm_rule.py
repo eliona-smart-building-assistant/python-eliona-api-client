@@ -32,10 +32,10 @@ from eliona.api_client.exceptions import ApiAttributeError
 def lazy_import():
     from eliona.api_client.model.alarm_priority import AlarmPriority
     from eliona.api_client.model.asset import Asset
-    from eliona.api_client.model.heap_subtype import HeapSubtype
+    from eliona.api_client.model.data_subtype import DataSubtype
     globals()['AlarmPriority'] = AlarmPriority
     globals()['Asset'] = Asset
-    globals()['HeapSubtype'] = HeapSubtype
+    globals()['DataSubtype'] = DataSubtype
 
 
 class AlarmRule(ModelNormal):
@@ -92,7 +92,7 @@ class AlarmRule(ModelNormal):
         lazy_import()
         return {
             'asset_id': (int,),  # noqa: E501
-            'subtype': (HeapSubtype,),  # noqa: E501
+            'subtype': (DataSubtype,),  # noqa: E501
             'attribute': (str,),  # noqa: E501
             'priority': (AlarmPriority,),  # noqa: E501
             'id': (int, none_type,),  # noqa: E501
@@ -148,7 +148,7 @@ class AlarmRule(ModelNormal):
 
         Args:
             asset_id (int): ID of the corresponding asset
-            subtype (HeapSubtype):
+            subtype (DataSubtype):
             attribute (str): Name of the attribute of the asset type
             priority (AlarmPriority):
 
@@ -256,7 +256,7 @@ class AlarmRule(ModelNormal):
 
         Args:
             asset_id (int): ID of the corresponding asset
-            subtype (HeapSubtype):
+            subtype (DataSubtype):
             attribute (str): Name of the attribute of the asset type
             priority (AlarmPriority):
 

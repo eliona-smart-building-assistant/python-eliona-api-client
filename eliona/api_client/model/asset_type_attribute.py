@@ -30,10 +30,10 @@ from eliona.api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from eliona.api_client.model.heap_subtype import HeapSubtype
+    from eliona.api_client.model.data_subtype import DataSubtype
     from eliona.api_client.model.pipeline import Pipeline
     from eliona.api_client.model.translation import Translation
-    globals()['HeapSubtype'] = HeapSubtype
+    globals()['DataSubtype'] = DataSubtype
     globals()['Pipeline'] = Pipeline
     globals()['Translation'] = Translation
 
@@ -122,7 +122,7 @@ class AssetTypeAttribute(ModelNormal):
         lazy_import()
         return {
             'name': (str,),  # noqa: E501
-            'subtype': (HeapSubtype,),  # noqa: E501
+            'subtype': (DataSubtype,),  # noqa: E501
             'asset_type_name': (str, none_type,),  # noqa: E501
             'type': (str, none_type,),  # noqa: E501
             'enable': (bool,),  # noqa: E501
@@ -172,8 +172,8 @@ class AssetTypeAttribute(ModelNormal):
         """AssetTypeAttribute - a model defined in OpenAPI
 
         Args:
-            name (str): Unique key of asset heap data
-            subtype (HeapSubtype):
+            name (str): Unique key of asset data
+            subtype (DataSubtype):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -208,7 +208,7 @@ class AssetTypeAttribute(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             asset_type_name (str, none_type): The unique name for the asset type. [optional]  # noqa: E501
             type (str, none_type): Name of the type for this attribute. [optional]  # noqa: E501
-            enable (bool): Is heap data active or not. [optional] if omitted the server will use the default value of True  # noqa: E501
+            enable (bool): Is data active or not. [optional] if omitted the server will use the default value of True  # noqa: E501
             translation (Translation): [optional]  # noqa: E501
             unit (str, none_type): Physical unit of numeric data. [optional]  # noqa: E501
             precision (int, none_type): Number of decimal places. [optional]  # noqa: E501
@@ -276,8 +276,8 @@ class AssetTypeAttribute(ModelNormal):
         """AssetTypeAttribute - a model defined in OpenAPI
 
         Args:
-            name (str): Unique key of asset heap data
-            subtype (HeapSubtype):
+            name (str): Unique key of asset data
+            subtype (DataSubtype):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -312,7 +312,7 @@ class AssetTypeAttribute(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             asset_type_name (str, none_type): The unique name for the asset type. [optional]  # noqa: E501
             type (str, none_type): Name of the type for this attribute. [optional]  # noqa: E501
-            enable (bool): Is heap data active or not. [optional] if omitted the server will use the default value of True  # noqa: E501
+            enable (bool): Is data active or not. [optional] if omitted the server will use the default value of True  # noqa: E501
             translation (Translation): [optional]  # noqa: E501
             unit (str, none_type): Physical unit of numeric data. [optional]  # noqa: E501
             precision (int, none_type): Number of decimal places. [optional]  # noqa: E501

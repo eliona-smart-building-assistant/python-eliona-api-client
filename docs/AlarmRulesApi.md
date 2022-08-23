@@ -222,7 +222,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     api_instance = alarm_rules_api.AlarmRulesApi(api_client)
     alarm_rule = AlarmRule(
         asset_id=4711,
-        subtype=HeapSubtype("input"),
+        subtype=DataSubtype("input"),
         attribute="temperature",
         enable=True,
         priority=AlarmPriority(2),

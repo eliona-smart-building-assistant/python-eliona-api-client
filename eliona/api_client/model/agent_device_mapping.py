@@ -31,11 +31,11 @@ from eliona.api_client.exceptions import ApiAttributeError
 
 def lazy_import():
     from eliona.api_client.model.agent_class import AgentClass
-    from eliona.api_client.model.heap_subtype import HeapSubtype
+    from eliona.api_client.model.data_subtype import DataSubtype
     from eliona.api_client.model.iosys_agent_device_mapping import IosysAgentDeviceMapping
     from eliona.api_client.model.mbus_agent_device_mapping import MbusAgentDeviceMapping
     globals()['AgentClass'] = AgentClass
-    globals()['HeapSubtype'] = HeapSubtype
+    globals()['DataSubtype'] = DataSubtype
     globals()['IosysAgentDeviceMapping'] = IosysAgentDeviceMapping
     globals()['MbusAgentDeviceMapping'] = MbusAgentDeviceMapping
 
@@ -122,7 +122,7 @@ class AgentDeviceMapping(ModelComposed):
             'filter': (str, none_type,),  # noqa: E501
             'tau': (float, none_type,),  # noqa: E501
             'field': (int, none_type,),  # noqa: E501
-            'subtype': (HeapSubtype,),  # noqa: E501
+            'subtype': (DataSubtype,),  # noqa: E501
             'attribute': (str,),  # noqa: E501
         }
 
@@ -211,7 +211,7 @@ class AgentDeviceMapping(ModelComposed):
             filter (str, none_type): [optional]  # noqa: E501
             tau (float, none_type): [optional]  # noqa: E501
             field (int, none_type): [optional]  # noqa: E501
-            subtype (HeapSubtype): [optional]  # noqa: E501
+            subtype (DataSubtype): [optional]  # noqa: E501
             attribute (str): Name of the attribute to map. [optional]  # noqa: E501
         """
 
@@ -333,7 +333,7 @@ class AgentDeviceMapping(ModelComposed):
             filter (str, none_type): [optional]  # noqa: E501
             tau (float, none_type): [optional]  # noqa: E501
             field (int, none_type): [optional]  # noqa: E501
-            subtype (HeapSubtype): [optional]  # noqa: E501
+            subtype (DataSubtype): [optional]  # noqa: E501
             attribute (str): Name of the attribute to map. [optional]  # noqa: E501
         """
 

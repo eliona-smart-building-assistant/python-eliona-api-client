@@ -23,8 +23,8 @@ from eliona.api_client.model.asset import Asset
 from eliona.api_client.model.asset_type import AssetType
 from eliona.api_client.model.asset_type_attribute import AssetTypeAttribute
 from eliona.api_client.model.dashboard import Dashboard
-from eliona.api_client.model.heap import Heap
-from eliona.api_client.model.heap_subtype import HeapSubtype
+from eliona.api_client.model.data import Data
+from eliona.api_client.model.data_subtype import DataSubtype
 from eliona.api_client.model.iosys_agent_device import IosysAgentDevice
 from eliona.api_client.model.iosys_agent_device_mapping import IosysAgentDeviceMapping
 from eliona.api_client.model.iosys_agent_device_mapping_specific import IosysAgentDeviceMappingSpecific
