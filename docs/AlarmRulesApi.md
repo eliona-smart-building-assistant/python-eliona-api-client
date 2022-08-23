@@ -18,6 +18,7 @@ Gets information about an alarm rule.
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import time
@@ -31,9 +32,19 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = alarm_rules_api.AlarmRulesApi(api_client)
     alarm_rule_id = 4711 # int | The id of the alarm rule
@@ -73,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -99,6 +110,7 @@ Gets information about alarm rules.
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import time
@@ -112,9 +124,19 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = alarm_rules_api.AlarmRulesApi(api_client)
     expansions = [
@@ -144,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -169,6 +191,7 @@ Create a new alarm rule or update an alarm rule if already exists
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import time
@@ -182,9 +205,19 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = alarm_rules_api.AlarmRulesApi(api_client)
     alarm_rule = AlarmRule(
@@ -240,7 +273,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

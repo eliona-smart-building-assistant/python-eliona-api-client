@@ -18,6 +18,7 @@ Returns a list of asset types
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import time
@@ -31,9 +32,19 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = asset_types_api.AssetTypesApi(api_client)
     expansions = [
@@ -63,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -88,6 +99,7 @@ Create a new asset type or update an asset type if already exists
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import time
@@ -101,9 +113,19 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = asset_types_api.AssetTypesApi(api_client)
     asset_type = AssetType(
@@ -171,7 +193,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -196,6 +218,7 @@ Create a new asset type attribute or update an asset type attribute if already e
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import time
@@ -209,9 +232,19 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = asset_types_api.AssetTypesApi(api_client)
     asset_type_name = "weather_location" # str | The name of the asset type
@@ -265,7 +298,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

@@ -22,6 +22,7 @@ Gets information about mappings between agent and eliona.
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import time
@@ -35,9 +36,19 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = agents_api.AgentsApi(api_client)
     agent_class = "iosys" # str | The class of an agent
@@ -66,7 +77,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -91,6 +102,7 @@ Gets information about agent devices.
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import time
@@ -104,9 +116,19 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = agents_api.AgentsApi(api_client)
     agent_class = "iosys" # str | The class of an agent
@@ -135,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -160,6 +182,7 @@ Gets information about agents.
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import time
@@ -173,9 +196,19 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = agents_api.AgentsApi(api_client)
 
@@ -198,7 +231,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -223,6 +256,7 @@ Gets information about agents.
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import time
@@ -236,9 +270,19 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = agents_api.AgentsApi(api_client)
     agent_class = "iosys" # str | The class of an agent
@@ -265,7 +309,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -290,6 +334,7 @@ Create a new agent or update an agent if already exists
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import time
@@ -303,9 +348,19 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = agents_api.AgentsApi(api_client)
     agent_class = "iosys" # str | The class of an agent
@@ -339,7 +394,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -364,6 +419,7 @@ Create a new agent device or update an agent device if already exists
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import time
@@ -377,9 +433,19 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = agents_api.AgentsApi(api_client)
     agent_class = "iosys" # str | The class of an agent
@@ -409,7 +475,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -434,6 +500,7 @@ Create a new agent device mapping or update an agent device mapping if already e
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import time
@@ -447,9 +514,19 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = agents_api.AgentsApi(api_client)
     agent_class = "iosys" # str | The class of an agent
@@ -480,7 +557,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
