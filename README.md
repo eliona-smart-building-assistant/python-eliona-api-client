@@ -112,6 +112,7 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**get_patch_by_name**](docs/AppsApi.md#get_patch_by_name) | **GET** /apps/{app-name}/patches/{patch-name} | Information about a patch for an app
 *AppsApi* | [**patch_app_by_name**](docs/AppsApi.md#patch_app_by_name) | **PATCH** /apps/{app-name} | Update an app
 *AppsApi* | [**patch_patch_by_name**](docs/AppsApi.md#patch_patch_by_name) | **PATCH** /apps/{app-name}/patches/{patch-name} | Updates a patch
+*AssetTypesApi* | [**delete_asset_type**](docs/AssetTypesApi.md#delete_asset_type) | **DELETE** /asset-types/{asset-type-name} | Delete an asset type
 *AssetTypesApi* | [**get_asset_types**](docs/AssetTypesApi.md#get_asset_types) | **GET** /asset-types | List of asset types
 *AssetTypesApi* | [**put_asset_type**](docs/AssetTypesApi.md#put_asset_type) | **PUT** /asset-types | Create or update an asset type
 *AssetTypesApi* | [**put_asset_type_attribute**](docs/AssetTypesApi.md#put_asset_type_attribute) | **PUT** /asset-types/{asset-type-name}/attributes | Create or update an asset type attribute
@@ -121,6 +122,8 @@ Class | Method | HTTP request | Description
 *DashboardsApi* | [**post_dashboard**](docs/DashboardsApi.md#post_dashboard) | **POST** /dashboards | Creates a new dashboard
 *DashboardsApi* | [**post_dashboard_widget**](docs/DashboardsApi.md#post_dashboard_widget) | **POST** /dashboards/{dashboard-id}/widgets | Adds widget to dashboard
 *DashboardsApi* | [**put_widget_type**](docs/DashboardsApi.md#put_widget_type) | **PUT** /widget-types | Create or update a widget type
+*DataApi* | [**get_data**](docs/DataApi.md#get_data) | **GET** /data | Gets all data
+*DataApi* | [**listen_data**](docs/DataApi.md#listen_data) | **GET** /data-listener | WebSocket connection for asset data changes
 *DataApi* | [**put_data**](docs/DataApi.md#put_data) | **PUT** /data | Create or update asset data
 *NodesApi* | [**get_node_by_ident**](docs/NodesApi.md#get_node_by_ident) | **GET** /nodes/{node-ident} | Information about a node
 *NodesApi* | [**get_nodes**](docs/NodesApi.md#get_nodes) | **GET** /nodes | Information about nodes

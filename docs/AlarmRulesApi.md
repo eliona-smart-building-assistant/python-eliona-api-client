@@ -50,7 +50,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     alarm_rule_id = 4711 # int | The id of the alarm rule
     expansions = [
         "expansions_example",
-    ] # [str], none_type | List of referenced data to load. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
+    ] # [str], none_type | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -76,7 +76,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **alarm_rule_id** | **int**| The id of the alarm rule |
- **expansions** | **[str], none_type**| List of referenced data to load. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
+ **expansions** | **[str], none_type**| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
 
 ### Return type
 
@@ -141,7 +141,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     api_instance = alarm_rules_api.AlarmRulesApi(api_client)
     expansions = [
         "expansions_example",
-    ] # [str], none_type | List of referenced data to load. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
+    ] # [str], none_type | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -158,7 +158,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **expansions** | **[str], none_type**| List of referenced data to load. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
+ **expansions** | **[str], none_type**| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
 
 ### Return type
 
