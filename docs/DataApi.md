@@ -49,8 +49,8 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = data_api.DataApi(api_client)
-    from_date = dateutil_parser('2020-01-01T09:00:00.000Z') # datetime | Filter by lower date time limit inclusive (optional)
-    to_date = dateutil_parser('2021-12-31T23:00:00.000Z') # datetime | Filter by upper date time limit exclusive (optional)
+    from_date = "2020-01-01T09:00:00.000Z" # str | Filter by lower date time (RFC3339) limit inclusive (optional)
+    to_date = "2021-12-31T23:00:00.000Z" # str | Filter by upper date time (RFC3339) limit exclusive (optional)
     asset_id = 4711 # int | Filter for a specific asset id (optional)
     data_subtype = "input" # str | Filter for a specific type of asset data (optional)
     asset_type_name = "weather_location" # str | Filter the name of the asset type (optional)
@@ -70,8 +70,8 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **from_date** | **datetime**| Filter by lower date time limit inclusive | [optional]
- **to_date** | **datetime**| Filter by upper date time limit exclusive | [optional]
+ **from_date** | **str**| Filter by lower date time (RFC3339) limit inclusive | [optional]
+ **to_date** | **str**| Filter by upper date time (RFC3339) limit exclusive | [optional]
  **asset_id** | **int**| Filter for a specific asset id | [optional]
  **data_subtype** | **str**| Filter for a specific type of asset data | [optional]
  **asset_type_name** | **str**| Filter the name of the asset type | [optional]
@@ -219,8 +219,8 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = data_api.DataApi(api_client)
-    from_date = dateutil_parser('2020-01-01T09:00:00.000Z') # datetime | Filter by lower date time limit inclusive (optional)
-    to_date = dateutil_parser('2021-12-31T23:00:00.000Z') # datetime | Filter by upper date time limit exclusive (optional)
+    from_date = "2020-01-01T09:00:00.000Z" # str | Filter by lower date time (RFC3339) limit inclusive (optional)
+    to_date = "2021-12-31T23:00:00.000Z" # str | Filter by upper date time (RFC3339) limit exclusive (optional)
     asset_id = 4711 # int | Filter for a specific asset id (optional)
     data_subtype = "input" # str | Filter for a specific type of asset data (optional)
     asset_type_name = "weather_location" # str | Filter the name of the asset type (optional)
@@ -240,8 +240,8 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **from_date** | **datetime**| Filter by lower date time limit inclusive | [optional]
- **to_date** | **datetime**| Filter by upper date time limit exclusive | [optional]
+ **from_date** | **str**| Filter by lower date time (RFC3339) limit inclusive | [optional]
+ **to_date** | **str**| Filter by upper date time (RFC3339) limit exclusive | [optional]
  **asset_id** | **int**| Filter for a specific asset id | [optional]
  **data_subtype** | **str**| Filter for a specific type of asset data | [optional]
  **asset_type_name** | **str**| Filter the name of the asset type | [optional]

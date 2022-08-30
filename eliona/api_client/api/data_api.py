@@ -78,9 +78,9 @@ class DataApi(object):
                 },
                 'openapi_types': {
                     'from_date':
-                        (datetime,),
+                        (str,),
                     'to_date':
-                        (datetime,),
+                        (str,),
                     'asset_id':
                         (int,),
                     'data_subtype':
@@ -222,9 +222,9 @@ class DataApi(object):
                 },
                 'openapi_types': {
                     'from_date':
-                        (datetime,),
+                        (str,),
                     'to_date':
-                        (datetime,),
+                        (str,),
                     'asset_id':
                         (int,),
                     'data_subtype':
@@ -385,8 +385,8 @@ class DataApi(object):
 
 
         Keyword Args:
-            from_date (datetime): Filter by lower date time limit inclusive. [optional]
-            to_date (datetime): Filter by upper date time limit exclusive. [optional]
+            from_date (str): Filter by lower date time (RFC3339) limit inclusive. [optional]
+            to_date (str): Filter by upper date time (RFC3339) limit exclusive. [optional]
             asset_id (int): Filter for a specific asset id. [optional]
             data_subtype (str): Filter for a specific type of asset data. [optional]
             asset_type_name (str): Filter the name of the asset type. [optional]
@@ -549,8 +549,8 @@ class DataApi(object):
 
 
         Keyword Args:
-            from_date (datetime): Filter by lower date time limit inclusive. [optional]
-            to_date (datetime): Filter by upper date time limit exclusive. [optional]
+            from_date (str): Filter by lower date time (RFC3339) limit inclusive. [optional]
+            to_date (str): Filter by upper date time (RFC3339) limit exclusive. [optional]
             asset_id (int): Filter for a specific asset id. [optional]
             data_subtype (str): Filter for a specific type of asset data. [optional]
             asset_type_name (str): Filter the name of the asset type. [optional]
