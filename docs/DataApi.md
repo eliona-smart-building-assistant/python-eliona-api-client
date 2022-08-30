@@ -4,10 +4,99 @@ All URIs are relative to *http://api.eliona.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**get_aggregated_data**](DataApi.md#get_aggregated_data) | **GET** /aggregated-data | Get aggregated data
 [**get_data**](DataApi.md#get_data) | **GET** /data | Gets all data
+[**get_data_trends**](DataApi.md#get_data_trends) | **GET** /data-trends | Get trend of historical data
 [**listen_data**](DataApi.md#listen_data) | **GET** /data-listener | WebSocket connection for asset data changes
 [**put_data**](DataApi.md#put_data) | **PUT** /data | Create or update asset data
 
+
+# **get_aggregated_data**
+> [AggregatedData] get_aggregated_data()
+
+Get aggregated data
+
+Gets aggregated data sets which combines a set of data points for a defined periodical raster
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import time
+import eliona.api_client
+from eliona.api_client.api import data_api
+from eliona.api_client.model.aggregated_data import AggregatedData
+from pprint import pprint
+# Defining the host is optional and defaults to http://api.eliona.io/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = eliona.api_client.Configuration(
+    host = "http://api.eliona.io/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with eliona.api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = data_api.DataApi(api_client)
+    from_date = dateutil_parser('2020-01-01T09:00:00.000Z') # datetime | Filter by lower date time limit inclusive (optional)
+    to_date = dateutil_parser('2021-12-31T23:00:00.000Z') # datetime | Filter by upper date time limit exclusive (optional)
+    asset_id = 4711 # int | Filter for a specific asset id (optional)
+    data_subtype = "input" # str | Filter for a specific type of asset data (optional)
+    asset_type_name = "weather_location" # str | Filter the name of the asset type (optional)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get aggregated data
+        api_response = api_instance.get_aggregated_data(from_date=from_date, to_date=to_date, asset_id=asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name)
+        pprint(api_response)
+    except eliona.api_client.ApiException as e:
+        print("Exception when calling DataApi->get_aggregated_data: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **from_date** | **datetime**| Filter by lower date time limit inclusive | [optional]
+ **to_date** | **datetime**| Filter by upper date time limit exclusive | [optional]
+ **asset_id** | **int**| Filter for a specific asset id | [optional]
+ **data_subtype** | **str**| Filter for a specific type of asset data | [optional]
+ **asset_type_name** | **str**| Filter the name of the asset type | [optional]
+
+### Return type
+
+[**[AggregatedData]**](AggregatedData.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully returned aggregated data sets |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_data**
 > [Data] get_data()
@@ -89,6 +178,93 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successfully returned data for assets |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_data_trends**
+> [Data] get_data_trends()
+
+Get trend of historical data
+
+Gets trend information about historical data for assets.
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import time
+import eliona.api_client
+from eliona.api_client.api import data_api
+from eliona.api_client.model.data import Data
+from pprint import pprint
+# Defining the host is optional and defaults to http://api.eliona.io/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = eliona.api_client.Configuration(
+    host = "http://api.eliona.io/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with eliona.api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = data_api.DataApi(api_client)
+    from_date = dateutil_parser('2020-01-01T09:00:00.000Z') # datetime | Filter by lower date time limit inclusive (optional)
+    to_date = dateutil_parser('2021-12-31T23:00:00.000Z') # datetime | Filter by upper date time limit exclusive (optional)
+    asset_id = 4711 # int | Filter for a specific asset id (optional)
+    data_subtype = "input" # str | Filter for a specific type of asset data (optional)
+    asset_type_name = "weather_location" # str | Filter the name of the asset type (optional)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Get trend of historical data
+        api_response = api_instance.get_data_trends(from_date=from_date, to_date=to_date, asset_id=asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name)
+        pprint(api_response)
+    except eliona.api_client.ApiException as e:
+        print("Exception when calling DataApi->get_data_trends: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **from_date** | **datetime**| Filter by lower date time limit inclusive | [optional]
+ **to_date** | **datetime**| Filter by upper date time limit exclusive | [optional]
+ **asset_id** | **int**| Filter for a specific asset id | [optional]
+ **data_subtype** | **str**| Filter for a specific type of asset data | [optional]
+ **asset_type_name** | **str**| Filter the name of the asset type | [optional]
+
+### Return type
+
+[**[Data]**](Data.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully returned historical data for assets |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

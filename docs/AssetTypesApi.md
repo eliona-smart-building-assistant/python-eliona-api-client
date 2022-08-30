@@ -238,7 +238,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
                 pipeline=Pipeline(
                     mode="avg",
                     raster=[
-                        "S1",
+                        PipelineRaster("DAY"),
                     ],
                 ),
                 viewer=False,
@@ -356,7 +356,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         pipeline=Pipeline(
             mode="avg",
             raster=[
-                "S1",
+                PipelineRaster("DAY"),
             ],
         ),
         viewer=False,

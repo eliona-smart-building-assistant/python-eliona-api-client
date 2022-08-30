@@ -91,6 +91,7 @@ class Data(ModelNormal):
             'subtype': (DataSubtype,),  # noqa: E501
             'data': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
             'timestamp': (datetime, none_type,),  # noqa: E501
+            'asset_type_name': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -103,9 +104,11 @@ class Data(ModelNormal):
         'subtype': 'subtype',  # noqa: E501
         'data': 'data',  # noqa: E501
         'timestamp': 'timestamp',  # noqa: E501
+        'asset_type_name': 'assetTypeName',  # noqa: E501
     }
 
     read_only_vars = {
+        'asset_type_name',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -152,6 +155,7 @@ class Data(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             timestamp (datetime, none_type): Timestamp of the latest data change. [optional]  # noqa: E501
+            asset_type_name (str, none_type): The name of the corresponding asset type. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -246,6 +250,7 @@ class Data(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             timestamp (datetime, none_type): Timestamp of the latest data change. [optional]  # noqa: E501
+            asset_type_name (str, none_type): The name of the corresponding asset type. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

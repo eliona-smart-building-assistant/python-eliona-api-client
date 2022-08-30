@@ -122,7 +122,9 @@ Class | Method | HTTP request | Description
 *DashboardsApi* | [**post_dashboard**](docs/DashboardsApi.md#post_dashboard) | **POST** /dashboards | Creates a new dashboard
 *DashboardsApi* | [**post_dashboard_widget**](docs/DashboardsApi.md#post_dashboard_widget) | **POST** /dashboards/{dashboard-id}/widgets | Adds widget to dashboard
 *DashboardsApi* | [**put_widget_type**](docs/DashboardsApi.md#put_widget_type) | **PUT** /widget-types | Create or update a widget type
+*DataApi* | [**get_aggregated_data**](docs/DataApi.md#get_aggregated_data) | **GET** /aggregated-data | Get aggregated data
 *DataApi* | [**get_data**](docs/DataApi.md#get_data) | **GET** /data | Gets all data
+*DataApi* | [**get_data_trends**](docs/DataApi.md#get_data_trends) | **GET** /data-trends | Get trend of historical data
 *DataApi* | [**listen_data**](docs/DataApi.md#listen_data) | **GET** /data-listener | WebSocket connection for asset data changes
 *DataApi* | [**put_data**](docs/DataApi.md#put_data) | **PUT** /data | Create or update asset data
 *NodesApi* | [**get_node_by_ident**](docs/NodesApi.md#get_node_by_ident) | **GET** /nodes/{node-ident} | Information about a node
@@ -138,6 +140,7 @@ Class | Method | HTTP request | Description
  - [AgentDeviceGeneral](docs/AgentDeviceGeneral.md)
  - [AgentDeviceMapping](docs/AgentDeviceMapping.md)
  - [AgentDeviceMappingGeneral](docs/AgentDeviceMappingGeneral.md)
+ - [AggregatedData](docs/AggregatedData.md)
  - [Alarm](docs/Alarm.md)
  - [AlarmPriority](docs/AlarmPriority.md)
  - [AlarmRule](docs/AlarmRule.md)
@@ -159,6 +162,7 @@ Class | Method | HTTP request | Description
  - [Node](docs/Node.md)
  - [Patch](docs/Patch.md)
  - [Pipeline](docs/Pipeline.md)
+ - [PipelineRaster](docs/PipelineRaster.md)
  - [Translation](docs/Translation.md)
  - [Widget](docs/Widget.md)
  - [WidgetData](docs/WidgetData.md)

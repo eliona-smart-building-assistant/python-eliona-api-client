@@ -15,6 +15,7 @@ from eliona.api_client.model.agent_device import AgentDevice
 from eliona.api_client.model.agent_device_general import AgentDeviceGeneral
 from eliona.api_client.model.agent_device_mapping import AgentDeviceMapping
 from eliona.api_client.model.agent_device_mapping_general import AgentDeviceMappingGeneral
+from eliona.api_client.model.aggregated_data import AggregatedData
 from eliona.api_client.model.alarm import Alarm
 from eliona.api_client.model.alarm_priority import AlarmPriority
 from eliona.api_client.model.alarm_rule import AlarmRule
@@ -36,6 +37,7 @@ from eliona.api_client.model.mbus_agent_device_specific import MbusAgentDeviceSp
 from eliona.api_client.model.node import Node
 from eliona.api_client.model.patch import Patch
 from eliona.api_client.model.pipeline import Pipeline
+from eliona.api_client.model.pipeline_raster import PipelineRaster
 from eliona.api_client.model.translation import Translation
 from eliona.api_client.model.widget import Widget
 from eliona.api_client.model.widget_data import WidgetData
