@@ -37,7 +37,6 @@ from eliona.api_client.model.mbus_agent_device_specific import MbusAgentDeviceSp
 from eliona.api_client.model.node import Node
 from eliona.api_client.model.patch import Patch
 from eliona.api_client.model.pipeline import Pipeline
-from eliona.api_client.model.pipeline_raster import PipelineRaster
 from eliona.api_client.model.translation import Translation
 from eliona.api_client.model.widget import Widget
 from eliona.api_client.model.widget_data import WidgetData

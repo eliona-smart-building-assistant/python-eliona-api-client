@@ -31,9 +31,7 @@ from eliona.api_client.exceptions import ApiAttributeError
 
 def lazy_import():
     from eliona.api_client.model.data_subtype import DataSubtype
-    from eliona.api_client.model.pipeline_raster import PipelineRaster
     globals()['DataSubtype'] = DataSubtype
-    globals()['PipelineRaster'] = PipelineRaster
 
 
 class AggregatedData(ModelNormal):
@@ -92,7 +90,7 @@ class AggregatedData(ModelNormal):
             'id': (int,),  # noqa: E501
             'asset_id': (int,),  # noqa: E501
             'subtype': (DataSubtype,),  # noqa: E501
-            'raster': (PipelineRaster,),  # noqa: E501
+            'raster': (str,),  # noqa: E501
             'attribute': (str,),  # noqa: E501
             'timestamp': (datetime, none_type,),  # noqa: E501
             'count': (float, none_type,),  # noqa: E501
@@ -144,7 +142,7 @@ class AggregatedData(ModelNormal):
             id (int): ID of this aggregated data set
             asset_id (int): ID of the corresponding asset
             subtype (DataSubtype):
-            raster (PipelineRaster):
+            raster (str): Pipeline calculation intervals.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -250,7 +248,7 @@ class AggregatedData(ModelNormal):
             id (int): ID of this aggregated data set
             asset_id (int): ID of the corresponding asset
             subtype (DataSubtype):
-            raster (PipelineRaster):
+            raster (str): Pipeline calculation intervals.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
