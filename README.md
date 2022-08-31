@@ -99,6 +99,10 @@ Class | Method | HTTP request | Description
 *AgentsApi* | [**put_agent_by_class**](docs/AgentsApi.md#put_agent_by_class) | **PUT** /agents/{agent-class} | Create or update an agent for a specific class
 *AgentsApi* | [**put_agent_device_by_id**](docs/AgentsApi.md#put_agent_device_by_id) | **PUT** /agents/{agent-class}/{agent-id}/devices | Create or update an agent device
 *AgentsApi* | [**put_agent_device_mapping_by_id**](docs/AgentsApi.md#put_agent_device_mapping_by_id) | **PUT** /agent-devices/{agent-class}/{agent-device-id}/mappings | Create or update an agent device mapping
+*AggregationsApi* | [**delete_aggregation_by_id**](docs/AggregationsApi.md#delete_aggregation_by_id) | **DELETE** /aggregations/{aggregation-id} | Delete an aggregation
+*AggregationsApi* | [**get_aggregation_by_id**](docs/AggregationsApi.md#get_aggregation_by_id) | **GET** /aggregations/{aggregation-id} | Information about an aggregation
+*AggregationsApi* | [**get_aggregations**](docs/AggregationsApi.md#get_aggregations) | **GET** /aggregations | Information about aggregations
+*AggregationsApi* | [**post_aggregation**](docs/AggregationsApi.md#post_aggregation) | **POST** /aggregations | Creates an aggregation
 *AlarmRulesApi* | [**get_alarm_rule_by_id**](docs/AlarmRulesApi.md#get_alarm_rule_by_id) | **GET** /alarm-rules/{alarm-rule-id} | Information about an alarm rule
 *AlarmRulesApi* | [**get_alarm_rules**](docs/AlarmRulesApi.md#get_alarm_rules) | **GET** /alarm-rules | Information about alarm rules
 *AlarmRulesApi* | [**put_alarm_rule**](docs/AlarmRulesApi.md#put_alarm_rule) | **PUT** /alarm-rules | Create or update an alarm rule
@@ -112,7 +116,7 @@ Class | Method | HTTP request | Description
 *AppsApi* | [**get_patch_by_name**](docs/AppsApi.md#get_patch_by_name) | **GET** /apps/{app-name}/patches/{patch-name} | Information about a patch for an app
 *AppsApi* | [**patch_app_by_name**](docs/AppsApi.md#patch_app_by_name) | **PATCH** /apps/{app-name} | Update an app
 *AppsApi* | [**patch_patch_by_name**](docs/AppsApi.md#patch_patch_by_name) | **PATCH** /apps/{app-name}/patches/{patch-name} | Updates a patch
-*AssetTypesApi* | [**delete_asset_type**](docs/AssetTypesApi.md#delete_asset_type) | **DELETE** /asset-types/{asset-type-name} | Delete an asset type
+*AssetTypesApi* | [**delete_asset_type_by_name**](docs/AssetTypesApi.md#delete_asset_type_by_name) | **DELETE** /asset-types/{asset-type-name} | Delete an asset type
 *AssetTypesApi* | [**get_asset_type_by_name**](docs/AssetTypesApi.md#get_asset_type_by_name) | **GET** /asset-types/{asset-type-name} | Information about an asset type
 *AssetTypesApi* | [**get_asset_types**](docs/AssetTypesApi.md#get_asset_types) | **GET** /asset-types | List of asset types
 *AssetTypesApi* | [**put_asset_type**](docs/AssetTypesApi.md#put_asset_type) | **PUT** /asset-types | Create or update an asset type
@@ -123,8 +127,8 @@ Class | Method | HTTP request | Description
 *DashboardsApi* | [**post_dashboard**](docs/DashboardsApi.md#post_dashboard) | **POST** /dashboards | Creates a new dashboard
 *DashboardsApi* | [**post_dashboard_widget**](docs/DashboardsApi.md#post_dashboard_widget) | **POST** /dashboards/{dashboard-id}/widgets | Adds widget to dashboard
 *DashboardsApi* | [**put_widget_type**](docs/DashboardsApi.md#put_widget_type) | **PUT** /widget-types | Create or update a widget type
-*DataApi* | [**get_aggregated_data**](docs/DataApi.md#get_aggregated_data) | **GET** /aggregated-data | Get aggregated data
 *DataApi* | [**get_data**](docs/DataApi.md#get_data) | **GET** /data | Gets all data
+*DataApi* | [**get_data_aggregated**](docs/DataApi.md#get_data_aggregated) | **GET** /data-aggregated | Get aggregated data
 *DataApi* | [**get_data_trends**](docs/DataApi.md#get_data_trends) | **GET** /data-trends | Get trend of historical data
 *DataApi* | [**listen_data**](docs/DataApi.md#listen_data) | **GET** /data-listener | WebSocket connection for asset data changes
 *DataApi* | [**put_data**](docs/DataApi.md#put_data) | **PUT** /data | Create or update asset data
@@ -141,7 +145,7 @@ Class | Method | HTTP request | Description
  - [AgentDeviceGeneral](docs/AgentDeviceGeneral.md)
  - [AgentDeviceMapping](docs/AgentDeviceMapping.md)
  - [AgentDeviceMappingGeneral](docs/AgentDeviceMappingGeneral.md)
- - [AggregatedData](docs/AggregatedData.md)
+ - [Aggregation](docs/Aggregation.md)
  - [Alarm](docs/Alarm.md)
  - [AlarmPriority](docs/AlarmPriority.md)
  - [AlarmRule](docs/AlarmRule.md)
@@ -151,6 +155,7 @@ Class | Method | HTTP request | Description
  - [AssetTypeAttribute](docs/AssetTypeAttribute.md)
  - [Dashboard](docs/Dashboard.md)
  - [Data](docs/Data.md)
+ - [DataAggregated](docs/DataAggregated.md)
  - [DataSubtype](docs/DataSubtype.md)
  - [IosysAgentDevice](docs/IosysAgentDevice.md)
  - [IosysAgentDeviceMapping](docs/IosysAgentDeviceMapping.md)
@@ -162,7 +167,6 @@ Class | Method | HTTP request | Description
  - [MbusAgentDeviceSpecific](docs/MbusAgentDeviceSpecific.md)
  - [Node](docs/Node.md)
  - [Patch](docs/Patch.md)
- - [Pipeline](docs/Pipeline.md)
  - [Translation](docs/Translation.md)
  - [Widget](docs/Widget.md)
  - [WidgetData](docs/WidgetData.md)

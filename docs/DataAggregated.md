@@ -1,14 +1,14 @@
-# AggregatedData
+# DataAggregated
 
 Aggregated data combines multiple data points for a periodical raster
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | ID of this aggregated data set | 
 **asset_id** | **int** | ID of the corresponding asset | 
 **subtype** | [**DataSubtype**](DataSubtype.md) |  | 
 **raster** | **str** | Pipeline calculation intervals. | 
+**aggregation_id** | **int** | ID of the aggregation | [optional] 
 **attribute** | **str** | Name of the attribute which holds the data points | [optional] 
 **timestamp** | **datetime, none_type** | Timestamp of this aggregated data set | [optional] 
 **count** | **float, none_type** | Count of data points in this aggregated data set | [optional] 

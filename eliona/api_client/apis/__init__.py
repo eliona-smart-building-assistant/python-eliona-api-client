@@ -15,6 +15,7 @@
 
 # Import APIs into API package:
 from eliona.api_client.api.agents_api import AgentsApi
+from eliona.api_client.api.aggregations_api import AggregationsApi
 from eliona.api_client.api.alarm_rules_api import AlarmRulesApi
 from eliona.api_client.api.alarms_api import AlarmsApi
 from eliona.api_client.api.apps_api import AppsApi

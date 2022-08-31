@@ -15,7 +15,8 @@ Name | Type | Description | Notes
 **precision** | **int, none_type** | Number of decimal places | [optional] 
 **min** | **float, none_type** | Lower limit | [optional] 
 **max** | **float, none_type** | Upper limit | [optional] 
-**pipeline** | [**Pipeline**](Pipeline.md) |  | [optional] 
+**aggregation_mode** | **str, none_type** | Aggregation calculation mode | [optional] 
+**aggregation_rasters** | **[str]** |  | [optional] 
 **viewer** | **bool, none_type** | Should the attribute be displayed in viewer | [optional]  if omitted the server will use the default value of False
 **ar** | **bool, none_type** | Should the attribute be displayed in AR | [optional]  if omitted the server will use the default value of False
 **sequence** | **int, none_type** | Sequence in AR display | [optional] 

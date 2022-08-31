@@ -4,19 +4,19 @@ All URIs are relative to *http://api.eliona.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_asset_type**](AssetTypesApi.md#delete_asset_type) | **DELETE** /asset-types/{asset-type-name} | Delete an asset type
+[**delete_asset_type_by_name**](AssetTypesApi.md#delete_asset_type_by_name) | **DELETE** /asset-types/{asset-type-name} | Delete an asset type
 [**get_asset_type_by_name**](AssetTypesApi.md#get_asset_type_by_name) | **GET** /asset-types/{asset-type-name} | Information about an asset type
 [**get_asset_types**](AssetTypesApi.md#get_asset_types) | **GET** /asset-types | List of asset types
 [**put_asset_type**](AssetTypesApi.md#put_asset_type) | **PUT** /asset-types | Create or update an asset type
 [**put_asset_type_attribute**](AssetTypesApi.md#put_asset_type_attribute) | **PUT** /asset-types/{asset-type-name}/attributes | Create or update an asset type attribute
 
 
-# **delete_asset_type**
-> delete_asset_type(asset_type_name)
+# **delete_asset_type_by_name**
+> delete_asset_type_by_name(asset_type_name)
 
 Delete an asset type
 
-Deletes an asset type and the attributes for this asset type
+Deletes an asset type and the attributes for this asset type.
 
 ### Example
 
@@ -53,9 +53,9 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Delete an asset type
-        api_instance.delete_asset_type(asset_type_name)
+        api_instance.delete_asset_type_by_name(asset_type_name)
     except eliona.api_client.ApiException as e:
-        print("Exception when calling AssetTypesApi->delete_asset_type: %s\n" % e)
+        print("Exception when calling AssetTypesApi->delete_asset_type_by_name: %s\n" % e)
 ```
 
 
@@ -83,7 +83,8 @@ void (empty response body)
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**204** | Successfully deleted an asset type |  -  |
+**204** | Successfully deleted the asset type |  -  |
+**404** | Asset type with name not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -328,12 +329,10 @@ with eliona.api_client.ApiClient(configuration) as api_client:
                 precision=1,
                 min=3.14,
                 max=3.14,
-                pipeline=Pipeline(
-                    mode="avg",
-                    raster=[
-                        "DAY",
-                    ],
-                ),
+                aggregation_mode="avg",
+                aggregation_rasters=[
+                    "DAY",
+                ],
                 viewer=False,
                 ar=False,
                 sequence=1,
@@ -448,12 +447,10 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         precision=1,
         min=3.14,
         max=3.14,
-        pipeline=Pipeline(
-            mode="avg",
-            raster=[
-                "DAY",
-            ],
-        ),
+        aggregation_mode="avg",
+        aggregation_rasters=[
+            "DAY",
+        ],
         viewer=False,
         ar=False,
         sequence=1,

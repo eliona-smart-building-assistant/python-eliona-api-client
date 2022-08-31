@@ -104,7 +104,7 @@ class Asset(ModelNormal):
         'project_id': 'projectId',  # noqa: E501
         'global_asset_identifier': 'globalAssetIdentifier',  # noqa: E501
         'asset_type': 'assetType',  # noqa: E501
-        'id': 'Id',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'latitude': 'latitude',  # noqa: E501
         'longitude': 'longitude',  # noqa: E501

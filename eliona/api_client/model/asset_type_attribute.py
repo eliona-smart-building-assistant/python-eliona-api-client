@@ -31,10 +31,8 @@ from eliona.api_client.exceptions import ApiAttributeError
 
 def lazy_import():
     from eliona.api_client.model.data_subtype import DataSubtype
-    from eliona.api_client.model.pipeline import Pipeline
     from eliona.api_client.model.translation import Translation
     globals()['DataSubtype'] = DataSubtype
-    globals()['Pipeline'] = Pipeline
     globals()['Translation'] = Translation
 
 
@@ -89,6 +87,50 @@ class AssetTypeAttribute(ModelNormal):
             'WATCHDOG': "watchdog",
             'WEATHER': "weather",
         },
+        ('aggregation_mode',): {
+            'None': None,
+            'AVG': "avg",
+            'SUM': "sum",
+            'CUSUM': "cusum",
+        },
+        ('aggregation_rasters',): {
+            'S1': "S1",
+            'S2': "S2",
+            'S3': "S3",
+            'S4': "S4",
+            'S5': "S5",
+            'S6': "S6",
+            'S10': "S10",
+            'S12': "S12",
+            'S15': "S15",
+            'S20': "S20",
+            'S30': "S30",
+            'M1': "M1",
+            'M2': "M2",
+            'M3': "M3",
+            'M4': "M4",
+            'M5': "M5",
+            'M6': "M6",
+            'M10': "M10",
+            'M12': "M12",
+            'M15': "M15",
+            'M20': "M20",
+            'M30': "M30",
+            'H1': "H1",
+            'H2': "H2",
+            'H3': "H3",
+            'H4': "H4",
+            'H6': "H6",
+            'H8': "H8",
+            'H12': "H12",
+            'DAY': "DAY",
+            'WEEK': "WEEK",
+            'MONTH': "MONTH",
+            'QUARTER': "QUARTER",
+            'YEAR': "YEAR",
+            'DECADE': "DECADE",
+            'CENTURY': "CENTURY",
+        },
     }
 
     validations = {
@@ -131,7 +173,8 @@ class AssetTypeAttribute(ModelNormal):
             'precision': (int, none_type,),  # noqa: E501
             'min': (float, none_type,),  # noqa: E501
             'max': (float, none_type,),  # noqa: E501
-            'pipeline': (Pipeline,),  # noqa: E501
+            'aggregation_mode': (str, none_type,),  # noqa: E501
+            'aggregation_rasters': ([str],),  # noqa: E501
             'viewer': (bool, none_type,),  # noqa: E501
             'ar': (bool, none_type,),  # noqa: E501
             'sequence': (int, none_type,),  # noqa: E501
@@ -154,7 +197,8 @@ class AssetTypeAttribute(ModelNormal):
         'precision': 'precision',  # noqa: E501
         'min': 'min',  # noqa: E501
         'max': 'max',  # noqa: E501
-        'pipeline': 'pipeline',  # noqa: E501
+        'aggregation_mode': 'aggregationMode',  # noqa: E501
+        'aggregation_rasters': 'aggregationRasters',  # noqa: E501
         'viewer': 'viewer',  # noqa: E501
         'ar': 'ar',  # noqa: E501
         'sequence': 'sequence',  # noqa: E501
@@ -214,7 +258,8 @@ class AssetTypeAttribute(ModelNormal):
             precision (int, none_type): Number of decimal places. [optional]  # noqa: E501
             min (float, none_type): Lower limit. [optional]  # noqa: E501
             max (float, none_type): Upper limit. [optional]  # noqa: E501
-            pipeline (Pipeline): [optional]  # noqa: E501
+            aggregation_mode (str, none_type): Aggregation calculation mode. [optional]  # noqa: E501
+            aggregation_rasters ([str]): [optional]  # noqa: E501
             viewer (bool, none_type): Should the attribute be displayed in viewer. [optional] if omitted the server will use the default value of False  # noqa: E501
             ar (bool, none_type): Should the attribute be displayed in AR. [optional] if omitted the server will use the default value of False  # noqa: E501
             sequence (int, none_type): Sequence in AR display. [optional]  # noqa: E501
@@ -318,7 +363,8 @@ class AssetTypeAttribute(ModelNormal):
             precision (int, none_type): Number of decimal places. [optional]  # noqa: E501
             min (float, none_type): Lower limit. [optional]  # noqa: E501
             max (float, none_type): Upper limit. [optional]  # noqa: E501
-            pipeline (Pipeline): [optional]  # noqa: E501
+            aggregation_mode (str, none_type): Aggregation calculation mode. [optional]  # noqa: E501
+            aggregation_rasters ([str]): [optional]  # noqa: E501
             viewer (bool, none_type): Should the attribute be displayed in viewer. [optional] if omitted the server will use the default value of False  # noqa: E501
             ar (bool, none_type): Should the attribute be displayed in AR. [optional] if omitted the server will use the default value of False  # noqa: E501
             sequence (int, none_type): Sequence in AR display. [optional]  # noqa: E501
