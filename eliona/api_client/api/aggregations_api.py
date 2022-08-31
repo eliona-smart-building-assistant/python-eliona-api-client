@@ -179,15 +179,15 @@ class AggregationsApi(object):
             },
             api_client=api_client
         )
-        self.post_aggregation_endpoint = _Endpoint(
+        self.put_aggregation_endpoint = _Endpoint(
             settings={
                 'response_type': (Aggregation,),
                 'auth': [
                     'ApiKeyAuth'
                 ],
                 'endpoint_path': '/aggregations',
-                'operation_id': 'post_aggregation',
-                'http_method': 'POST',
+                'operation_id': 'put_aggregation',
+                'http_method': 'PUT',
                 'servers': None,
             },
             params_map={
@@ -476,18 +476,18 @@ class AggregationsApi(object):
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         return self.get_aggregations_endpoint.call_with_http_info(**kwargs)
 
-    def post_aggregation(
+    def put_aggregation(
         self,
         aggregation,
         **kwargs
     ):
-        """Creates an aggregation  # noqa: E501
+        """Creates or updates an aggregation  # noqa: E501
 
-        Creates an aggregation  # noqa: E501
+        Creates an aggregation or updates if already exists  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.post_aggregation(aggregation, async_req=True)
+        >>> thread = api.put_aggregation(aggregation, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -557,5 +557,5 @@ class AggregationsApi(object):
         kwargs['_request_auths'] = kwargs.get('_request_auths', None)
         kwargs['aggregation'] = \
             aggregation
-        return self.post_aggregation_endpoint.call_with_http_info(**kwargs)
+        return self.put_aggregation_endpoint.call_with_http_info(**kwargs)
 

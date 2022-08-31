@@ -102,7 +102,7 @@ Class | Method | HTTP request | Description
 *AggregationsApi* | [**delete_aggregation_by_id**](docs/AggregationsApi.md#delete_aggregation_by_id) | **DELETE** /aggregations/{aggregation-id} | Delete an aggregation
 *AggregationsApi* | [**get_aggregation_by_id**](docs/AggregationsApi.md#get_aggregation_by_id) | **GET** /aggregations/{aggregation-id} | Information about an aggregation
 *AggregationsApi* | [**get_aggregations**](docs/AggregationsApi.md#get_aggregations) | **GET** /aggregations | Information about aggregations
-*AggregationsApi* | [**post_aggregation**](docs/AggregationsApi.md#post_aggregation) | **POST** /aggregations | Creates an aggregation
+*AggregationsApi* | [**put_aggregation**](docs/AggregationsApi.md#put_aggregation) | **PUT** /aggregations | Creates or updates an aggregation
 *AlarmRulesApi* | [**get_alarm_rule_by_id**](docs/AlarmRulesApi.md#get_alarm_rule_by_id) | **GET** /alarm-rules/{alarm-rule-id} | Information about an alarm rule
 *AlarmRulesApi* | [**get_alarm_rules**](docs/AlarmRulesApi.md#get_alarm_rules) | **GET** /alarm-rules | Information about alarm rules
 *AlarmRulesApi* | [**put_alarm_rule**](docs/AlarmRulesApi.md#put_alarm_rule) | **PUT** /alarm-rules | Create or update an alarm rule

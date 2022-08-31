@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**delete_aggregation_by_id**](AggregationsApi.md#delete_aggregation_by_id) | **DELETE** /aggregations/{aggregation-id} | Delete an aggregation
 [**get_aggregation_by_id**](AggregationsApi.md#get_aggregation_by_id) | **GET** /aggregations/{aggregation-id} | Information about an aggregation
 [**get_aggregations**](AggregationsApi.md#get_aggregations) | **GET** /aggregations | Information about aggregations
-[**post_aggregation**](AggregationsApi.md#post_aggregation) | **POST** /aggregations | Creates an aggregation
+[**put_aggregation**](AggregationsApi.md#put_aggregation) | **PUT** /aggregations | Creates or updates an aggregation
 
 
 # **delete_aggregation_by_id**
@@ -240,12 +240,12 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **post_aggregation**
-> Aggregation post_aggregation(aggregation)
+# **put_aggregation**
+> Aggregation put_aggregation(aggregation)
 
-Creates an aggregation
+Creates or updates an aggregation
 
-Creates an aggregation
+Creates an aggregation or updates if already exists
 
 ### Example
 
@@ -288,11 +288,11 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        # Creates an aggregation
-        api_response = api_instance.post_aggregation(aggregation)
+        # Creates or updates an aggregation
+        api_response = api_instance.put_aggregation(aggregation)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
-        print("Exception when calling AggregationsApi->post_aggregation: %s\n" % e)
+        print("Exception when calling AggregationsApi->put_aggregation: %s\n" % e)
 ```
 
 
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | Successfully created an aggregation |  -  |
+**201** | Successfully created or updated an aggregation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
