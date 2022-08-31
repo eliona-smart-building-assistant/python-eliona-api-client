@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **asset_id** | **int** | ID of the corresponding asset | 
 **subtype** | [**DataSubtype**](DataSubtype.md) |  | 
-**raster** | **str** | Pipeline calculation intervals. | 
+**raster** | **str** | Calculation intervals. | 
 **aggregation_id** | **int** | ID of the aggregation | [optional] 
 **attribute** | **str** | Name of the attribute which holds the data points | [optional] 
 **timestamp** | **datetime, none_type** | Timestamp of this aggregated data set | [optional] 

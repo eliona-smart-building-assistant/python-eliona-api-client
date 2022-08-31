@@ -59,7 +59,13 @@ class Aggregation(ModelNormal):
     """
 
     allowed_values = {
+        ('mode',): {
+            'AVG': "avg",
+            'SUM': "sum",
+            'CUSUM': "cusum",
+        },
         ('raster',): {
+            'None': None,
             'S1': "S1",
             'S2': "S2",
             'S3': "S3",
@@ -97,12 +103,6 @@ class Aggregation(ModelNormal):
             'DECADE': "DECADE",
             'CENTURY': "CENTURY",
         },
-        ('mode',): {
-            'None': None,
-            'AVG': "avg",
-            'SUM': "sum",
-            'CUSUM': "cusum",
-        },
     }
 
     validations = {
@@ -133,10 +133,10 @@ class Aggregation(ModelNormal):
         return {
             'asset_id': (int,),  # noqa: E501
             'subtype': (DataSubtype,),  # noqa: E501
-            'raster': (str,),  # noqa: E501
+            'mode': (str,),  # noqa: E501
             'id': (int, none_type,),  # noqa: E501
             'attribute': (str,),  # noqa: E501
-            'mode': (str, none_type,),  # noqa: E501
+            'raster': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -147,10 +147,10 @@ class Aggregation(ModelNormal):
     attribute_map = {
         'asset_id': 'assetId',  # noqa: E501
         'subtype': 'subtype',  # noqa: E501
-        'raster': 'raster',  # noqa: E501
+        'mode': 'mode',  # noqa: E501
         'id': 'id',  # noqa: E501
         'attribute': 'attribute',  # noqa: E501
-        'mode': 'mode',  # noqa: E501
+        'raster': 'raster',  # noqa: E501
     }
 
     read_only_vars = {
@@ -161,13 +161,13 @@ class Aggregation(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, asset_id, subtype, raster, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, asset_id, subtype, mode, *args, **kwargs):  # noqa: E501
         """Aggregation - a model defined in OpenAPI
 
         Args:
             asset_id (int): ID of the corresponding asset
             subtype (DataSubtype):
-            raster (str): calculation interval
+            mode (str): Calculation mode
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -202,7 +202,7 @@ class Aggregation(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             id (int, none_type): ID of the aggregation. [optional]  # noqa: E501
             attribute (str): Name of the attribute which holds the data points. [optional]  # noqa: E501
-            mode (str, none_type): Calculation mode. [optional]  # noqa: E501
+            raster (str, none_type): calculation interval. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,7 +236,7 @@ class Aggregation(ModelNormal):
 
         self.asset_id = asset_id
         self.subtype = subtype
-        self.raster = raster
+        self.mode = mode
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -257,13 +257,13 @@ class Aggregation(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, asset_id, subtype, raster, *args, **kwargs):  # noqa: E501
+    def __init__(self, asset_id, subtype, mode, *args, **kwargs):  # noqa: E501
         """Aggregation - a model defined in OpenAPI
 
         Args:
             asset_id (int): ID of the corresponding asset
             subtype (DataSubtype):
-            raster (str): calculation interval
+            mode (str): Calculation mode
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -298,7 +298,7 @@ class Aggregation(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             id (int, none_type): ID of the aggregation. [optional]  # noqa: E501
             attribute (str): Name of the attribute which holds the data points. [optional]  # noqa: E501
-            mode (str, none_type): Calculation mode. [optional]  # noqa: E501
+            raster (str, none_type): calculation interval. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -330,7 +330,7 @@ class Aggregation(ModelNormal):
 
         self.asset_id = asset_id
         self.subtype = subtype
-        self.raster = raster
+        self.mode = mode
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

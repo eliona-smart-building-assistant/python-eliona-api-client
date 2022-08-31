@@ -179,7 +179,7 @@ class DataAggregated(ModelNormal):
         Args:
             asset_id (int): ID of the corresponding asset
             subtype (DataSubtype):
-            raster (str): Pipeline calculation intervals.
+            raster (str): Calculation intervals.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -284,7 +284,7 @@ class DataAggregated(ModelNormal):
         Args:
             asset_id (int): ID of the corresponding asset
             subtype (DataSubtype):
-            raster (str): Pipeline calculation intervals.
+            raster (str): Calculation intervals.
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
