@@ -1,20 +1,21 @@
-# eliona.api_client.DashboardsApi
+# eliona.api_client.WidgetsTypesApi
 
 All URIs are relative to *http://api.eliona.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_dashboard_by_id**](DashboardsApi.md#get_dashboard_by_id) | **GET** /dashboards/{dashboard-id} | Information about a dashboard
-[**get_dashboards**](DashboardsApi.md#get_dashboards) | **GET** /dashboards | Information about dashboards
-[**post_dashboard**](DashboardsApi.md#post_dashboard) | **POST** /dashboards | Creates a new dashboard
+[**delete_widget_type_by_name**](WidgetsTypesApi.md#delete_widget_type_by_name) | **DELETE** /widget-types/{widget-type-name} | Delete a widget type
+[**get_widget_type_by_name**](WidgetsTypesApi.md#get_widget_type_by_name) | **GET** /widget-types/{widget-type-name} | Information about a widget type
+[**get_widget_types**](WidgetsTypesApi.md#get_widget_types) | **GET** /widget-types | List of widget types
+[**put_widget_type**](WidgetsTypesApi.md#put_widget_type) | **PUT** /widget-types | Create or update a widget type
 
 
-# **get_dashboard_by_id**
-> Dashboard get_dashboard_by_id(dashboard_id)
+# **delete_widget_type_by_name**
+> delete_widget_type_by_name(widget_type_name)
 
-Information about a dashboard
+Delete a widget type
 
-Gets information about a dashboard.
+Deletes a widget type and the elements for this widget type.
 
 ### Example
 
@@ -23,8 +24,7 @@ Gets information about a dashboard.
 ```python
 import time
 import eliona.api_client
-from eliona.api_client.api import dashboards_api
-from eliona.api_client.model.dashboard import Dashboard
+from eliona.api_client.api import widgets_types_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
@@ -46,28 +46,15 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = dashboards_api.DashboardsApi(api_client)
-    dashboard_id = 4711 # int | The id of the dashboard
-    expansions = [
-        "expansions_example",
-    ] # [str], none_type | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
+    api_instance = widgets_types_api.WidgetsTypesApi(api_client)
+    widget_type_name = "weather" # str | The name of the widget type
 
     # example passing only required values which don't have defaults set
     try:
-        # Information about a dashboard
-        api_response = api_instance.get_dashboard_by_id(dashboard_id)
-        pprint(api_response)
+        # Delete a widget type
+        api_instance.delete_widget_type_by_name(widget_type_name)
     except eliona.api_client.ApiException as e:
-        print("Exception when calling DashboardsApi->get_dashboard_by_id: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        # Information about a dashboard
-        api_response = api_instance.get_dashboard_by_id(dashboard_id, expansions=expansions)
-        pprint(api_response)
-    except eliona.api_client.ApiException as e:
-        print("Exception when calling DashboardsApi->get_dashboard_by_id: %s\n" % e)
+        print("Exception when calling WidgetsTypesApi->delete_widget_type_by_name: %s\n" % e)
 ```
 
 
@@ -75,12 +62,103 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dashboard_id** | **int**| The id of the dashboard |
+ **widget_type_name** | **str**| The name of the widget type |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | Successfully deleted the widget type |  -  |
+**404** | Widget type with name not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_widget_type_by_name**
+> WidgetType get_widget_type_by_name(widget_type_name)
+
+Information about a widget type
+
+Gets information about a widget type.
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import time
+import eliona.api_client
+from eliona.api_client.api import widgets_types_api
+from eliona.api_client.model.widget_type import WidgetType
+from pprint import pprint
+# Defining the host is optional and defaults to http://api.eliona.io/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = eliona.api_client.Configuration(
+    host = "http://api.eliona.io/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with eliona.api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = widgets_types_api.WidgetsTypesApi(api_client)
+    widget_type_name = "weather" # str | The name of the widget type
+    expansions = [
+        "expansions_example",
+    ] # [str], none_type | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Information about a widget type
+        api_response = api_instance.get_widget_type_by_name(widget_type_name)
+        pprint(api_response)
+    except eliona.api_client.ApiException as e:
+        print("Exception when calling WidgetsTypesApi->get_widget_type_by_name: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Information about a widget type
+        api_response = api_instance.get_widget_type_by_name(widget_type_name, expansions=expansions)
+        pprint(api_response)
+    except eliona.api_client.ApiException as e:
+        print("Exception when calling WidgetsTypesApi->get_widget_type_by_name: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **widget_type_name** | **str**| The name of the widget type |
  **expansions** | **[str], none_type**| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
 
 ### Return type
 
-[**Dashboard**](Dashboard.md)
+[**WidgetType**](WidgetType.md)
 
 ### Authorization
 
@@ -96,17 +174,17 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successfully returned the the dashboard |  -  |
-**404** | Dashboard with id not found |  -  |
+**200** | Successfully returned a widget type by name. |  -  |
+**404** | Widget type with name not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_dashboards**
-> [Dashboard] get_dashboards()
+# **get_widget_types**
+> [WidgetType] get_widget_types()
 
-Information about dashboards
+List of widget types
 
-Gets a list of dashboards
+Returns a list of widget types
 
 ### Example
 
@@ -115,8 +193,8 @@ Gets a list of dashboards
 ```python
 import time
 import eliona.api_client
-from eliona.api_client.api import dashboards_api
-from eliona.api_client.model.dashboard import Dashboard
+from eliona.api_client.api import widgets_types_api
+from eliona.api_client.model.widget_type import WidgetType
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
@@ -138,7 +216,7 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = dashboards_api.DashboardsApi(api_client)
+    api_instance = widgets_types_api.WidgetsTypesApi(api_client)
     expansions = [
         "expansions_example",
     ] # [str], none_type | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
@@ -146,11 +224,11 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        # Information about dashboards
-        api_response = api_instance.get_dashboards(expansions=expansions)
+        # List of widget types
+        api_response = api_instance.get_widget_types(expansions=expansions)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
-        print("Exception when calling DashboardsApi->get_dashboards: %s\n" % e)
+        print("Exception when calling WidgetsTypesApi->get_widget_types: %s\n" % e)
 ```
 
 
@@ -162,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Dashboard]**](Dashboard.md)
+[**[WidgetType]**](WidgetType.md)
 
 ### Authorization
 
@@ -178,16 +256,16 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successfully returned the list of dashboards |  -  |
+**200** | Successfully returned a list of widget types |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **post_dashboard**
-> Dashboard post_dashboard(dashboard)
+# **put_widget_type**
+> put_widget_type(widget_type)
 
-Creates a new dashboard
+Create or update a widget type
 
-Create a new dashboard for frontend
+Create a widget type if the a type with the name not exists or update a widget type if the name already exists
 
 ### Example
 
@@ -196,8 +274,8 @@ Create a new dashboard for frontend
 ```python
 import time
 import eliona.api_client
-from eliona.api_client.api import dashboards_api
-from eliona.api_client.model.dashboard import Dashboard
+from eliona.api_client.api import widgets_types_api
+from eliona.api_client.model.widget_type import WidgetType
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
@@ -219,48 +297,45 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = dashboards_api.DashboardsApi(api_client)
-    dashboard = Dashboard(
-        name="Weather info",
-        project_id="99",
-        user_id="42",
-        sequence=1,
-        widgets=[
-            Widget(
-                widget_type_name="Weather",
-                details={},
-                asset_id=4711,
+    api_instance = widgets_types_api.WidgetsTypesApi(api_client)
+    widget_type = WidgetType(
+        name="weather",
+        custom=True,
+        translation=Translation(
+            de="Das ist eine deutsche Beschreibung",
+            en="This is an english description",
+            fr="Ceci est une description français",
+            it="Questa è una descrizione italiana",
+        ),
+        icon="weather",
+        with_alarm=False,
+        with_timespan=False,
+        elements=[
+            WidgetTypeElement(
+                category="weather",
                 sequence=1,
-                data=[
-                    WidgetData(
-                        element_sequence=1,
-                        asset_id=4711,
-                        data={},
-                    ),
-                ],
+                config={},
             ),
         ],
-    ) # Dashboard | 
+    ) # WidgetType | 
     expansions = [
         "expansions_example",
     ] # [str], none_type | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     # example passing only required values which don't have defaults set
     try:
-        # Creates a new dashboard
-        api_response = api_instance.post_dashboard(dashboard)
-        pprint(api_response)
+        # Create or update a widget type
+        api_instance.put_widget_type(widget_type)
     except eliona.api_client.ApiException as e:
-        print("Exception when calling DashboardsApi->post_dashboard: %s\n" % e)
+        print("Exception when calling WidgetsTypesApi->put_widget_type: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        # Creates a new dashboard
-        api_response = api_instance.post_dashboard(dashboard, expansions=expansions)
-        pprint(api_response)
+        # Create or update a widget type
+        api_instance.put_widget_type(widget_type, expansions=expansions)
     except eliona.api_client.ApiException as e:
-        print("Exception when calling DashboardsApi->post_dashboard: %s\n" % e)
+        print("Exception when calling WidgetsTypesApi->put_widget_type: %s\n" % e)
 ```
 
 
@@ -268,12 +343,12 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dashboard** | [**Dashboard**](Dashboard.md)|  |
+ **widget_type** | [**WidgetType**](WidgetType.md)|  |
  **expansions** | **[str], none_type**| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
 
 ### Return type
 
-[**Dashboard**](Dashboard.md)
+void (empty response body)
 
 ### Authorization
 
@@ -282,14 +357,14 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | Successfully added a new Dashboard |  -  |
+**201** | Successfully added widget type |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

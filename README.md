@@ -124,9 +124,9 @@ Class | Method | HTTP request | Description
 *AssetsApi* | [**get_asset_by_id**](docs/AssetsApi.md#get_asset_by_id) | **GET** /assets/{asset-id} | Information about an asset
 *AssetsApi* | [**get_assets**](docs/AssetsApi.md#get_assets) | **GET** /assets | Information about assets
 *AssetsApi* | [**put_asset**](docs/AssetsApi.md#put_asset) | **PUT** /assets | Create or update an asset
+*DashboardsApi* | [**get_dashboard_by_id**](docs/DashboardsApi.md#get_dashboard_by_id) | **GET** /dashboards/{dashboard-id} | Information about a dashboard
+*DashboardsApi* | [**get_dashboards**](docs/DashboardsApi.md#get_dashboards) | **GET** /dashboards | Information about dashboards
 *DashboardsApi* | [**post_dashboard**](docs/DashboardsApi.md#post_dashboard) | **POST** /dashboards | Creates a new dashboard
-*DashboardsApi* | [**post_dashboard_widget**](docs/DashboardsApi.md#post_dashboard_widget) | **POST** /dashboards/{dashboard-id}/widgets | Adds widget to dashboard
-*DashboardsApi* | [**put_widget_type**](docs/DashboardsApi.md#put_widget_type) | **PUT** /widget-types | Create or update a widget type
 *DataApi* | [**get_data**](docs/DataApi.md#get_data) | **GET** /data | Gets all data
 *DataApi* | [**get_data_aggregated**](docs/DataApi.md#get_data_aggregated) | **GET** /data-aggregated | Get aggregated data
 *DataApi* | [**get_data_trends**](docs/DataApi.md#get_data_trends) | **GET** /data-trends | Get trend of historical data
@@ -135,6 +135,12 @@ Class | Method | HTTP request | Description
 *NodesApi* | [**get_node_by_ident**](docs/NodesApi.md#get_node_by_ident) | **GET** /nodes/{node-ident} | Information about a node
 *NodesApi* | [**get_nodes**](docs/NodesApi.md#get_nodes) | **GET** /nodes | Information about nodes
 *NodesApi* | [**put_node**](docs/NodesApi.md#put_node) | **PUT** /nodes | Create or update a node
+*WidgetsApi* | [**get_dashboard_widgets**](docs/WidgetsApi.md#get_dashboard_widgets) | **GET** /dashboards/{dashboard-id}/widgets | Information about widgets on dashboard
+*WidgetsApi* | [**post_dashboard_widget**](docs/WidgetsApi.md#post_dashboard_widget) | **POST** /dashboards/{dashboard-id}/widgets | Adds widget to dashboard
+*WidgetsTypesApi* | [**delete_widget_type_by_name**](docs/WidgetsTypesApi.md#delete_widget_type_by_name) | **DELETE** /widget-types/{widget-type-name} | Delete a widget type
+*WidgetsTypesApi* | [**get_widget_type_by_name**](docs/WidgetsTypesApi.md#get_widget_type_by_name) | **GET** /widget-types/{widget-type-name} | Information about a widget type
+*WidgetsTypesApi* | [**get_widget_types**](docs/WidgetsTypesApi.md#get_widget_types) | **GET** /widget-types | List of widget types
+*WidgetsTypesApi* | [**put_widget_type**](docs/WidgetsTypesApi.md#put_widget_type) | **PUT** /widget-types | Create or update a widget type
 
 
 ## Documentation For Models

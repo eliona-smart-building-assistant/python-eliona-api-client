@@ -92,6 +92,7 @@ class WidgetType(ModelNormal):
             'name': (str,),  # noqa: E501
             'translation': (Translation,),  # noqa: E501
             'elements': ([WidgetTypeElement],),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
             'custom': (bool,),  # noqa: E501
             'icon': (str, none_type,),  # noqa: E501
             'with_alarm': (bool, none_type,),  # noqa: E501
@@ -107,6 +108,7 @@ class WidgetType(ModelNormal):
         'name': 'name',  # noqa: E501
         'translation': 'translation',  # noqa: E501
         'elements': 'elements',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'custom': 'custom',  # noqa: E501
         'icon': 'icon',  # noqa: E501
         'with_alarm': 'withAlarm',  # noqa: E501
@@ -114,6 +116,7 @@ class WidgetType(ModelNormal):
     }
 
     read_only_vars = {
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -126,7 +129,7 @@ class WidgetType(ModelNormal):
         Args:
             name (str): The unique name for this widget type
             translation (Translation):
-            elements ([WidgetTypeElement]): A list of elements for this widget
+            elements ([WidgetTypeElement]): A list of elements for this widget (order matches the order of elements for this type)
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -159,6 +162,7 @@ class WidgetType(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            id (int, none_type): The internal Id of widget type. [optional]  # noqa: E501
             custom (bool): Is this a customer created type or not. [optional] if omitted the server will use the default value of True  # noqa: E501
             icon (str, none_type): Icon name corresponding to assets used in this widget. [optional]  # noqa: E501
             with_alarm (bool, none_type): Show alarms in widget. [optional] if omitted the server will use the default value of False  # noqa: E501
@@ -223,7 +227,7 @@ class WidgetType(ModelNormal):
         Args:
             name (str): The unique name for this widget type
             translation (Translation):
-            elements ([WidgetTypeElement]): A list of elements for this widget
+            elements ([WidgetTypeElement]): A list of elements for this widget (order matches the order of elements for this type)
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -256,6 +260,7 @@ class WidgetType(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            id (int, none_type): The internal Id of widget type. [optional]  # noqa: E501
             custom (bool): Is this a customer created type or not. [optional] if omitted the server will use the default value of True  # noqa: E501
             icon (str, none_type): Icon name corresponding to assets used in this widget. [optional]  # noqa: E501
             with_alarm (bool, none_type): Show alarms in widget. [optional] if omitted the server will use the default value of False  # noqa: E501

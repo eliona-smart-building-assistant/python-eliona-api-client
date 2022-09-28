@@ -59,11 +59,6 @@ class Widget(ModelNormal):
     """
 
     allowed_values = {
-        ('width',): {
-            'NORMAL': "normal",
-            'DOUBLE': "double",
-            'FULL': "full",
-        },
     }
 
     validations = {
@@ -93,10 +88,10 @@ class Widget(ModelNormal):
         lazy_import()
         return {
             'widget_type_name': (str,),  # noqa: E501
-            'width': (str,),  # noqa: E501
-            'timespan': (int, none_type,),  # noqa: E501
+            'id': (int, none_type,),  # noqa: E501
             'details': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
             'asset_id': (int, none_type,),  # noqa: E501
+            'sequence': (int, none_type,),  # noqa: E501
             'data': ([WidgetData], none_type,),  # noqa: E501
         }
 
@@ -107,26 +102,26 @@ class Widget(ModelNormal):
 
     attribute_map = {
         'widget_type_name': 'widgetTypeName',  # noqa: E501
-        'width': 'width',  # noqa: E501
-        'timespan': 'timespan',  # noqa: E501
+        'id': 'id',  # noqa: E501
         'details': 'details',  # noqa: E501
         'asset_id': 'assetId',  # noqa: E501
+        'sequence': 'sequence',  # noqa: E501
         'data': 'data',  # noqa: E501
     }
 
     read_only_vars = {
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, widget_type_name, width, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, widget_type_name, *args, **kwargs):  # noqa: E501
         """Widget - a model defined in OpenAPI
 
         Args:
             widget_type_name (str): The name for the type of this widget
-            width (str): The width of this widget on dashboard
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -159,9 +154,10 @@ class Widget(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            timespan (int, none_type): The number of days if the widget type uses timespan. [optional]  # noqa: E501
+            id (int, none_type): The internal Id of widget. [optional]  # noqa: E501
             details ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type): Detailed configuration depending on the widget type. [optional]  # noqa: E501
             asset_id (int, none_type): The master asset id of this widget. [optional]  # noqa: E501
+            sequence (int, none_type): Placement order on dashboard; if not set the index in array is taken. [optional]  # noqa: E501
             data ([WidgetData], none_type): List of data for the elements of widget. [optional]  # noqa: E501
         """
 
@@ -195,7 +191,6 @@ class Widget(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.widget_type_name = widget_type_name
-        self.width = width
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -216,12 +211,11 @@ class Widget(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, widget_type_name, width, *args, **kwargs):  # noqa: E501
+    def __init__(self, widget_type_name, *args, **kwargs):  # noqa: E501
         """Widget - a model defined in OpenAPI
 
         Args:
             widget_type_name (str): The name for the type of this widget
-            width (str): The width of this widget on dashboard
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -254,9 +248,10 @@ class Widget(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            timespan (int, none_type): The number of days if the widget type uses timespan. [optional]  # noqa: E501
+            id (int, none_type): The internal Id of widget. [optional]  # noqa: E501
             details ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type): Detailed configuration depending on the widget type. [optional]  # noqa: E501
             asset_id (int, none_type): The master asset id of this widget. [optional]  # noqa: E501
+            sequence (int, none_type): Placement order on dashboard; if not set the index in array is taken. [optional]  # noqa: E501
             data ([WidgetData], none_type): List of data for the elements of widget. [optional]  # noqa: E501
         """
 
@@ -288,7 +283,6 @@ class Widget(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.widget_type_name = widget_type_name
-        self.width = width
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
