@@ -139,11 +139,16 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = assets_api.AssetsApi(api_client)
+    asset_type_name = "weather_location" # str | Filter the name of the asset type (optional)
+    expansions = [
+        "expansions_example",
+    ] # [str], none_type | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         # Information about assets
-        api_response = api_instance.get_assets()
+        api_response = api_instance.get_assets(asset_type_name=asset_type_name, expansions=expansions)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
         print("Exception when calling AssetsApi->get_assets: %s\n" % e)
@@ -151,7 +156,11 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **asset_type_name** | **str**| Filter the name of the asset type | [optional]
+ **expansions** | **[str], none_type**| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
 
 ### Return type
 

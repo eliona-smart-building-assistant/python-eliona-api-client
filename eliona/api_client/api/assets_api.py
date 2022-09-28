@@ -106,9 +106,12 @@ class AssetsApi(object):
             },
             params_map={
                 'all': [
+                    'asset_type_name',
+                    'expansions',
                 ],
                 'required': [],
                 'nullable': [
+                    'expansions',
                 ],
                 'enum': [
                 ],
@@ -121,12 +124,21 @@ class AssetsApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
+                    'asset_type_name':
+                        (str,),
+                    'expansions':
+                        ([str], none_type,),
                 },
                 'attribute_map': {
+                    'asset_type_name': 'assetTypeName',
+                    'expansions': 'expansions',
                 },
                 'location_map': {
+                    'asset_type_name': 'query',
+                    'expansions': 'query',
                 },
                 'collection_format_map': {
+                    'expansions': 'csv',
                 }
             },
             headers_map={
@@ -290,6 +302,8 @@ class AssetsApi(object):
 
 
         Keyword Args:
+            asset_type_name (str): Filter the name of the asset type. [optional]
+            expansions ([str], none_type): List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
