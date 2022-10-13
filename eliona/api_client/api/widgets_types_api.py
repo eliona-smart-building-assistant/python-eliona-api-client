@@ -39,7 +39,8 @@ class WidgetsTypesApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/widget-types/{widget-type-name}',
                 'operation_id': 'delete_widget_type_by_name',
@@ -88,7 +89,8 @@ class WidgetsTypesApi(object):
             settings={
                 'response_type': (WidgetType,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/widget-types/{widget-type-name}',
                 'operation_id': 'get_widget_type_by_name',
@@ -146,7 +148,8 @@ class WidgetsTypesApi(object):
             settings={
                 'response_type': ([WidgetType],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/widget-types',
                 'operation_id': 'get_widget_types',
@@ -197,7 +200,8 @@ class WidgetsTypesApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/widget-types',
                 'operation_id': 'put_widget_type',

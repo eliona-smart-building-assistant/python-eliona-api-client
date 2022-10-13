@@ -39,7 +39,8 @@ class AlarmsApi(object):
             settings={
                 'response_type': (Alarm,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/alarms/{alarm-rule-id}',
                 'operation_id': 'get_alarm_by_id',
@@ -97,7 +98,8 @@ class AlarmsApi(object):
             settings={
                 'response_type': ([Alarm],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/alarms-history/{alarm-rule-id}',
                 'operation_id': 'get_alarm_history_by_id',
@@ -155,7 +157,8 @@ class AlarmsApi(object):
             settings={
                 'response_type': ([Alarm],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/alarms',
                 'operation_id': 'get_alarms',
@@ -212,7 +215,8 @@ class AlarmsApi(object):
             settings={
                 'response_type': ([Alarm],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/alarms-history',
                 'operation_id': 'get_alarms_history',
@@ -269,7 +273,8 @@ class AlarmsApi(object):
             settings={
                 'response_type': ([Alarm],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/alarms-highest',
                 'operation_id': 'get_highest_alarms',
@@ -326,7 +331,8 @@ class AlarmsApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/alarms/{alarm-rule-id}',
                 'operation_id': 'patch_alarm_by_id',

@@ -39,7 +39,8 @@ class DashboardsApi(object):
             settings={
                 'response_type': (Dashboard,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/dashboards/{dashboard-id}',
                 'operation_id': 'get_dashboard_by_id',
@@ -97,7 +98,8 @@ class DashboardsApi(object):
             settings={
                 'response_type': ([Dashboard],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/dashboards',
                 'operation_id': 'get_dashboards',
@@ -148,7 +150,8 @@ class DashboardsApi(object):
             settings={
                 'response_type': (Dashboard,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/dashboards',
                 'operation_id': 'post_dashboard',

@@ -398,6 +398,14 @@ conf = eliona.api_client.Configuration(
                     'ApiKeyAuth',
                 ),
             }
+        if self.access_token is not None:
+            auth['BearerAuth'] = {
+                'type': 'bearer',
+                'in': 'header',
+                'format': 'JWT',
+                'key': 'Authorization',
+                'value': 'Bearer ' + self.access_token
+            }
         return auth
 
     def to_debug_report(self):

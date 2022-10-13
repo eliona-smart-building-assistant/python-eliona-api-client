@@ -39,7 +39,8 @@ class NodesApi(object):
             settings={
                 'response_type': (Node,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/nodes/{node-ident}',
                 'operation_id': 'get_node_by_ident',
@@ -90,7 +91,8 @@ class NodesApi(object):
             settings={
                 'response_type': ([Node],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/nodes',
                 'operation_id': 'get_nodes',
@@ -134,7 +136,8 @@ class NodesApi(object):
             settings={
                 'response_type': (Node,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/nodes',
                 'operation_id': 'put_node',

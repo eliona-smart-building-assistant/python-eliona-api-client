@@ -22,6 +22,7 @@ Gets information about alarm.
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -45,6 +46,11 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
@@ -87,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -114,6 +120,7 @@ Gets information about alarm over the entire time. This includes current alarm a
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -137,6 +144,11 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
@@ -179,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -205,6 +217,7 @@ Gets information about alarms
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -228,6 +241,11 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
@@ -262,7 +280,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -288,6 +306,7 @@ Gets information about alarms over the entire time. This includes current alarms
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -311,6 +330,11 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
@@ -345,7 +369,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -371,6 +395,7 @@ Gets information about an alarms with the highest priority for each asset.
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -394,6 +419,11 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
@@ -428,7 +458,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -454,6 +484,7 @@ Update properties of alarm for given id.
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -476,6 +507,11 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
@@ -515,7 +551,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 

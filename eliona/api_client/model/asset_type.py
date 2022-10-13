@@ -96,6 +96,8 @@ class AssetType(ModelNormal):
             'translation': (Translation,),  # noqa: E501
             'urldoc': (str, none_type,),  # noqa: E501
             'icon': (str, none_type,),  # noqa: E501
+            'payload_function': (str, none_type,),  # noqa: E501
+            'allowed_inactivity': (str, none_type,),  # noqa: E501
             'attributes': ([AssetTypeAttribute], none_type,),  # noqa: E501
         }
 
@@ -112,6 +114,8 @@ class AssetType(ModelNormal):
         'translation': 'translation',  # noqa: E501
         'urldoc': 'urldoc',  # noqa: E501
         'icon': 'icon',  # noqa: E501
+        'payload_function': 'payloadFunction',  # noqa: E501
+        'allowed_inactivity': 'allowedInactivity',  # noqa: E501
         'attributes': 'attributes',  # noqa: E501
     }
 
@@ -165,6 +169,8 @@ class AssetType(ModelNormal):
             translation (Translation): [optional]  # noqa: E501
             urldoc (str, none_type): The url describing assets of this type. [optional]  # noqa: E501
             icon (str, none_type): Icon name corresponding to assets of this type. [optional]  # noqa: E501
+            payload_function (str, none_type): Asset types payload function. [optional]  # noqa: E501
+            allowed_inactivity (str, none_type): [optional]  # noqa: E501
             attributes ([AssetTypeAttribute], none_type): List of named attributes. [optional]  # noqa: E501
         """
 
@@ -261,6 +267,8 @@ class AssetType(ModelNormal):
             translation (Translation): [optional]  # noqa: E501
             urldoc (str, none_type): The url describing assets of this type. [optional]  # noqa: E501
             icon (str, none_type): Icon name corresponding to assets of this type. [optional]  # noqa: E501
+            payload_function (str, none_type): Asset types payload function. [optional]  # noqa: E501
+            allowed_inactivity (str, none_type): [optional]  # noqa: E501
             attributes ([AssetTypeAttribute], none_type): List of named attributes. [optional]  # noqa: E501
         """
 

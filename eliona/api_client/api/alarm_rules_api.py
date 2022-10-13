@@ -39,7 +39,8 @@ class AlarmRulesApi(object):
             settings={
                 'response_type': (AlarmRule,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/alarm-rules/{alarm-rule-id}',
                 'operation_id': 'get_alarm_rule_by_id',
@@ -97,7 +98,8 @@ class AlarmRulesApi(object):
             settings={
                 'response_type': ([AlarmRule],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/alarm-rules',
                 'operation_id': 'get_alarm_rules',
@@ -148,7 +150,8 @@ class AlarmRulesApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/alarm-rules',
                 'operation_id': 'put_alarm_rule',

@@ -39,7 +39,8 @@ class WidgetsApi(object):
             settings={
                 'response_type': (Widget,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/dashboards/{dashboard-id}/widgets',
                 'operation_id': 'get_dashboard_widgets',
@@ -97,7 +98,8 @@ class WidgetsApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/dashboards/{dashboard-id}/widgets',
                 'operation_id': 'post_dashboard_widget',

@@ -40,7 +40,8 @@ class AppsApi(object):
             settings={
                 'response_type': (App,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/apps/{app-name}',
                 'operation_id': 'get_app_by_name',
@@ -91,7 +92,8 @@ class AppsApi(object):
             settings={
                 'response_type': (Patch,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/apps/{app-name}/patches/{patch-name}',
                 'operation_id': 'get_patch_by_name',
@@ -148,7 +150,8 @@ class AppsApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/apps/{app-name}',
                 'operation_id': 'patch_app_by_name',
@@ -202,7 +205,8 @@ class AppsApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/apps/{app-name}/patches/{patch-name}',
                 'operation_id': 'patch_patch_by_name',

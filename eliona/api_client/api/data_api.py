@@ -40,7 +40,8 @@ class DataApi(object):
             settings={
                 'response_type': ([Data],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/data',
                 'operation_id': 'get_data',
@@ -107,7 +108,8 @@ class DataApi(object):
             settings={
                 'response_type': ([DataAggregated],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/data-aggregated',
                 'operation_id': 'get_data_aggregated',
@@ -184,7 +186,8 @@ class DataApi(object):
             settings={
                 'response_type': ([Data],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/data-trends',
                 'operation_id': 'get_data_trends',
@@ -261,7 +264,8 @@ class DataApi(object):
             settings={
                 'response_type': (Data,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/data-listener',
                 'operation_id': 'listen_data',
@@ -323,7 +327,8 @@ class DataApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/data',
                 'operation_id': 'put_data',

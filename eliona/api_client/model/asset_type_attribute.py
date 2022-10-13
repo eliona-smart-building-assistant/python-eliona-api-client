@@ -86,6 +86,7 @@ class AssetTypeAttribute(ModelNormal):
             'VOLTAGE': "voltage",
             'WATCHDOG': "watchdog",
             'WEATHER': "weather",
+            'VOC': "voc",
         },
         ('aggregation_mode',): {
             'None': None,
@@ -179,6 +180,11 @@ class AssetTypeAttribute(ModelNormal):
             'ar': (bool, none_type,),  # noqa: E501
             'sequence': (int, none_type,),  # noqa: E501
             'virtual': (bool, none_type,),  # noqa: E501
+            'scale': (float, none_type,),  # noqa: E501
+            'zero': (float, none_type,),  # noqa: E501
+            'map': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
+            'source_path': ([str], none_type,),  # noqa: E501
+            'is_digital': (bool, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -203,6 +209,11 @@ class AssetTypeAttribute(ModelNormal):
         'ar': 'ar',  # noqa: E501
         'sequence': 'sequence',  # noqa: E501
         'virtual': 'virtual',  # noqa: E501
+        'scale': 'scale',  # noqa: E501
+        'zero': 'zero',  # noqa: E501
+        'map': 'map',  # noqa: E501
+        'source_path': 'sourcePath',  # noqa: E501
+        'is_digital': 'isDigital',  # noqa: E501
     }
 
     read_only_vars = {
@@ -264,6 +275,11 @@ class AssetTypeAttribute(ModelNormal):
             ar (bool, none_type): Should the attribute be displayed in AR. [optional] if omitted the server will use the default value of False  # noqa: E501
             sequence (int, none_type): Sequence in AR display. [optional]  # noqa: E501
             virtual (bool, none_type): Is the attribute virtual or not. [optional]  # noqa: E501
+            scale (float, none_type): value scale. [optional]  # noqa: E501
+            zero (float, none_type): value scale. [optional]  # noqa: E501
+            map ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type): custom map. [optional]  # noqa: E501
+            source_path ([str], none_type): source path for attribute value. [optional]  # noqa: E501
+            is_digital (bool, none_type): is attribute digital. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -369,6 +385,11 @@ class AssetTypeAttribute(ModelNormal):
             ar (bool, none_type): Should the attribute be displayed in AR. [optional] if omitted the server will use the default value of False  # noqa: E501
             sequence (int, none_type): Sequence in AR display. [optional]  # noqa: E501
             virtual (bool, none_type): Is the attribute virtual or not. [optional]  # noqa: E501
+            scale (float, none_type): value scale. [optional]  # noqa: E501
+            zero (float, none_type): value scale. [optional]  # noqa: E501
+            map ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type): custom map. [optional]  # noqa: E501
+            source_path ([str], none_type): source path for attribute value. [optional]  # noqa: E501
+            is_digital (bool, none_type): is attribute digital. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -70,6 +70,11 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
 
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
@@ -135,6 +140,7 @@ Class | Method | HTTP request | Description
 *NodesApi* | [**get_node_by_ident**](docs/NodesApi.md#get_node_by_ident) | **GET** /nodes/{node-ident} | Information about a node
 *NodesApi* | [**get_nodes**](docs/NodesApi.md#get_nodes) | **GET** /nodes | Information about nodes
 *NodesApi* | [**put_node**](docs/NodesApi.md#put_node) | **PUT** /nodes | Create or update a node
+*VersionApi* | [**get_version**](docs/VersionApi.md#get_version) | **GET** /version | Version of the API
 *WidgetsApi* | [**get_dashboard_widgets**](docs/WidgetsApi.md#get_dashboard_widgets) | **GET** /dashboards/{dashboard-id}/widgets | Information about widgets on dashboard
 *WidgetsApi* | [**post_dashboard_widget**](docs/WidgetsApi.md#post_dashboard_widget) | **POST** /dashboards/{dashboard-id}/widgets | Adds widget to dashboard
 *WidgetsTypesApi* | [**delete_widget_type_by_name**](docs/WidgetsTypesApi.md#delete_widget_type_by_name) | **DELETE** /widget-types/{widget-type-name} | Delete a widget type
@@ -188,6 +194,11 @@ Class | Method | HTTP request | Description
 - **Type**: API key
 - **API key parameter name**: X-API-Key
 - **Location**: HTTP header
+
+
+## BearerAuth
+
+- **Type**: Bearer authentication (JWT)
 
 
 ## Author

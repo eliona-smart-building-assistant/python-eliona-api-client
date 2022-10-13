@@ -39,7 +39,8 @@ class AssetsApi(object):
             settings={
                 'response_type': (Asset,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/assets/{asset-id}',
                 'operation_id': 'get_asset_by_id',
@@ -97,7 +98,8 @@ class AssetsApi(object):
             settings={
                 'response_type': ([Asset],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/assets',
                 'operation_id': 'get_assets',
@@ -153,7 +155,8 @@ class AssetsApi(object):
             settings={
                 'response_type': (Asset,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/assets',
                 'operation_id': 'put_asset',

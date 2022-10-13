@@ -41,7 +41,8 @@ class AgentsApi(object):
             settings={
                 'response_type': ([AgentDeviceMapping],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/agent-devices/{agent-class}/{agent-device-id}/mappings',
                 'operation_id': 'get_agent_device_mappings_by_id',
@@ -104,7 +105,8 @@ class AgentsApi(object):
             settings={
                 'response_type': ([AgentDevice],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/agents/{agent-class}/{agent-id}/devices',
                 'operation_id': 'get_agent_devices_by_id',
@@ -167,7 +169,8 @@ class AgentsApi(object):
             settings={
                 'response_type': ([Agent],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/agents',
                 'operation_id': 'get_agents',
@@ -211,7 +214,8 @@ class AgentsApi(object):
             settings={
                 'response_type': ([Agent],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/agents/{agent-class}',
                 'operation_id': 'get_agents_by_class',
@@ -268,7 +272,8 @@ class AgentsApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/agents/{agent-class}',
                 'operation_id': 'put_agent_by_class',
@@ -331,7 +336,8 @@ class AgentsApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/agents/{agent-class}/{agent-id}/devices',
                 'operation_id': 'put_agent_device_by_id',
@@ -399,7 +405,8 @@ class AgentsApi(object):
             settings={
                 'response_type': (AgentDeviceMapping,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/agent-devices/{agent-class}/{agent-device-id}/mappings',
                 'operation_id': 'put_agent_device_mapping_by_id',

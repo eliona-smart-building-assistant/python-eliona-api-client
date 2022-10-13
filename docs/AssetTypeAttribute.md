@@ -21,6 +21,11 @@ Name | Type | Description | Notes
 **ar** | **bool, none_type** | Should the attribute be displayed in AR | [optional]  if omitted the server will use the default value of False
 **sequence** | **int, none_type** | Sequence in AR display | [optional] 
 **virtual** | **bool, none_type** | Is the attribute virtual or not | [optional] 
+**scale** | **float, none_type** | value scale | [optional] 
+**zero** | **float, none_type** | value scale | [optional] 
+**map** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | custom map | [optional] 
+**source_path** | **[str], none_type** | source path for attribute value | [optional] 
+**is_digital** | **bool, none_type** | is attribute digital | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

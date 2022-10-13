@@ -21,6 +21,7 @@ Gets information about data for assets.
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -44,6 +45,11 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
@@ -78,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -104,6 +110,7 @@ Gets aggregated data sets which combines a set of data points for a defined peri
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -127,6 +134,11 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
@@ -165,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -191,6 +203,7 @@ Gets trend information about historical data for assets.
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -214,6 +227,11 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
@@ -252,7 +270,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -278,6 +296,7 @@ Open a WebSocket connection to get informed when new asset data is written or an
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -301,6 +320,11 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
@@ -333,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -359,6 +383,7 @@ Create new asset data or update data if already exists.
 ### Example
 
 * Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -382,6 +407,11 @@ configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
 with eliona.api_client.ApiClient(configuration) as api_client:
@@ -415,7 +445,7 @@ void (empty response body)
 
 ### Authorization
 
-[ApiKeyAuth](../README.md#ApiKeyAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 

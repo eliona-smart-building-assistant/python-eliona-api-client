@@ -39,7 +39,8 @@ class AggregationsApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/aggregations/{aggregation-id}',
                 'operation_id': 'delete_aggregation_by_id',
@@ -88,7 +89,8 @@ class AggregationsApi(object):
             settings={
                 'response_type': (Aggregation,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/aggregations/{aggregation-id}',
                 'operation_id': 'get_aggregation_by_id',
@@ -139,7 +141,8 @@ class AggregationsApi(object):
             settings={
                 'response_type': ([Aggregation],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/aggregations',
                 'operation_id': 'get_aggregations',
@@ -183,7 +186,8 @@ class AggregationsApi(object):
             settings={
                 'response_type': (Aggregation,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/aggregations',
                 'operation_id': 'put_aggregation',

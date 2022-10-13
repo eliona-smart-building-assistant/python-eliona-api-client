@@ -40,7 +40,8 @@ class AssetTypesApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/asset-types/{asset-type-name}',
                 'operation_id': 'delete_asset_type_by_name',
@@ -89,7 +90,8 @@ class AssetTypesApi(object):
             settings={
                 'response_type': (AssetType,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/asset-types/{asset-type-name}',
                 'operation_id': 'get_asset_type_by_name',
@@ -147,7 +149,8 @@ class AssetTypesApi(object):
             settings={
                 'response_type': ([AssetType],),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/asset-types',
                 'operation_id': 'get_asset_types',
@@ -198,7 +201,8 @@ class AssetTypesApi(object):
             settings={
                 'response_type': (AssetType,),
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/asset-types',
                 'operation_id': 'put_asset_type',
@@ -257,7 +261,8 @@ class AssetTypesApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'ApiKeyAuth'
+                    'ApiKeyAuth',
+                    'BearerAuth'
                 ],
                 'endpoint_path': '/asset-types/{asset-type-name}/attributes',
                 'operation_id': 'put_asset_type_attribute',
