@@ -16,7 +16,7 @@ VERSION = "2.2.3"
 #
 # python setup.py install
 #
-# prerequisite:  setuptools
+# prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
 REQUIRES = [
