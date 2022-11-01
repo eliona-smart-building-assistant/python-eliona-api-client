@@ -18,4 +18,5 @@ class TagValues(str, enum.Enum):
     DASHBOARDS = "Dashboards"
     WIDGETS_TYPES = "Widgets types"
     WIDGETS = "Widgets"
+    MESSAGES = "Messages"
     VERSION = "Version"

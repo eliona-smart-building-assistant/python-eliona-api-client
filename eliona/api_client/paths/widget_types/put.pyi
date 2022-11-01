@@ -54,6 +54,10 @@ class ExpansionsSchema(
         )
 # body param
 SchemaForRequestBodyApplicationJson = WidgetType
+SchemaFor200ResponseBodyApplicationJson = WidgetType
+_all_accept_content_types = (
+    'application/json',
+)
 
 
 class BaseApi(api_client.Api):
@@ -63,11 +67,12 @@ class BaseApi(api_client.Api):
         body: typing.Union[SchemaForRequestBodyApplicationJson, ],
         query_params: RequestQueryParams = frozendict.frozendict(),
         content_type: str = 'application/json',
+        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         """
@@ -94,6 +99,9 @@ class BaseApi(api_client.Api):
 
         _headers = HTTPHeaderDict()
         # TODO add cookie handling
+        if accept_content_types:
+            for accept_content_type in accept_content_types:
+                _headers.add('Accept', accept_content_type)
 
         if body is schemas.unset:
             raise exceptions.ApiValueError(
@@ -140,17 +148,19 @@ class PutWidgetType(BaseApi):
         body: typing.Union[SchemaForRequestBodyApplicationJson, ],
         query_params: RequestQueryParams = frozendict.frozendict(),
         content_type: str = 'application/json',
+        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         return self._put_widget_type_oapg(
             body=body,
             query_params=query_params,
             content_type=content_type,
+            accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,
             skip_deserialization=skip_deserialization
@@ -165,17 +175,19 @@ class ApiForput(BaseApi):
         body: typing.Union[SchemaForRequestBodyApplicationJson, ],
         query_params: RequestQueryParams = frozendict.frozendict(),
         content_type: str = 'application/json',
+        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         return self._put_widget_type_oapg(
             body=body,
             query_params=query_params,
             content_type=content_type,
+            accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,
             skip_deserialization=skip_deserialization

@@ -31,6 +31,10 @@ from eliona/api_client.model.asset_type_attribute import AssetTypeAttribute
 AssetTypeNameSchema = schemas.StrSchema
 # body param
 SchemaForRequestBodyApplicationJson = AssetTypeAttribute
+SchemaFor200ResponseBodyApplicationJson = AssetTypeAttribute
+_all_accept_content_types = (
+    'application/json',
+)
 
 
 class BaseApi(api_client.Api):
@@ -40,11 +44,12 @@ class BaseApi(api_client.Api):
         body: typing.Union[SchemaForRequestBodyApplicationJson, ],
         path_params: RequestPathParams = frozendict.frozendict(),
         content_type: str = 'application/json',
+        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         """
@@ -71,6 +76,9 @@ class BaseApi(api_client.Api):
 
         _headers = HTTPHeaderDict()
         # TODO add cookie handling
+        if accept_content_types:
+            for accept_content_type in accept_content_types:
+                _headers.add('Accept', accept_content_type)
 
         if body is schemas.unset:
             raise exceptions.ApiValueError(
@@ -117,17 +125,19 @@ class PutAssetTypeAttribute(BaseApi):
         body: typing.Union[SchemaForRequestBodyApplicationJson, ],
         path_params: RequestPathParams = frozendict.frozendict(),
         content_type: str = 'application/json',
+        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         return self._put_asset_type_attribute_oapg(
             body=body,
             path_params=path_params,
             content_type=content_type,
+            accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,
             skip_deserialization=skip_deserialization
@@ -142,17 +152,19 @@ class ApiForput(BaseApi):
         body: typing.Union[SchemaForRequestBodyApplicationJson, ],
         path_params: RequestPathParams = frozendict.frozendict(),
         content_type: str = 'application/json',
+        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         return self._put_asset_type_attribute_oapg(
             body=body,
             path_params=path_params,
             content_type=content_type,
+            accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,
             skip_deserialization=skip_deserialization

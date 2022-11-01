@@ -13,6 +13,7 @@ from eliona.api_client.apis.tags.data_api import DataApi
 from eliona.api_client.apis.tags.dashboards_api import DashboardsApi
 from eliona.api_client.apis.tags.widgets_types_api import WidgetsTypesApi
 from eliona.api_client.apis.tags.widgets_api import WidgetsApi
+from eliona.api_client.apis.tags.messages_api import MessagesApi
 from eliona.api_client.apis.tags.version_api import VersionApi
 
 TagToApi = typing_extensions.TypedDict(
@@ -30,6 +31,7 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.DASHBOARDS: DashboardsApi,
         TagValues.WIDGETS_TYPES: WidgetsTypesApi,
         TagValues.WIDGETS: WidgetsApi,
+        TagValues.MESSAGES: MessagesApi,
         TagValues.VERSION: VersionApi,
     }
 )
@@ -48,6 +50,7 @@ tag_to_api = TagToApi(
         TagValues.DASHBOARDS: DashboardsApi,
         TagValues.WIDGETS_TYPES: WidgetsTypesApi,
         TagValues.WIDGETS: WidgetsApi,
+        TagValues.MESSAGES: MessagesApi,
         TagValues.VERSION: VersionApi,
     }
 )

@@ -23,19 +23,19 @@ Key | Input Type | Accessed Type | Description | Notes
 **acknowledgeTimestamp** | None, str, datetime,  | NoneClass, str,  | Timestamp of the latest data change | [optional] value must conform to RFC-3339 date-time
 **acknowledgeText** | None, str,  | NoneClass, str,  | Text of acknowledgement | [optional] 
 **acknowledgeUserId** | None, str,  | NoneClass, str,  | User who acknowledged the alarm | [optional] 
-**[message](#message)** | dict, frozendict.frozendict, None,  | frozendict.frozendict, NoneClass,  | Message texts for alarm | [optional] 
+**[message](#message)** | dict, frozendict.frozendict, None,  | frozendict.frozendict, NoneClass,  | Message.yaml texts for alarm | [optional] 
 **assetInfo** | [**Asset**](Asset.md) | [**Asset**](Asset.md) |  | [optional] 
 **ruleInfo** | [**AlarmRule**](AlarmRule.md) | [**AlarmRule**](AlarmRule.md) |  | [optional] 
 **any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
 
 # message
 
-Message texts for alarm
+Message.yaml texts for alarm
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-dict, frozendict.frozendict, None,  | frozendict.frozendict, NoneClass,  | Message texts for alarm | 
+dict, frozendict.frozendict, None,  | frozendict.frozendict, NoneClass,  | Message.yaml texts for alarm | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

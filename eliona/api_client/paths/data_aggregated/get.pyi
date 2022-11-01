@@ -54,6 +54,7 @@ class DataSubtypeSchema(
     def OUTPUT(cls):
         return cls("output")
 AssetTypeNameSchema = schemas.StrSchema
+AggregationIdSchema = schemas.IntSchema
 
 
 class SchemaFor200ResponseBodyApplicationJson(
@@ -114,6 +115,7 @@ class BaseApi(api_client.Api):
             request_query_asset_id,
             request_query_data_subtype,
             request_query_asset_type_name,
+            request_query_aggregation_id,
         ):
             parameter_data = query_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:

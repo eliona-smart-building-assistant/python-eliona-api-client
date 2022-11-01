@@ -29,7 +29,7 @@ from eliona/api_client.model.asset import Asset
 
 # body param
 SchemaForRequestBodyApplicationJson = Asset
-SchemaFor201ResponseBodyApplicationJson = Asset
+SchemaFor200ResponseBodyApplicationJson = Asset
 _all_accept_content_types = (
     'application/json',
 )
@@ -46,7 +46,7 @@ class BaseApi(api_client.Api):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         """
@@ -112,7 +112,7 @@ class PutAsset(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         return self._put_asset_oapg(
@@ -137,7 +137,7 @@ class ApiForput(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         return self._put_asset_oapg(

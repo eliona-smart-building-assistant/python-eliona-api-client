@@ -20,7 +20,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **equal** | None, decimal.Decimal, int, float,  | NoneClass, decimal.Decimal,  | Triggers alarm if attribute value equals this value | [optional] value must be a 64 bit float
 **low** | None, decimal.Decimal, int, float,  | NoneClass, decimal.Decimal,  | Triggers alarm if attribute value is less than value | [optional] value must be a 64 bit float
 **high** | None, decimal.Decimal, int, float,  | NoneClass, decimal.Decimal,  | Triggers alarm if attribute value is greater than value | [optional] value must be a 64 bit float
-**[message](#message)** | dict, frozendict.frozendict, None,  | frozendict.frozendict, NoneClass,  | Message texts for alarm | [optional] 
+**[message](#message)** | dict, frozendict.frozendict, None,  | frozendict.frozendict, NoneClass,  | Texts for alarm | [optional] 
 **[tags](#tags)** | list, tuple, None,  | tuple, NoneClass,  | List of associated tags | [optional] 
 **subject** | None, str,  | NoneClass, str,  | The subject for the alarm | [optional] 
 **urldoc** | None, str,  | NoneClass, str,  | The url describing the alarm | [optional] 
@@ -31,12 +31,12 @@ Key | Input Type | Accessed Type | Description | Notes
 
 # message
 
-Message texts for alarm
+Texts for alarm
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-dict, frozendict.frozendict, None,  | frozendict.frozendict, NoneClass,  | Message texts for alarm | 
+dict, frozendict.frozendict, None,  | frozendict.frozendict, NoneClass,  | Texts for alarm | 
 
 # tags
 

@@ -31,8 +31,13 @@ from eliona.api_client.apis.paths.nodes import Nodes
 from eliona.api_client.apis.paths.nodes_node_ident import NodesNodeIdent
 from eliona.api_client.apis.paths.agents import Agents
 from eliona.api_client.apis.paths.agents_agent_class import AgentsAgentClass
+from eliona.api_client.apis.paths.agents_agent_class_agent_id import AgentsAgentClassAgentId
 from eliona.api_client.apis.paths.agents_agent_class_agent_id_devices import AgentsAgentClassAgentIdDevices
+from eliona.api_client.apis.paths.agent_devices_agent_class_agent_device_id import AgentDevicesAgentClassAgentDeviceId
 from eliona.api_client.apis.paths.agent_devices_agent_class_agent_device_id_mappings import AgentDevicesAgentClassAgentDeviceIdMappings
+from eliona.api_client.apis.paths.agent_device_mappings_agent_class_agent_device_mapping_id import AgentDeviceMappingsAgentClassAgentDeviceMappingId
+from eliona.api_client.apis.paths.send_mail import SendMail
+from eliona.api_client.apis.paths.message_receipts_message_id import MessageReceiptsMessageId
 
 PathToApi = typing_extensions.TypedDict(
     'PathToApi',
@@ -67,8 +72,13 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.NODES_NODEIDENT: NodesNodeIdent,
         PathValues.AGENTS: Agents,
         PathValues.AGENTS_AGENTCLASS: AgentsAgentClass,
+        PathValues.AGENTS_AGENTCLASS_AGENTID: AgentsAgentClassAgentId,
         PathValues.AGENTS_AGENTCLASS_AGENTID_DEVICES: AgentsAgentClassAgentIdDevices,
+        PathValues.AGENTDEVICES_AGENTCLASS_AGENTDEVICEID: AgentDevicesAgentClassAgentDeviceId,
         PathValues.AGENTDEVICES_AGENTCLASS_AGENTDEVICEID_MAPPINGS: AgentDevicesAgentClassAgentDeviceIdMappings,
+        PathValues.AGENTDEVICEMAPPINGS_AGENTCLASS_AGENTDEVICEMAPPINGID: AgentDeviceMappingsAgentClassAgentDeviceMappingId,
+        PathValues.SENDMAIL: SendMail,
+        PathValues.MESSAGERECEIPTS_MESSAGEID: MessageReceiptsMessageId,
     }
 )
 
@@ -104,7 +114,12 @@ path_to_api = PathToApi(
         PathValues.NODES_NODEIDENT: NodesNodeIdent,
         PathValues.AGENTS: Agents,
         PathValues.AGENTS_AGENTCLASS: AgentsAgentClass,
+        PathValues.AGENTS_AGENTCLASS_AGENTID: AgentsAgentClassAgentId,
         PathValues.AGENTS_AGENTCLASS_AGENTID_DEVICES: AgentsAgentClassAgentIdDevices,
+        PathValues.AGENTDEVICES_AGENTCLASS_AGENTDEVICEID: AgentDevicesAgentClassAgentDeviceId,
         PathValues.AGENTDEVICES_AGENTCLASS_AGENTDEVICEID_MAPPINGS: AgentDevicesAgentClassAgentDeviceIdMappings,
+        PathValues.AGENTDEVICEMAPPINGS_AGENTCLASS_AGENTDEVICEMAPPINGID: AgentDeviceMappingsAgentClassAgentDeviceMappingId,
+        PathValues.SENDMAIL: SendMail,
+        PathValues.MESSAGERECEIPTS_MESSAGEID: MessageReceiptsMessageId,
     }
 )

@@ -141,7 +141,7 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
 
-    def _get_agent_device_mappings_by_id_oapg(
+    def _get_agent_device_mappings_by_device_id_oapg(
         self: api_client.Api,
         path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -205,10 +205,10 @@ class BaseApi(api_client.Api):
         return api_response
 
 
-class GetAgentDeviceMappingsById(BaseApi):
+class GetAgentDeviceMappingsByDeviceId(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
-    def get_agent_device_mappings_by_id(
+    def get_agent_device_mappings_by_device_id(
         self: BaseApi,
         path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -219,7 +219,7 @@ class GetAgentDeviceMappingsById(BaseApi):
         ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
-        return self._get_agent_device_mappings_by_id_oapg(
+        return self._get_agent_device_mappings_by_device_id_oapg(
             path_params=path_params,
             accept_content_types=accept_content_types,
             stream=stream,
@@ -242,7 +242,7 @@ class ApiForget(BaseApi):
         ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
-        return self._get_agent_device_mappings_by_id_oapg(
+        return self._get_agent_device_mappings_by_device_id_oapg(
             path_params=path_params,
             accept_content_types=accept_content_types,
             stream=stream,

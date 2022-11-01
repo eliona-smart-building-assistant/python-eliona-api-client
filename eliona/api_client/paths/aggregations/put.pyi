@@ -29,7 +29,7 @@ from eliona/api_client.model.aggregation import Aggregation
 
 # body param
 SchemaForRequestBodyApplicationJson = Aggregation
-SchemaFor201ResponseBodyApplicationJson = Aggregation
+SchemaFor200ResponseBodyApplicationJson = Aggregation
 _all_accept_content_types = (
     'application/json',
 )
@@ -46,7 +46,7 @@ class BaseApi(api_client.Api):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         """
@@ -112,7 +112,7 @@ class PutAggregation(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         return self._put_aggregation_oapg(
@@ -137,7 +137,7 @@ class ApiForput(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         return self._put_aggregation_oapg(

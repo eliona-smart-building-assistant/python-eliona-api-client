@@ -65,6 +65,7 @@ class DataSubtypeSchema(
     def OUTPUT(cls):
         return cls("output")
 AssetTypeNameSchema = schemas.StrSchema
+AggregationIdSchema = schemas.IntSchema
 RequestRequiredQueryParams = typing_extensions.TypedDict(
     'RequestRequiredQueryParams',
     {
@@ -78,6 +79,7 @@ RequestOptionalQueryParams = typing_extensions.TypedDict(
         'assetId': typing.Union[AssetIdSchema, decimal.Decimal, int, ],
         'dataSubtype': typing.Union[DataSubtypeSchema, str, ],
         'assetTypeName': typing.Union[AssetTypeNameSchema, str, ],
+        'aggregationId': typing.Union[AggregationIdSchema, decimal.Decimal, int, ],
     },
     total=False
 )
@@ -115,6 +117,12 @@ request_query_asset_type_name = api_client.QueryParameter(
     name="assetTypeName",
     style=api_client.ParameterStyle.FORM,
     schema=AssetTypeNameSchema,
+    explode=True,
+)
+request_query_aggregation_id = api_client.QueryParameter(
+    name="aggregationId",
+    style=api_client.ParameterStyle.FORM,
+    schema=AggregationIdSchema,
     explode=True,
 )
 _auth = [
@@ -202,6 +210,7 @@ class BaseApi(api_client.Api):
             request_query_asset_id,
             request_query_data_subtype,
             request_query_asset_type_name,
+            request_query_aggregation_id,
         ):
             parameter_data = query_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:

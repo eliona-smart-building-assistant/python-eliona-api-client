@@ -54,7 +54,7 @@ class ExpansionsSchema(
         )
 # body param
 SchemaForRequestBodyApplicationJson = AssetType
-SchemaFor201ResponseBodyApplicationJson = AssetType
+SchemaFor200ResponseBodyApplicationJson = AssetType
 _all_accept_content_types = (
     'application/json',
 )
@@ -72,7 +72,7 @@ class BaseApi(api_client.Api):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         """
@@ -153,7 +153,7 @@ class PutAssetType(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         return self._put_asset_type_oapg(
@@ -180,7 +180,7 @@ class ApiForput(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         return self._put_asset_type_oapg(

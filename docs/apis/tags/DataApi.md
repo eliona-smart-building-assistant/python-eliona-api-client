@@ -192,6 +192,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         'assetId': 4711,
         'dataSubtype': "input",
         'assetTypeName': "weather_location",
+        'aggregationId': 0815,
     }
     try:
         # Get aggregated data
@@ -222,6 +223,7 @@ toDate | ToDateSchema | | optional
 assetId | AssetIdSchema | | optional
 dataSubtype | DataSubtypeSchema | | optional
 assetTypeName | AssetTypeNameSchema | | optional
+aggregationId | AggregationIdSchema | | optional
 
 
 # FromDateSchema
@@ -258,6 +260,13 @@ str,  | str,  |  | must be one of ["input", "info", "status", "output", ]
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 str,  | str,  |  | 
+
+# AggregationIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | 
 
 ### Return Types, Responses
 
@@ -562,7 +571,7 @@ Type | Description  | Notes
 
 Create or update asset data
 
-Create new asset data or update data if already exists.
+Create new asset data or update data if already exists. Uses the unique combination of asset id and subtype for updating.
 
 ### Example
 

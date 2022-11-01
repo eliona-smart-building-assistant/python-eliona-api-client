@@ -45,7 +45,7 @@ class AgentClassSchema(
 AgentDeviceIdSchema = schemas.IntSchema
 # body param
 SchemaForRequestBodyApplicationJson = AgentDeviceMapping
-SchemaFor201ResponseBodyApplicationJson = AgentDeviceMapping
+SchemaFor200ResponseBodyApplicationJson = AgentDeviceMapping
 _all_accept_content_types = (
     'application/json',
 )
@@ -53,7 +53,7 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
 
-    def _put_agent_device_mapping_by_id_oapg(
+    def _put_agent_device_mapping_by_device_id_oapg(
         self: api_client.Api,
         body: typing.Union[SchemaForRequestBodyApplicationJson, ],
         path_params: RequestPathParams = frozendict.frozendict(),
@@ -63,7 +63,7 @@ class BaseApi(api_client.Api):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
         """
@@ -132,10 +132,10 @@ class BaseApi(api_client.Api):
         return api_response
 
 
-class PutAgentDeviceMappingById(BaseApi):
+class PutAgentDeviceMappingByDeviceId(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
-    def put_agent_device_mapping_by_id(
+    def put_agent_device_mapping_by_device_id(
         self: BaseApi,
         body: typing.Union[SchemaForRequestBodyApplicationJson, ],
         path_params: RequestPathParams = frozendict.frozendict(),
@@ -145,10 +145,10 @@ class PutAgentDeviceMappingById(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
-        return self._put_agent_device_mapping_by_id_oapg(
+        return self._put_agent_device_mapping_by_device_id_oapg(
             body=body,
             path_params=path_params,
             content_type=content_type,
@@ -172,10 +172,10 @@ class ApiForput(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ) -> typing.Union[
-        ApiResponseFor201,
+        ApiResponseFor200,
         api_client.ApiResponseWithoutDeserialization
     ]:
-        return self._put_agent_device_mapping_by_id_oapg(
+        return self._put_agent_device_mapping_by_device_id_oapg(
             body=body,
             path_params=path_params,
             content_type=content_type,
