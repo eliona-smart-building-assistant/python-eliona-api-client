@@ -50,11 +50,11 @@ class Message(
             
             
                 class MetaOapg:
-                    items = schemas.DictSchema
+                    items = schemas.StrSchema
             
                 def __new__(
                     cls,
-                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]], typing.List[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]]],
+                    arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, str, ]], typing.List[typing.Union[MetaOapg.items, str, ]]],
                     _configuration: typing.Optional[schemas.Configuration] = None,
                 ) -> 'recipients':
                     return super().__new__(
@@ -97,7 +97,7 @@ class Message(
             
             
                 class MetaOapg:
-                    items = schemas.DictSchema
+                    items = schemas.StrSchema
             
             
                 def __new__(
@@ -121,7 +121,7 @@ class Message(
             
             
                 class MetaOapg:
-                    items = schemas.DictSchema
+                    items = schemas.StrSchema
             
             
                 def __new__(

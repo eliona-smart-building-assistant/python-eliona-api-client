@@ -32,16 +32,7 @@ list, tuple,  | tuple,  | A list of recipient addresses to receive this message 
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[items](#items) | dict, frozendict.frozendict,  | frozendict.frozendict,  | A recipient&#x27;s address, e.g. an e-mail address | 
-
-# items
-
-A recipient's address, e.g. an e-mail address
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  | A recipient&#x27;s address, e.g. an e-mail address | 
+items | str,  | str,  | A recipient&#x27;s address, e.g. an e-mail address | 
 
 # copyRecipients
 
@@ -55,16 +46,7 @@ list, tuple, None,  | tuple, NoneClass,  | A list of recipient addresses to rece
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[items](#items) | dict, frozendict.frozendict,  | frozendict.frozendict,  | A recipient&#x27;s address, e.g. an e-mail address | 
-
-# items
-
-A recipient's address, e.g. an e-mail address
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  | A recipient&#x27;s address, e.g. an e-mail address | 
+items | str,  | str,  | A recipient&#x27;s address, e.g. an e-mail address | 
 
 # blindCopyRecipients
 
@@ -78,16 +60,7 @@ list, tuple, None,  | tuple, NoneClass,  | A list of recipient addresses to rece
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[items](#items) | dict, frozendict.frozendict,  | frozendict.frozendict,  | A recipient&#x27;s address, e.g. an e-mail address | 
-
-# items
-
-A recipient's address, e.g. an e-mail address
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  | A recipient&#x27;s address, e.g. an e-mail address | 
+items | str,  | str,  | A recipient&#x27;s address, e.g. an e-mail address | 
 
 # attachments
 

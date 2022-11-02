@@ -170,13 +170,13 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     body = Message(
         sender="sender@example.com",
         recipients=[
-            dict()
+            "recipient@example.com"
         ],
         copy_recipients=[
-            dict()
+            "copy-recipient@example.com"
         ],
         blind_copy_recipients=[
-            dict()
+            "blind-copy-recipient@example.com"
         ],
         subject="This is a example message",
         mime_type="text/html",
