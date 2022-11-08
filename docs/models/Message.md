@@ -11,12 +11,12 @@ dict, frozendict.frozendict,  | frozendict.frozendict,  | A message |
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
 **[recipients](#recipients)** | list, tuple,  | tuple,  | A list of recipient addresses to receive this message | 
-**content** | str,  | str,  | The content of the message | 
+**content** | str,  | str,  | The content of the message. If template is used, the content is embedded in the template. | 
 **sender** | None, str,  | NoneClass, str,  | Address of the sender, e.g. an e-mail address | [optional] 
 **[copyRecipients](#copyRecipients)** | list, tuple, None,  | tuple, NoneClass,  | A list of recipient addresses to receive this message as copy | [optional] 
 **[blindCopyRecipients](#blindCopyRecipients)** | list, tuple, None,  | tuple, NoneClass,  | A list of recipient addresses to receive this message as blind copy without any other recipient information | [optional] 
 **subject** | str,  | str,  | The subject for this message | [optional] 
-**mimeType** | None, str,  | NoneClass, str,  | The MIME type of the message content | [optional] 
+**template** | None, str,  | NoneClass, str,  | The template used for message content | [optional] must be one of ["none", "eliona", ] if omitted the server will use the default value of "eliona"
 **[attachments](#attachments)** | list, tuple, None,  | tuple, NoneClass,  | A list of files attached to the message | [optional] 
 **any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
 

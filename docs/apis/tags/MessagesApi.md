@@ -179,13 +179,14 @@ with eliona.api_client.ApiClient(configuration) as api_client:
             "blind-copy-recipient@example.com"
         ],
         subject="This is a example message",
-        mime_type="text/html",
+        template="eliona",
         content="<h1>Example</h1>",
         attachments=[
             Attachment(
                 name="example.gif",
-                mime_type="image/png",
-                data="[B@e2b3026",
+                content_type="image/png",
+                encoding="base64",
+                content="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=",
             )
         ],
     )
