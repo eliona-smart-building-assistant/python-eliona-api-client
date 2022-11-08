@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **equal** | **float, none_type** | Triggers alarm if attribute value equals this value | [optional] 
 **low** | **float, none_type** | Triggers alarm if attribute value is less than value | [optional] 
 **high** | **float, none_type** | Triggers alarm if attribute value is greater than value | [optional] 
-**message** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | Message texts for alarm | [optional] 
+**message** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | Texts for alarm | [optional] 
 **tags** | **[str], none_type** | List of associated tags | [optional] 
 **subject** | **str, none_type** | The subject for the alarm | [optional] 
 **urldoc** | **str, none_type** | The url describing the alarm | [optional] 
