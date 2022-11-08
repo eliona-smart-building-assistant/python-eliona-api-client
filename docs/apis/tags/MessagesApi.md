@@ -179,7 +179,6 @@ with eliona.api_client.ApiClient(configuration) as api_client:
             "blind-copy-recipient@example.com"
         ],
         subject="This is a example message",
-        template="eliona",
         content="<h1>Example</h1>",
         attachments=[
             Attachment(

@@ -16,7 +16,6 @@ Key | Input Type | Accessed Type | Description | Notes
 **[copyRecipients](#copyRecipients)** | list, tuple, None,  | tuple, NoneClass,  | A list of recipient addresses to receive this message as copy | [optional] 
 **[blindCopyRecipients](#blindCopyRecipients)** | list, tuple, None,  | tuple, NoneClass,  | A list of recipient addresses to receive this message as blind copy without any other recipient information | [optional] 
 **subject** | str,  | str,  | The subject for this message | [optional] 
-**template** | None, str,  | NoneClass, str,  | The template used for message content | [optional] must be one of ["none", "eliona", ] if omitted the server will use the default value of "eliona"
 **[attachments](#attachments)** | list, tuple, None,  | tuple, NoneClass,  | A list of files attached to the message | [optional] 
 **any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
 
