@@ -6,7 +6,7 @@ An alarm
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **asset_id** | **int** | ID of the corresponding asset | 
-**subtype** | [**HeapSubtype**](HeapSubtype.md) |  | 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | 
 **priority** | [**AlarmPriority**](AlarmPriority.md) |  | 
 **timestamp** | **datetime** | Timestamp of the latest data change | 
 **occurrences** | **int** | How often this alarm is triggered | 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **acknowledge_timestamp** | **datetime, none_type** | Timestamp of the latest data change | [optional] 
 **acknowledge_text** | **str, none_type** | Text of acknowledgement | [optional] 
 **acknowledge_user_id** | **str, none_type** | User who acknowledged the alarm | [optional] 
-**message** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | Message texts for alarm | [optional] 
+**message** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | Message.yaml texts for alarm | [optional] 
 **asset_info** | [**Asset**](Asset.md) |  | [optional] 
 **rule_info** | [**AlarmRule**](AlarmRule.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

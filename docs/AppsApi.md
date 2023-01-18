@@ -19,6 +19,8 @@ Gets information about an app.
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -32,9 +34,24 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     app_name = "weather" # str | The name of the app
@@ -61,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -86,6 +103,8 @@ Gets information about a patch for an app.
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -99,9 +118,24 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     app_name = "weather" # str | The name of the app
@@ -130,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -155,6 +189,8 @@ Update properties of an app.
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -167,9 +203,24 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     app_name = "weather" # str | The name of the app
@@ -205,7 +256,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -230,6 +281,8 @@ Updates properties of a patch for an app.
 
 ### Example
 
+* Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
 
 ```python
 import time
@@ -242,9 +295,24 @@ configuration = eliona.api_client.Configuration(
     host = "http://api.eliona.io/v2"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
 
 # Enter a context with an instance of the API client
-with eliona.api_client.ApiClient() as api_client:
+with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     app_name = "weather" # str | The name of the app
@@ -282,7 +350,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 

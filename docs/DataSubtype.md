@@ -1,11 +1,11 @@
-# HeapSubtype
+# DataSubtype
 
-Type of asset heap data
+Type of asset data
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | **str** | Type of asset heap data | defaults to "input",  must be one of ["input", "info", "status", "output", ]
+**value** | **str** | Type of asset data | defaults to "input",  must be one of ["input", "info", "status", "output", ]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

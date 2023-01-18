@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **translation** | [**Translation**](Translation.md) |  | [optional] 
 **urldoc** | **str, none_type** | The url describing assets of this type | [optional] 
 **icon** | **str, none_type** | Icon name corresponding to assets of this type | [optional] 
+**payload_function** | **str, none_type** | Asset types payload function | [optional] 
+**allowed_inactivity** | **str, none_type** |  | [optional] 
 **attributes** | [**[AssetTypeAttribute], none_type**](AssetTypeAttribute.md) | List of named attributes | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

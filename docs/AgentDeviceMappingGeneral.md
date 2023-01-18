@@ -5,7 +5,7 @@ A general mapping of attributes for an agent
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**subtype** | [**HeapSubtype**](HeapSubtype.md) |  | 
+**subtype** | [**DataSubtype**](DataSubtype.md) |  | 
 **attribute** | **str** | Name of the attribute to map | 
 **_class** | [**AgentClass**](AgentClass.md) |  | [optional] 
 **id** | **int, none_type** | Unique id for the mapping | [optional] [readonly] 
