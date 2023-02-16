@@ -1,6 +1,6 @@
 # eliona.api_client.AssetsApi
 
-All URIs are relative to *http://api.eliona.io/v2*
+All URIs are relative to *https://api.eliona.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -29,10 +29,10 @@ import eliona.api_client
 from eliona.api_client.api import assets_api
 from eliona.api_client.model.asset import Asset
 from pprint import pprint
-# Defining the host is optional and defaults to http://api.eliona.io/v2
+# Defining the host is optional and defaults to https://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "http://api.eliona.io/v2"
+    host = "https://api.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -127,10 +127,10 @@ import eliona.api_client
 from eliona.api_client.api import assets_api
 from eliona.api_client.model.asset import Asset
 from pprint import pprint
-# Defining the host is optional and defaults to http://api.eliona.io/v2
+# Defining the host is optional and defaults to https://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "http://api.eliona.io/v2"
+    host = "https://api.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -154,6 +154,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = assets_api.AssetsApi(api_client)
     asset_type_name = "weather_location" # str | Filter the name of the asset type (optional)
+    project_id = "projectId_example" # str, none_type | Filter for a specific project (optional)
     expansions = [
         "expansions_example",
     ] # [str], none_type | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
@@ -162,7 +163,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Information about assets
-        api_response = api_instance.get_assets(asset_type_name=asset_type_name, expansions=expansions)
+        api_response = api_instance.get_assets(asset_type_name=asset_type_name, project_id=project_id, expansions=expansions)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
         print("Exception when calling AssetsApi->get_assets: %s\n" % e)
@@ -174,6 +175,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asset_type_name** | **str**| Filter the name of the asset type | [optional]
+ **project_id** | **str, none_type**| Filter for a specific project | [optional]
  **expansions** | **[str], none_type**| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
 
 ### Return type
@@ -216,10 +218,10 @@ import eliona.api_client
 from eliona.api_client.api import assets_api
 from eliona.api_client.model.asset import Asset
 from pprint import pprint
-# Defining the host is optional and defaults to http://api.eliona.io/v2
+# Defining the host is optional and defaults to https://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "http://api.eliona.io/v2"
+    host = "https://api.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -312,10 +314,10 @@ import eliona.api_client
 from eliona.api_client.api import assets_api
 from eliona.api_client.model.asset import Asset
 from pprint import pprint
-# Defining the host is optional and defaults to http://api.eliona.io/v2
+# Defining the host is optional and defaults to https://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "http://api.eliona.io/v2"
+    host = "https://api.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -407,10 +409,10 @@ import eliona.api_client
 from eliona.api_client.api import assets_api
 from eliona.api_client.model.asset import Asset
 from pprint import pprint
-# Defining the host is optional and defaults to http://api.eliona.io/v2
+# Defining the host is optional and defaults to https://api.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "http://api.eliona.io/v2"
+    host = "https://api.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters

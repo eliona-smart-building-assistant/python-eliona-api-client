@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **raster** | **str** | Calculation intervals. | 
 **aggregation_id** | **int** | ID of the aggregation | [optional] 
 **attribute** | **str** | Name of the attribute which holds the data points | [optional] 
-**timestamp** | **datetime, none_type** | Timestamp of this aggregated data set | [optional] 
+**timestamp** | **datetime, none_type** | Timestamp of this aggregated data set. The timestamp when the timeslot based on raster starts. | [optional] 
 **count** | **float, none_type** | Count of data points in this aggregated data set | [optional] 
 **average** | **float, none_type** | Average of all data points for this aggregated data set | [optional] 
 **sum** | **float, none_type** | Sum of all data points for this aggregated data set | [optional] 
