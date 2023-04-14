@@ -368,7 +368,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
                 virtual=True,
                 scale=3.14,
                 zero=3.14,
-                map={},
+                map=[{"value":0,"map":{"en":"empty","de":"leer"}},{"value":1,"map":{"en":"full","de":"voll"}}],
                 source_path=[
                     "source_path_example",
                 ],
@@ -500,7 +500,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         virtual=True,
         scale=3.14,
         zero=3.14,
-        map={},
+        map=[{"value":0,"map":{"en":"empty","de":"leer"}},{"value":1,"map":{"en":"full","de":"voll"}}],
         source_path=[
             "source_path_example",
         ],
@@ -633,7 +633,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
                 virtual=True,
                 scale=3.14,
                 zero=3.14,
-                map={},
+                map=[{"value":0,"map":{"en":"empty","de":"leer"}},{"value":1,"map":{"en":"full","de":"voll"}}],
                 source_path=[
                     "source_path_example",
                 ],
@@ -764,7 +764,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         virtual=True,
         scale=3.14,
         zero=3.14,
-        map={},
+        map=[{"value":0,"map":{"en":"empty","de":"leer"}},{"value":1,"map":{"en":"full","de":"voll"}}],
         source_path=[
             "source_path_example",
         ],
@@ -897,7 +897,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
                 virtual=True,
                 scale=3.14,
                 zero=3.14,
-                map={},
+                map=[{"value":0,"map":{"en":"empty","de":"leer"}},{"value":1,"map":{"en":"full","de":"voll"}}],
                 source_path=[
                     "source_path_example",
                 ],
