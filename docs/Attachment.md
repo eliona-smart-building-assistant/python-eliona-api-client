@@ -1,6 +1,6 @@
 # Attachment
 
-A binary attachment for messages
+A binary attachment
 
 ## Properties
 Name | Type | Description | Notes

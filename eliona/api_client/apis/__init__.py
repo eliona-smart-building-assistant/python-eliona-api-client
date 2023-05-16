@@ -25,6 +25,7 @@ from eliona.api_client.api.dashboards_api import DashboardsApi
 from eliona.api_client.api.data_api import DataApi
 from eliona.api_client.api.messages_api import MessagesApi
 from eliona.api_client.api.nodes_api import NodesApi
+from eliona.api_client.api.qr_codes_api import QRCodesApi
 from eliona.api_client.api.version_api import VersionApi
 from eliona.api_client.api.widgets_api import WidgetsApi
 from eliona.api_client.api.widgets_types_api import WidgetsTypesApi

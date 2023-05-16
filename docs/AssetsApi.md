@@ -251,16 +251,37 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         asset_type="asset_type_example",
         latitude=47.3667,
         longitude=8.55,
+        is_tracker=False,
         description="Weather station Zurich, Swiss",
         parent_functional_asset_id=4712,
         parent_locational_asset_id=4712,
         tags=["weather","location"],
+        attachments=[
+            Attachment(
+                name="example.gif",
+                content_type="image/png",
+                encoding="base64",
+                content="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=",
+            ),
+        ],
     ) # Asset | 
+    expansions = [
+        "expansions_example",
+    ] # [str], none_type | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Create an asset
         api_response = api_instance.post_asset(asset)
+        pprint(api_response)
+    except eliona.api_client.ApiException as e:
+        print("Exception when calling AssetsApi->post_asset: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Create an asset
+        api_response = api_instance.post_asset(asset, expansions=expansions)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
         print("Exception when calling AssetsApi->post_asset: %s\n" % e)
@@ -272,6 +293,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asset** | [**Asset**](Asset.md)|  |
+ **expansions** | **[str], none_type**| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
 
 ### Return type
 
@@ -301,7 +323,7 @@ Name | Type | Description  | Notes
 
 Create or update an asset
 
-Creates an asset if no asset  or updating it if already exists. Uses the unique combination of project id and global asset id for updating.
+Creates an asset if no asset exists or update it if already exists. Uses the unique combination of project id and global asset id for updating.
 
 ### Example
 
@@ -347,16 +369,37 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         asset_type="asset_type_example",
         latitude=47.3667,
         longitude=8.55,
+        is_tracker=False,
         description="Weather station Zurich, Swiss",
         parent_functional_asset_id=4712,
         parent_locational_asset_id=4712,
         tags=["weather","location"],
+        attachments=[
+            Attachment(
+                name="example.gif",
+                content_type="image/png",
+                encoding="base64",
+                content="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=",
+            ),
+        ],
     ) # Asset | 
+    expansions = [
+        "expansions_example",
+    ] # [str], none_type | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Create or update an asset
         api_response = api_instance.put_asset(asset)
+        pprint(api_response)
+    except eliona.api_client.ApiException as e:
+        print("Exception when calling AssetsApi->put_asset: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Create or update an asset
+        api_response = api_instance.put_asset(asset, expansions=expansions)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
         print("Exception when calling AssetsApi->put_asset: %s\n" % e)
@@ -368,6 +411,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asset** | [**Asset**](Asset.md)|  |
+ **expansions** | **[str], none_type**| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
 
 ### Return type
 
@@ -443,16 +487,37 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         asset_type="asset_type_example",
         latitude=47.3667,
         longitude=8.55,
+        is_tracker=False,
         description="Weather station Zurich, Swiss",
         parent_functional_asset_id=4712,
         parent_locational_asset_id=4712,
         tags=["weather","location"],
+        attachments=[
+            Attachment(
+                name="example.gif",
+                content_type="image/png",
+                encoding="base64",
+                content="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=",
+            ),
+        ],
     ) # Asset | 
+    expansions = [
+        "expansions_example",
+    ] # [str], none_type | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Update an asset
         api_response = api_instance.put_asset_by_id(asset_id, asset)
+        pprint(api_response)
+    except eliona.api_client.ApiException as e:
+        print("Exception when calling AssetsApi->put_asset_by_id: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Update an asset
+        api_response = api_instance.put_asset_by_id(asset_id, asset, expansions=expansions)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
         print("Exception when calling AssetsApi->put_asset_by_id: %s\n" % e)
@@ -465,6 +530,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asset_id** | **int**| The id of the asset |
  **asset** | [**Asset**](Asset.md)|  |
+ **expansions** | **[str], none_type**| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
 
 ### Return type
 
