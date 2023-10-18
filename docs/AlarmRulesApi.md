@@ -237,6 +237,9 @@ configuration = eliona.api_client.Configuration(
 with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = alarm_rules_api.AlarmRulesApi(api_client)
+    alarm_rule_ids = [
+        1,
+    ] # [int], none_type | List of alarm rule ids for filtering (optional)
     expansions = [
         "expansions_example",
     ] # [str], none_type | List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows 'ObjectName.fieldName'. (optional)
@@ -245,7 +248,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Information about alarm rules
-        api_response = api_instance.get_alarm_rules(expansions=expansions)
+        api_response = api_instance.get_alarm_rules(alarm_rule_ids=alarm_rule_ids, expansions=expansions)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
         print("Exception when calling AlarmRulesApi->get_alarm_rules: %s\n" % e)
@@ -256,6 +259,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **alarm_rule_ids** | **[int], none_type**| List of alarm rule ids for filtering | [optional]
  **expansions** | **[str], none_type**| List of referenced data to load, insert or update. Each entry defines the full qualified name of the field to be expanded as follows &#39;ObjectName.fieldName&#39;. | [optional]
 
 ### Return type
@@ -343,6 +347,8 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         notify_on="R",
         dont_mask=False,
         asset_info=Asset(
+            resource_id="123e4567-e89b-12d3-a456-426655440000",
+            device_ids=["XYZ0123",173493272],
             project_id="99",
             global_asset_identifier="zurich_swiss",
             name="Station Zurich",
@@ -466,6 +472,8 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         notify_on="R",
         dont_mask=False,
         asset_info=Asset(
+            resource_id="123e4567-e89b-12d3-a456-426655440000",
+            device_ids=["XYZ0123",173493272],
             project_id="99",
             global_asset_identifier="zurich_swiss",
             name="Station Zurich",
@@ -590,6 +598,8 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         notify_on="R",
         dont_mask=False,
         asset_info=Asset(
+            resource_id="123e4567-e89b-12d3-a456-426655440000",
+            device_ids=["XYZ0123",173493272],
             project_id="99",
             global_asset_identifier="zurich_swiss",
             name="Station Zurich",

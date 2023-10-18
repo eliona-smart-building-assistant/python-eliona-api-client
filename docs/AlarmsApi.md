@@ -556,7 +556,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_alarm_by_id**
-> patch_alarm_by_id(alarm_rule_id, )
+> patch_alarm_by_id(alarm_rule_id, acknowledged)
 
 Update alarm
 
@@ -599,12 +599,13 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = alarms_api.AlarmsApi(api_client)
     alarm_rule_id = 4711 # int | The id of the alarm rule
-    acknowledge_text = "acknowledgeText_example" # str | Sets the text for acknowledgement (optional)
+    acknowledged = True # bool | Marks the alarm as acknowledged or not acknowledged by setting the acknowledge timestamp to now or to null.
+    acknowledge_text = "acknowledgeText_example" # str | Sets the text for acknowledgement if acknowledged is set to true (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Update alarm
-        api_instance.patch_alarm_by_id(alarm_rule_id, )
+        api_instance.patch_alarm_by_id(alarm_rule_id, acknowledged)
     except eliona.api_client.ApiException as e:
         print("Exception when calling AlarmsApi->patch_alarm_by_id: %s\n" % e)
 
@@ -612,7 +613,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Update alarm
-        api_instance.patch_alarm_by_id(alarm_rule_id, acknowledge_text=acknowledge_text)
+        api_instance.patch_alarm_by_id(alarm_rule_id, acknowledged, acknowledge_text=acknowledge_text)
     except eliona.api_client.ApiException as e:
         print("Exception when calling AlarmsApi->patch_alarm_by_id: %s\n" % e)
 ```
@@ -623,8 +624,8 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **alarm_rule_id** | **int**| The id of the alarm rule |
- **acknowledged** | **bool**| Marks the alarm as acknowledged by setting the acknowledge timestamp to now. | defaults to True
- **acknowledge_text** | **str**| Sets the text for acknowledgement | [optional]
+ **acknowledged** | **bool**| Marks the alarm as acknowledged or not acknowledged by setting the acknowledge timestamp to now or to null. |
+ **acknowledge_text** | **str**| Sets the text for acknowledgement if acknowledged is set to true | [optional]
 
 ### Return type
 

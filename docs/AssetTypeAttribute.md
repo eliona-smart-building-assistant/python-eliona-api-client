@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **virtual** | **bool, none_type** | Is the attribute virtual or not | [optional] 
 **scale** | **float, none_type** | value scale | [optional] 
 **zero** | **float, none_type** | value scale | [optional] 
-**map** | **[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}], none_type** | list of mappings between integer values and custom translated strings | [optional] 
+**map** | [**[ValueMapping], none_type**](ValueMapping.md) | list of mapping between value and custom text | [optional] 
 **source_path** | **[str], none_type** | source path for attribute value | [optional] 
 **is_digital** | **bool, none_type** | is attribute digital | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

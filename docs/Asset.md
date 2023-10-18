@@ -8,14 +8,18 @@ Name | Type | Description | Notes
 **project_id** | **str** | ID of the project to which the asset belongs | 
 **global_asset_identifier** | **str** | Unique identifier for the asset | 
 **asset_type** | **str** | Reference to asset type by name | 
+**resource_id** | **str, none_type** | A custom identifier for the resource, which can be utilized to identify it for various operations such as updates, deletions, and other related tasks. If this identifier is not provided, the application will generate a new value for it automatically | [optional] 
 **id** | **int, none_type** | The internal Id of asset | [optional] [readonly] 
+**device_ids** | **[str], none_type** | A list of unique device ids | [optional] 
 **name** | **str, none_type** | Alternate text for the asset to display in frontend | [optional] 
 **latitude** | **float, none_type** | Latitude coordinate (GPS) of the asset | [optional] 
 **longitude** | **float, none_type** | Longitude coordinate (GPS) of the asset | [optional] 
 **is_tracker** | **bool, none_type** | Does the asset function as a tracker and capture its position by itself | [optional]  if omitted the server will use the default value of False
 **description** | **str, none_type** | Textual description for this asset | [optional] 
 **parent_functional_asset_id** | **int, none_type** | The id of an asset which groups this asset as a functional child | [optional] 
+**functional_asset_id_path** | **[int], none_type** | The hierarchical path of functional ids of the asset | [optional] [readonly] 
 **parent_locational_asset_id** | **int, none_type** | The id of an asset which groups this asset as a locational child | [optional] 
+**locational_asset_id_path** | **[int], none_type** | The hierarchical path of locational ids of the asset | [optional] [readonly] 
 **tags** | **[str], none_type** | List of associated tags | [optional] 
 **children_info** | [**[Asset], none_type**](Asset.md) | List of children for this asset. | [optional] [readonly] 
 **attachments** | [**[Attachment], none_type**](Attachment.md) | A list of files attached to the asset | [optional] 

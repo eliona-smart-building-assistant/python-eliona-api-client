@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**get_data_aggregated**](DataApi.md#get_data_aggregated) | **GET** /data-aggregated | Get aggregated data
 [**get_data_trends**](DataApi.md#get_data_trends) | **GET** /data-trends | Get trend of historical data
 [**listen_data**](DataApi.md#listen_data) | **GET** /data-listener | WebSocket connection for asset data changes
+[**put_bulk_data**](DataApi.md#put_bulk_data) | **PUT** /data-bulk | Create or update multiple asset data
 [**put_data**](DataApi.md#put_data) | **PUT** /data | Create or update asset data
 
 
@@ -372,6 +373,96 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successfully opened a connection to asset data WebSocket |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_bulk_data**
+> put_bulk_data(data)
+
+Create or update multiple asset data
+
+Create multiple asset data or update data if already exists. Uses the unique combination of asset id and subtype for updating.
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+* Bearer (JWT) Authentication (BearerAuth):
+
+```python
+import time
+import eliona.api_client
+from eliona.api_client.api import data_api
+from eliona.api_client.model.data import Data
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.eliona.io/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = eliona.api_client.Configuration(
+    host = "https://api.eliona.io/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Configure Bearer authorization (JWT): BearerAuth
+configuration = eliona.api_client.Configuration(
+    access_token = 'YOUR_BEARER_TOKEN'
+)
+
+# Enter a context with an instance of the API client
+with eliona.api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = data_api.DataApi(api_client)
+    data = [
+        Data(
+            asset_id=4711,
+            subtype=DataSubtype("input"),
+            timestamp=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            data={},
+        ),
+    ] # [Data] | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create or update multiple asset data
+        api_instance.put_bulk_data(data)
+    except eliona.api_client.ApiException as e:
+        print("Exception when calling DataApi->put_bulk_data: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**[Data]**](Data.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Successfully created multiple asset data |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
