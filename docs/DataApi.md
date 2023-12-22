@@ -57,6 +57,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = data_api.DataApi(api_client)
     asset_id = 4711 # int | Filter for a specific asset id (optional)
+    parent_asset_id = 4711 # int | Filter for a specific parent asset id (optional)
     data_subtype = "input" # str | Filter for a specific type of asset data (optional)
     asset_type_name = "weather_location" # str | Filter the name of the asset type (optional)
 
@@ -64,7 +65,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Gets all data
-        api_response = api_instance.get_data(asset_id=asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name)
+        api_response = api_instance.get_data(asset_id=asset_id, parent_asset_id=parent_asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
         print("Exception when calling DataApi->get_data: %s\n" % e)
@@ -76,6 +77,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **asset_id** | **int**| Filter for a specific asset id | [optional]
+ **parent_asset_id** | **int**| Filter for a specific parent asset id | [optional]
  **data_subtype** | **str**| Filter for a specific type of asset data | [optional]
  **asset_type_name** | **str**| Filter the name of the asset type | [optional]
 
@@ -426,6 +428,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
             subtype=DataSubtype("input"),
             timestamp=dateutil_parser('1970-01-01T00:00:00.00Z'),
             data={},
+            client_reference="ABC123",
         ),
     ] # [Data] | 
 
@@ -515,6 +518,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         subtype=DataSubtype("input"),
         timestamp=dateutil_parser('1970-01-01T00:00:00.00Z'),
         data={},
+        client_reference="ABC123",
     ) # Data | 
 
     # example passing only required values which don't have defaults set

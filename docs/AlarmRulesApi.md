@@ -346,6 +346,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         urldoc="urldoc_example",
         notify_on="R",
         dont_mask=False,
+        check_type="limits",
         asset_info=Asset(
             resource_id="123e4567-e89b-12d3-a456-426655440000",
             device_ids=["XYZ0123",173493272],
@@ -471,6 +472,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         urldoc="urldoc_example",
         notify_on="R",
         dont_mask=False,
+        check_type="limits",
         asset_info=Asset(
             resource_id="123e4567-e89b-12d3-a456-426655440000",
             device_ids=["XYZ0123",173493272],
@@ -597,6 +599,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         urldoc="urldoc_example",
         notify_on="R",
         dont_mask=False,
+        check_type="limits",
         asset_info=Asset(
             resource_id="123e4567-e89b-12d3-a456-426655440000",
             device_ids=["XYZ0123",173493272],
