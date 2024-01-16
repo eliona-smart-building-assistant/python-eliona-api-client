@@ -1,6 +1,6 @@
 # eliona.api_client.DataApi
 
-All URIs are relative to *https://api.eliona.io/v2*
+All URIs are relative to *https://name.eliona.io/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -30,10 +30,10 @@ import eliona.api_client
 from eliona.api_client.api import data_api
 from eliona.api_client.model.data import Data
 from pprint import pprint
-# Defining the host is optional and defaults to https://api.eliona.io/v2
+# Defining the host is optional and defaults to https://name.eliona.io/api/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://api.eliona.io/v2"
+    host = "https://name.eliona.io/api/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -121,10 +121,10 @@ import eliona.api_client
 from eliona.api_client.api import data_api
 from eliona.api_client.model.data_aggregated import DataAggregated
 from pprint import pprint
-# Defining the host is optional and defaults to https://api.eliona.io/v2
+# Defining the host is optional and defaults to https://name.eliona.io/api/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://api.eliona.io/v2"
+    host = "https://name.eliona.io/api/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -216,10 +216,10 @@ import eliona.api_client
 from eliona.api_client.api import data_api
 from eliona.api_client.model.data import Data
 from pprint import pprint
-# Defining the host is optional and defaults to https://api.eliona.io/v2
+# Defining the host is optional and defaults to https://name.eliona.io/api/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://api.eliona.io/v2"
+    host = "https://name.eliona.io/api/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -309,10 +309,10 @@ import eliona.api_client
 from eliona.api_client.api import data_api
 from eliona.api_client.model.data import Data
 from pprint import pprint
-# Defining the host is optional and defaults to https://api.eliona.io/v2
+# Defining the host is optional and defaults to https://name.eliona.io/api/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://api.eliona.io/v2"
+    host = "https://name.eliona.io/api/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -396,10 +396,10 @@ import eliona.api_client
 from eliona.api_client.api import data_api
 from eliona.api_client.model.data import Data
 from pprint import pprint
-# Defining the host is optional and defaults to https://api.eliona.io/v2
+# Defining the host is optional and defaults to https://name.eliona.io/api/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://api.eliona.io/v2"
+    host = "https://name.eliona.io/api/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -431,11 +431,20 @@ with eliona.api_client.ApiClient(configuration) as api_client:
             client_reference="ABC123",
         ),
     ] # [Data] | 
+    direct_mode = "true" # str | Executes the operation directly without using other services. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Create or update multiple asset data
         api_instance.put_bulk_data(data)
+    except eliona.api_client.ApiException as e:
+        print("Exception when calling DataApi->put_bulk_data: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Create or update multiple asset data
+        api_instance.put_bulk_data(data, direct_mode=direct_mode)
     except eliona.api_client.ApiException as e:
         print("Exception when calling DataApi->put_bulk_data: %s\n" % e)
 ```
@@ -446,6 +455,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**[Data]**](Data.md)|  |
+ **direct_mode** | **str**| Executes the operation directly without using other services. | [optional]
 
 ### Return type
 
@@ -487,10 +497,10 @@ import eliona.api_client
 from eliona.api_client.api import data_api
 from eliona.api_client.model.data import Data
 from pprint import pprint
-# Defining the host is optional and defaults to https://api.eliona.io/v2
+# Defining the host is optional and defaults to https://name.eliona.io/api/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://api.eliona.io/v2"
+    host = "https://name.eliona.io/api/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -520,11 +530,20 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         data={},
         client_reference="ABC123",
     ) # Data | 
+    direct_mode = "true" # str | Executes the operation directly without using other services. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Create or update asset data
         api_instance.put_data(data)
+    except eliona.api_client.ApiException as e:
+        print("Exception when calling DataApi->put_data: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Create or update asset data
+        api_instance.put_data(data, direct_mode=direct_mode)
     except eliona.api_client.ApiException as e:
         print("Exception when calling DataApi->put_data: %s\n" % e)
 ```
@@ -535,6 +554,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **data** | [**Data**](Data.md)|  |
+ **direct_mode** | **str**| Executes the operation directly without using other services. | [optional]
 
 ### Return type
 
