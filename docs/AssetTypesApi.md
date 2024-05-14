@@ -1,6 +1,6 @@
 # eliona.api_client.AssetTypesApi
 
-All URIs are relative to *https://name.eliona.io/api/v2*
+All URIs are relative to *https://name.eliona.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -31,10 +31,10 @@ import time
 import eliona.api_client
 from eliona.api_client.api import asset_types_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -115,10 +115,10 @@ import eliona.api_client
 from eliona.api_client.api import asset_types_api
 from eliona.api_client.model.asset_type import AssetType
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -213,10 +213,10 @@ import eliona.api_client
 from eliona.api_client.api import asset_types_api
 from eliona.api_client.model.asset_type import AssetType
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -300,10 +300,10 @@ import eliona.api_client
 from eliona.api_client.api import asset_types_api
 from eliona.api_client.model.asset_type import AssetType
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -341,6 +341,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         icon="weather",
         payload_function="PLS",
         allowed_inactivity="0 hours 5 mins",
+        is_tracker=False,
         attributes=[
             AssetTypeAttribute(
                 asset_type_name="weather_location",
@@ -366,13 +367,11 @@ with eliona.api_client.ApiClient(configuration) as api_client:
                 ar=False,
                 sequence=1,
                 virtual=True,
+                formula="{seconds} * 60",
                 scale=3.14,
                 zero=3.14,
                 map=[
-                    ValueMapping(
-                        value=5,
-                        text="five",
-                    ),
+                    {},
                 ],
                 source_path=[
                     "source_path_example",
@@ -452,10 +451,10 @@ import eliona.api_client
 from eliona.api_client.api import asset_types_api
 from eliona.api_client.model.asset_type_attribute import AssetTypeAttribute
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -503,13 +502,11 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         ar=False,
         sequence=1,
         virtual=True,
+        formula="{seconds} * 60",
         scale=3.14,
         zero=3.14,
         map=[
-            ValueMapping(
-                value=5,
-                text="five",
-            ),
+            {},
         ],
         source_path=[
             "source_path_example",
@@ -575,10 +572,10 @@ import eliona.api_client
 from eliona.api_client.api import asset_types_api
 from eliona.api_client.model.asset_type import AssetType
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -616,6 +613,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         icon="weather",
         payload_function="PLS",
         allowed_inactivity="0 hours 5 mins",
+        is_tracker=False,
         attributes=[
             AssetTypeAttribute(
                 asset_type_name="weather_location",
@@ -641,13 +639,11 @@ with eliona.api_client.ApiClient(configuration) as api_client:
                 ar=False,
                 sequence=1,
                 virtual=True,
+                formula="{seconds} * 60",
                 scale=3.14,
                 zero=3.14,
                 map=[
-                    ValueMapping(
-                        value=5,
-                        text="five",
-                    ),
+                    {},
                 ],
                 source_path=[
                     "source_path_example",
@@ -726,10 +722,10 @@ import eliona.api_client
 from eliona.api_client.api import asset_types_api
 from eliona.api_client.model.asset_type_attribute import AssetTypeAttribute
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -777,13 +773,11 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         ar=False,
         sequence=1,
         virtual=True,
+        formula="{seconds} * 60",
         scale=3.14,
         zero=3.14,
         map=[
-            ValueMapping(
-                value=5,
-                text="five",
-            ),
+            {},
         ],
         source_path=[
             "source_path_example",
@@ -848,10 +842,10 @@ import eliona.api_client
 from eliona.api_client.api import asset_types_api
 from eliona.api_client.model.asset_type import AssetType
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -890,6 +884,7 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         icon="weather",
         payload_function="PLS",
         allowed_inactivity="0 hours 5 mins",
+        is_tracker=False,
         attributes=[
             AssetTypeAttribute(
                 asset_type_name="weather_location",
@@ -915,13 +910,11 @@ with eliona.api_client.ApiClient(configuration) as api_client:
                 ar=False,
                 sequence=1,
                 virtual=True,
+                formula="{seconds} * 60",
                 scale=3.14,
                 zero=3.14,
                 map=[
-                    ValueMapping(
-                        value=5,
-                        text="five",
-                    ),
+                    {},
                 ],
                 source_path=[
                     "source_path_example",

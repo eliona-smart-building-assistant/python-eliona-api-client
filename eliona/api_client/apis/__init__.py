@@ -21,6 +21,7 @@ from eliona.api_client.api.alarms_api import AlarmsApi
 from eliona.api_client.api.apps_api import AppsApi
 from eliona.api_client.api.asset_types_api import AssetTypesApi
 from eliona.api_client.api.assets_api import AssetsApi
+from eliona.api_client.api.calculation_rules_api import CalculationRulesApi
 from eliona.api_client.api.communication_api import CommunicationApi
 from eliona.api_client.api.dashboards_api import DashboardsApi
 from eliona.api_client.api.data_api import DataApi

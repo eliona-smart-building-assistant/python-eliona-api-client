@@ -1,6 +1,6 @@
 # eliona.api_client.AlarmsApi
 
-All URIs are relative to *https://name.eliona.io/api/v2*
+All URIs are relative to *https://name.eliona.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -31,10 +31,10 @@ import eliona.api_client
 from eliona.api_client.api import alarms_api
 from eliona.api_client.model.alarm import Alarm
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -129,10 +129,10 @@ import eliona.api_client
 from eliona.api_client.api import alarms_api
 from eliona.api_client.model.alarm import Alarm
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -226,10 +226,10 @@ import eliona.api_client
 from eliona.api_client.api import alarms_api
 from eliona.api_client.model.alarm import Alarm
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -315,10 +315,10 @@ import eliona.api_client
 from eliona.api_client.api import alarms_api
 from eliona.api_client.model.alarm import Alarm
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -404,10 +404,10 @@ import eliona.api_client
 from eliona.api_client.api import alarms_api
 from eliona.api_client.model.alarm import Alarm
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -476,7 +476,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listen_alarm**
-> Alarm listen_alarm()
+> AlarmListen listen_alarm()
 
 WebSocket connection for alarm changes
 
@@ -491,12 +491,12 @@ Open a WebSocket connection to get informed when new alarm data is written or an
 import time
 import eliona.api_client
 from eliona.api_client.api import alarms_api
-from eliona.api_client.model.alarm import Alarm
+from eliona.api_client.model.alarm_listen import AlarmListen
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -535,7 +535,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Alarm**](Alarm.md)
+[**AlarmListen**](AlarmListen.md)
 
 ### Authorization
 
@@ -572,10 +572,10 @@ import time
 import eliona.api_client
 from eliona.api_client.api import alarms_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters

@@ -1,6 +1,6 @@
 # eliona.api_client.DataApi
 
-All URIs are relative to *https://name.eliona.io/api/v2*
+All URIs are relative to *https://name.eliona.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -30,10 +30,10 @@ import eliona.api_client
 from eliona.api_client.api import data_api
 from eliona.api_client.model.data import Data
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -121,10 +121,10 @@ import eliona.api_client
 from eliona.api_client.api import data_api
 from eliona.api_client.model.data_aggregated import DataAggregated
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -153,12 +153,13 @@ with eliona.api_client.ApiClient(configuration) as api_client:
     data_subtype = "input" # str | Filter for a specific type of asset data (optional)
     asset_type_name = "weather_location" # str | Filter the name of the asset type (optional)
     aggregation_id = 0815 # int | Filter for a specific aggregation id (optional)
+    aggregation_raster = "DAY" # str | Aggregation calculation interval (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Get aggregated data
-        api_response = api_instance.get_data_aggregated(from_date=from_date, to_date=to_date, asset_id=asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name, aggregation_id=aggregation_id)
+        api_response = api_instance.get_data_aggregated(from_date=from_date, to_date=to_date, asset_id=asset_id, data_subtype=data_subtype, asset_type_name=asset_type_name, aggregation_id=aggregation_id, aggregation_raster=aggregation_raster)
         pprint(api_response)
     except eliona.api_client.ApiException as e:
         print("Exception when calling DataApi->get_data_aggregated: %s\n" % e)
@@ -175,6 +176,7 @@ Name | Type | Description  | Notes
  **data_subtype** | **str**| Filter for a specific type of asset data | [optional]
  **asset_type_name** | **str**| Filter the name of the asset type | [optional]
  **aggregation_id** | **int**| Filter for a specific aggregation id | [optional]
+ **aggregation_raster** | **str**| Aggregation calculation interval | [optional]
 
 ### Return type
 
@@ -216,10 +218,10 @@ import eliona.api_client
 from eliona.api_client.api import data_api
 from eliona.api_client.model.data import Data
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -292,7 +294,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listen_data**
-> Data listen_data()
+> DataListen listen_data()
 
 WebSocket connection for asset data changes
 
@@ -307,12 +309,12 @@ Open a WebSocket connection to get informed when new asset data is written or an
 import time
 import eliona.api_client
 from eliona.api_client.api import data_api
-from eliona.api_client.model.data import Data
+from eliona.api_client.model.data_listen import DataListen
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -358,7 +360,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Data**](Data.md)
+[**DataListen**](DataListen.md)
 
 ### Authorization
 
@@ -396,10 +398,10 @@ import eliona.api_client
 from eliona.api_client.api import data_api
 from eliona.api_client.model.data import Data
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -497,10 +499,10 @@ import eliona.api_client
 from eliona.api_client.api import data_api
 from eliona.api_client.model.data import Data
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters

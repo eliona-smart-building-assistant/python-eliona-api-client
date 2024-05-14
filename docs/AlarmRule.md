@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **urldoc** | **str, none_type** | The url describing the alarm | [optional] 
 **notify_on** | **str, none_type** | Notification | [optional] 
 **dont_mask** | **bool, none_type** | Do not mask | [optional]  if omitted the server will use the default value of False
-**check_type** | **str, none_type** | Check type | [optional]  if omitted the server will use the default value of "limits"
+**check_type** | **str, none_type** | Check type | [optional] 
 **asset_info** | [**Asset**](Asset.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

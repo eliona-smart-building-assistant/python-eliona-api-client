@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **latitude** | **float, none_type** | Latitude coordinate (GPS) of the asset | [optional] 
 **longitude** | **float, none_type** | Longitude coordinate (GPS) of the asset | [optional] 
 **is_tracker** | **bool, none_type** | Does the asset function as a tracker and capture its position by itself | [optional]  if omitted the server will use the default value of False
+**tracker_id** | **int, none_type** | Tracker Asset Id | [optional] 
 **description** | **str, none_type** | Textual description for this asset | [optional] 
 **parent_functional_asset_id** | **int, none_type** | The id of an asset which groups this asset as a functional child | [optional] 
 **functional_asset_id_path** | **[int], none_type** | The hierarchical path of functional ids of the asset | [optional] [readonly] 

@@ -1,6 +1,6 @@
 # eliona.api_client.QRCodesApi
 
-All URIs are relative to *https://name.eliona.io/api/v2*
+All URIs are relative to *https://name.eliona.io/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -24,10 +24,10 @@ import time
 import eliona.api_client
 from eliona.api_client.api import qr_codes_api
 from pprint import pprint
-# Defining the host is optional and defaults to https://name.eliona.io/api/v2
+# Defining the host is optional and defaults to https://name.eliona.io/v2
 # See configuration.py for a list of all supported configuration parameters.
 configuration = eliona.api_client.Configuration(
-    host = "https://name.eliona.io/api/v2"
+    host = "https://name.eliona.io/v2"
 )
 
 # The client must configure the authentication and authorization parameters
