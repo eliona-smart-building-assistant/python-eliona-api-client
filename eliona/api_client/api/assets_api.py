@@ -26,7 +26,6 @@ from eliona.api_client.model.asset import Asset
 from eliona.api_client.model.asset_dry_run import AssetDryRun
 from eliona.api_client.model.asset_listen import AssetListen
 from eliona.api_client.model.attribute_display import AttributeDisplay
-from eliona.api_client.model.str_none_type import StrNoneType
 
 
 class AssetsApi(object):
