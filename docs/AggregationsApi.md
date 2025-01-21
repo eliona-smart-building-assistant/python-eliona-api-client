@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Delete an aggregation
 
-Deletes an aggregation by the given id.
+Deprecated: Use the 'GET /data-trend-aggregated' endpoint to retrieve aggregated data for periodic rasters without defining aggregations. Deletes an aggregation by the given id. 
 
 ### Example
 
@@ -100,7 +100,7 @@ void (empty response body)
 
 Information about an aggregation
 
-Gets information about an aggregation by the given id.
+Deprecated: Use the 'GET /data-trend-aggregated' endpoint to retrieve aggregated data for periodic rasters without defining aggregations. Gets information about an aggregation by the given id. 
 
 ### Example
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 Information about aggregations
 
-Gets a list of aggregations
+Deprecated: Use the 'GET /data-trend-aggregated' endpoint to retrieve aggregated data for periodic rasters without defining aggregations. Gets a list of aggregations. 
 
 ### Example
 
@@ -265,7 +265,7 @@ This endpoint does not need any parameter.
 
 Creates an aggregation
 
-Creates a new aggregation.
+Deprecated: Use the 'GET /data-trend-aggregated' endpoint to retrieve aggregated data for periodic rasters without defining aggregations. Creates a new aggregation. 
 
 ### Example
 
@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 
 Creates or updates an aggregation
 
-Creates an aggregation or updates if already exists. Uses the unique combination of asset id, subtype, attribute and raster for updating.
+Deprecated: Use the 'GET /data-trend-aggregated' endpoint to retrieve aggregated data for periodic rasters without defining aggregations. Creates an aggregation or updates if already exists. Uses the unique combination of asset id, subtype, attribute and raster for updating. 
 
 ### Example
 
@@ -446,7 +446,7 @@ Name | Type | Description  | Notes
 
 Updates an aggregation
 
-Updates an aggregation.
+Deprecated: Use the 'GET /data-trend-aggregated' endpoint to retrieve aggregated data for periodic rasters without defining aggregations. Updates an aggregation. 
 
 ### Example
 

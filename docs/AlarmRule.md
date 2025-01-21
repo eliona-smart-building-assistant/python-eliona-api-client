@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **tags** | **[str], none_type** | List of associated tags | [optional] 
 **subject** | **str, none_type** | The subject for the alarm | [optional] 
 **urldoc** | **str, none_type** | The url describing the alarm | [optional] 
+**params** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type** | Parameter for aggregated alarms | [optional] 
 **notify_on** | **str, none_type** | Notification | [optional] 
 **dont_mask** | **bool, none_type** | Do not mask | [optional]  if omitted the server will use the default value of False
 **check_type** | **str, none_type** | Check type | [optional] 

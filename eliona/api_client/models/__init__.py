@@ -39,6 +39,7 @@ from eliona.api_client.model.data_aggregated import DataAggregated
 from eliona.api_client.model.data_listen import DataListen
 from eliona.api_client.model.data_listen_all_of import DataListenAllOf
 from eliona.api_client.model.data_subtype import DataSubtype
+from eliona.api_client.model.data_trend_aggregated import DataTrendAggregated
 from eliona.api_client.model.dry_run_general import DryRunGeneral
 from eliona.api_client.model.iosys_agent_device import IosysAgentDevice
 from eliona.api_client.model.iosys_agent_device1 import IosysAgentDevice1

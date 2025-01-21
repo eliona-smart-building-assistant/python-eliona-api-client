@@ -7,7 +7,7 @@ docker run --rm ^
     --git-repo-id python-eliona-api-client ^
     -i https://raw.githubusercontent.com/eliona-smart-building-assistant/eliona-api/main/openapi.yaml ^
     -o /local ^
-    --additional-properties="packageName=eliona.api_client,packageVersion=2.6.11,projectName=Python Eliona API client"
+    --additional-properties="packageName=eliona.api_client,packageVersion=2.8.2,projectName=Python Eliona API client"
 
 :: There is an ivalid import that we cannot avoid in this version of Openapi generator. Let's just remove it.
 SET "FILE_PATH=.\eliona\api_client\api\assets_api.py"

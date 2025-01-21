@@ -365,6 +365,8 @@ with eliona.api_client.ApiClient(configuration) as api_client:
             description="Weather station Zurich, Swiss",
             parent_functional_asset_id=4712,
             parent_locational_asset_id=4712,
+            parent_functional_identifier="4712",
+            parent_locational_identifier="4712",
             tags=["weather","location"],
             attachments=[
                 Attachment(
@@ -490,6 +492,8 @@ with eliona.api_client.ApiClient(configuration) as api_client:
             description="Weather station Zurich, Swiss",
             parent_functional_asset_id=4712,
             parent_locational_asset_id=4712,
+            parent_functional_identifier="4712",
+            parent_locational_identifier="4712",
             tags=["weather","location"],
             attachments=[
                 Attachment(
@@ -970,6 +974,8 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         description="Weather station Zurich, Swiss",
         parent_functional_asset_id=4712,
         parent_locational_asset_id=4712,
+        parent_functional_identifier="4712",
+        parent_locational_identifier="4712",
         tags=["weather","location"],
         attachments=[
             Attachment(
@@ -1095,6 +1101,8 @@ with eliona.api_client.ApiClient(configuration) as api_client:
             description="Weather station Zurich, Swiss",
             parent_functional_asset_id=4712,
             parent_locational_asset_id=4712,
+            parent_functional_identifier="4712",
+            parent_locational_identifier="4712",
             tags=["weather","location"],
             attachments=[
                 Attachment(
@@ -1220,6 +1228,8 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         description="Weather station Zurich, Swiss",
         parent_functional_asset_id=4712,
         parent_locational_asset_id=4712,
+        parent_functional_identifier="4712",
+        parent_locational_identifier="4712",
         tags=["weather","location"],
         attachments=[
             Attachment(
@@ -1344,6 +1354,8 @@ with eliona.api_client.ApiClient(configuration) as api_client:
         description="Weather station Zurich, Swiss",
         parent_functional_asset_id=4712,
         parent_locational_asset_id=4712,
+        parent_functional_identifier="4712",
+        parent_locational_identifier="4712",
         tags=["weather","location"],
         attachments=[
             Attachment(
@@ -1566,6 +1578,8 @@ with eliona.api_client.ApiClient(configuration) as api_client:
             description="Weather station Zurich, Swiss",
             parent_functional_asset_id=4712,
             parent_locational_asset_id=4712,
+            parent_functional_identifier="4712",
+            parent_locational_identifier="4712",
             tags=["weather","location"],
             attachments=[
                 Attachment(
